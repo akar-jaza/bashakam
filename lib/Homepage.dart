@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
         body: Center(
           child: Column(
             children: [
-              const MyCard(imageAsset: 'assets/images/listcc.svg', verticalMargin: 20, title: 'ڕیزبەندی', color: Color(0xFFB5ECF5),),
+              const MyCard(imageAsset: 'assets/images/list2.svg', verticalMargin: 20, title: 'ڕیزبەندی', color: Color(0xFFB5ECF5),),
               const MyCard(imageAsset: 'assets/images/listcc.svg', verticalMargin: 0, title: 'ڕیزبەندی', color: Color(0xFF9CF8C1)),
             ],
           ),
