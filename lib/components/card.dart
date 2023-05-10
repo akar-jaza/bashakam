@@ -19,31 +19,39 @@ class MyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 25, vertical: verticalMargin),
-      height: 100,
+      height: 120,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(6),
         color: color,
       ),
       child: Padding(
         padding: const EdgeInsets.all(15.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SvgPicture.asset(imageAsset),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontFamily: 'rabarBold',
-                    fontSize: 18,
-                  ),
+        child: InkWell(
+          onLongPress: () {},
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Flexible(
+                child: SvgPicture.asset(
+                  imageAsset,
+                  width: 100,
                 ),
-              ],
-            ),
-          ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(
+                      fontFamily: 'rabarBold',
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
