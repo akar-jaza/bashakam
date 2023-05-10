@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'components/card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -36,7 +37,8 @@ class _HomePageState extends State<HomePage> {
             children: [
               Row(
                 children: [
-                  Card(),
+                  const MyCard(),
+                 
                 ],
               )
             ],
@@ -47,36 +49,3 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class Card extends StatelessWidget {
-  const Card({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.centerRight,
-      margin:
-          const EdgeInsets.symmetric(vertical: 35, horizontal: 60),
-      height: 80,
-      width: 150,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: const Color(0xFF5FCCA0),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Image.asset(
-              'assets/list.png',
-              height: 20,
-              color: Colors.black,
-            ),
-            const Text("ڕیزبەندی"),
-          ],
-        ),
-      ),
-    );
-  }
-}
