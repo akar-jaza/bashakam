@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'components/card.dart';
 
@@ -35,12 +37,8 @@ class _HomePageState extends State<HomePage> {
         body: Center(
           child: Column(
             children: [
-              Row(
-                children: [
-                  const MyCard(),
-                 
-                ],
-              )
+              const MyCard(imageAsset: 'assets/images/listcc.svg', verticalMargin: 20, title: 'ڕیزبەندی', color: Color(0xFFB5ECF5),),
+              const MyCard(imageAsset: 'assets/images/listcc.svg', verticalMargin: 0, title: 'ڕیزبەندی', color: Color(0xFF9CF8C1)),
             ],
           ),
         ),
@@ -48,4 +46,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
