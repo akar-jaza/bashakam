@@ -26,32 +26,29 @@ class MyCard extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.all(15.0),
-        child: InkWell(
-          onLongPress: () {},
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Flexible(
-                child: SvgPicture.asset(
-                  imageAsset,
-                  width: 100,
-                ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(
+              child: SvgPicture.asset(
+                imageAsset,
+                width: 100,
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(
-                      fontFamily: 'rabarBold',
-                      fontSize: 18,
-                    ),
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontFamily: 'rabarBold',
+                    fontSize: 18,
                   ),
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

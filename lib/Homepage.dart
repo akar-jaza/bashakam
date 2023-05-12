@@ -17,10 +17,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0xFF1A120B),
         appBar: AppBar(
+          backgroundColor: Color(0xff1A120B),
           leading: Builder(
             builder: (BuildContext context) {
               return IconButton(
+                color: Colors.white,
                 icon: Icon(CupertinoIcons.line_horizontal_3),
                 onPressed: () {
                   Scaffold.of(context).openDrawer();
@@ -32,7 +35,10 @@ class _HomePageState extends State<HomePage> {
           actions: [
             IconButton(
               onPressed: () {},
-              icon: const Icon(CupertinoIcons.settings_solid),
+              icon: const Icon(
+                CupertinoIcons.settings_solid,
+              ),
+              color: Colors.white,
             ),
           ],
         ),
