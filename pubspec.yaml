@@ -62,8 +62,9 @@ flutter:
     - assets/
     - assets/images/list2.svg
     - assets/images/calc.svg
-    - assets/images/bars-3.png
-    - assets/images/barssvg-3.svg
+    - assets/images/earth.svg
+    - assets/images/cats.svg
+    - assets/images/flo.png
 
   #   - images/a_dot_ham.jpeg
 

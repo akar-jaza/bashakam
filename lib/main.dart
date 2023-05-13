@@ -8,7 +8,6 @@ void main() => runApp(Main());
 
 // ignore: use_key_in_widget_constructors
 class Main extends StatelessWidget {
-
   ColorFile colorFile = ColorFile();
 
   @override
@@ -16,15 +15,12 @@ class Main extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: true,
-        fontFamily: 'rabarBold',
-        primaryColorDark: Colors.black        
+        useMaterial3: true, fontFamily: 'uni', primaryColorDark: Colors.black,
         // appBarTheme: AppBarTheme(
         //   color: colorFile.appBarColor,
         // ),
         // scaffoldBackgroundColor: colorFile.bodyColor,
-     ),
-     
+      ),
       home: HomePage(),
     );
   }

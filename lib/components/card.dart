@@ -39,6 +39,7 @@ class MyCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
+                
                 Text(
                   title,
                   style: TextStyle(
