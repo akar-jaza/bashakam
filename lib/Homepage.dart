@@ -92,7 +92,24 @@ class _HomePageState extends State<HomePage> {
                   fontFamily: 'rabarBold',
                 ),
               ),
-              
+              Row(
+                children: [
+                  MyCard(
+                    verticalMargin: 10,
+                    imageAsset: 'assets/images/calc.svg',
+                    title: 'Helo',
+                    color: colorFile.kWhiteTextColor,
+                    text: 'ڕیزبەندی بکە',
+                  ),
+                  MyCard(
+                    verticalMargin: 10,
+                    imageAsset: 'assets/images/calc.svg',
+                    title: 'Helo',
+                    color: colorFile.kWhiteTextColor,
+                    text: 'ڕیزبەندیەکانم',
+                  ),
+                ],
+              )
             ],
           ),
         ),
