@@ -92,19 +92,31 @@ class _HomePageState extends State<HomePage> {
                   fontFamily: 'rabarBold',
                 ),
               ),
+              SizedBox(height: 12),
+              SizedBox(
+                width: 300,
+                child: Text(
+                  'ڕیزبەندی بکە، ڕیزبەندیاکانت ببینە، زانیاری لەسەر بەشەکان ببینە',
+                  style: TextStyle(
+                    color: colorFile.kGreyTextColor,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   MyCard(
                     verticalMargin: 10,
                     imageAsset: 'assets/images/calc.svg',
-                    title: 'Helo',
+                    buttonTitle: 'Helo',
                     color: colorFile.kWhiteTextColor,
                     text: 'ڕیزبەندی بکە',
                   ),
                   MyCard(
                     verticalMargin: 10,
                     imageAsset: 'assets/images/calc.svg',
-                    title: 'Helo',
+                    buttonTitle: 'Helo',
                     color: colorFile.kWhiteTextColor,
                     text: 'ڕیزبەندیەکانم',
                   ),
