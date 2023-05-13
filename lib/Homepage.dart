@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
             builder: (BuildContext context) {
               return IconButton(
                 color: Colors.white,
-                icon: Icon(Icons.attach_money),
+                icon: Icon(Icons.menu_outlined),
                 onPressed: () {
                   Scaffold.of(context).openDrawer();
                 },
@@ -92,31 +92,46 @@ class _HomePageState extends State<HomePage> {
                   fontFamily: 'rabarBold',
                 ),
               ),
-              SizedBox(height: 12),
-              SizedBox(
-                width: 300,
-                child: Text(
-                  'ڕیزبەندی بکە، ڕیزبەندیاکانت ببینە، زانیاری لەسەر بەشەکان ببینە',
-                  style: TextStyle(
-                    color: colorFile.kGreyTextColor,
-                    fontSize: 12,
-                  ),
+              SizedBox(height: 15),
+              Text(
+                'ڕیزبەندی بکە، ڕیزبەندیاکانت ببینە، زانیاری لەسەر بەشەکان ببینە',
+                style: TextStyle(
+                  color: colorFile.kGreyTextColor,
+                  fontSize: 12,
                 ),
+              ),
+              SizedBox(
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   MyCard(
-                    verticalMargin: 10,
-                    imageAsset: 'assets/images/calc.svg',
-                    buttonTitle: 'Helo',
+                    imageAsset: 'assets/images/list3.svg',
+                    buttonTitle: 'بکە',
                     color: colorFile.kWhiteTextColor,
                     text: 'ڕیزبەندی بکە',
                   ),
                   MyCard(
-                    verticalMargin: 10,
-                    imageAsset: 'assets/images/calc.svg',
-                    buttonTitle: 'Helo',
+                    imageAsset: 'assets/images/zarabin.svg',
+                    buttonTitle: 'ببینە',
+                    color: colorFile.kWhiteTextColor,
+                    text: 'ڕیزبەندیەکانم',
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  MyCard(
+                    imageAsset: 'assets/images/list3.svg',
+                    buttonTitle: 'بکە',
+                    color: colorFile.kWhiteTextColor,
+                    text: 'ڕیزبەندی بکە',
+                  ),
+                  MyCard(
+                    imageAsset: 'assets/images/zarabin.svg',
+                    buttonTitle: 'ببینە',
                     color: colorFile.kWhiteTextColor,
                     text: 'ڕیزبەندیەکانم',
                   ),

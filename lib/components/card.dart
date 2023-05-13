@@ -9,13 +9,13 @@ import 'package:flutter/material.dart';
 class MyCard extends StatelessWidget {
   const MyCard({
     super.key,
-    required this.verticalMargin,
+    this.verticalMargin,
     required this.imageAsset,
     required this.buttonTitle,
     required this.color,
     required this.text,
   });
-  final double verticalMargin;
+  final double? verticalMargin;
   final String imageAsset;
   final String buttonTitle;
   final Color color;
@@ -26,11 +26,10 @@ class MyCard extends StatelessWidget {
     ColorFile colorFile = ColorFile();
     return InkWell(
       onTap: () {},
-      onLongPress: () {},
-      splashColor: colorFile.kblueColor,
+      splashColor: colorFile.kappBarColor,
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 7, vertical: verticalMargin),
-        height: 140,
+        margin: EdgeInsets.symmetric(horizontal: 7, vertical: 10),
+        height: 150,
         width: 135,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6),
@@ -39,7 +38,7 @@ class MyCard extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
               child: Align(
                 alignment: Alignment.centerRight, // Aligns child to the right
                 child: Text(
@@ -47,18 +46,16 @@ class MyCard extends StatelessWidget {
                   textAlign: TextAlign.right,
                   style: TextStyle(
                     color: colorFile.kWhiteTextColor,
+                    fontSize: 13
                   ),
                 ),
               ),
             ),
             SizedBox(height: 15),
-            Flexible(
-              child: SvgPicture.asset(
-                imageAsset,
-                height: 100,
-              ),
+            SvgPicture.asset(
+              imageAsset,
+              height: 50,
             ),
-            SizedBox(height: 10),
             TextButton(
               onPressed: () {},
               child: Text(

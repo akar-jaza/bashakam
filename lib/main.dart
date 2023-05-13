@@ -15,7 +15,8 @@ class Main extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: true, fontFamily: 'rabarBold', primaryColorDark: Colors.black,
+        useMaterial3: true, fontFamily: 'rabarBold',
+        primaryColorDark: ColorFile().kblueColor,
         // appBarTheme: AppBarTheme(
         //   color: colorFile.appBarColor,
         // ),
