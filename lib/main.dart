@@ -17,6 +17,7 @@ class Main extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true, fontFamily: 'rabarBold',
         primaryColorDark: ColorFile().kblueColor,
+       
         // appBarTheme: AppBarTheme(
         //   color: colorFile.appBarColor,
         // ),

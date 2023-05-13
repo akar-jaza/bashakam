@@ -38,11 +38,24 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: colorFile.kbodyColor,
         appBar: AppBar(
           backgroundColor: colorFile.kbodyColor,
+          title: Center(
+            child: Text(
+              '🎓 بەشەکەم',
+              style: TextStyle(
+                fontSize: 18,
+                color: colorFile.kWhiteTextColor,
+                fontFamily: 'rabarBold',
+              ),
+            ),
+          ),
           leading: Builder(
             builder: (BuildContext context) {
               return IconButton(
                 color: Colors.white,
-                icon: Icon(Icons.menu_outlined),
+                icon: Icon(
+                  Icons.menu_outlined,
+                  size: 18,
+                ),
                 onPressed: () {
                   Scaffold.of(context).openDrawer();
                 },
@@ -66,78 +79,101 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-        body: Center(
-          child: Column(
-            children: [
-              SvgPicture.asset(
-                'assets/images/cats.svg',
-                width: 200,
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Text(
-                'ڕیزبەندی بکە لەگەڵ ئەپڵیکەیشنی',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: colorFile.kWhiteTextColor,
-                  fontFamily: 'rabarBold',
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 25,
                 ),
-              ),
-              Text(
-                '🎓 بەشەکەم',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: colorFile.kWhiteTextColor,
-                  fontFamily: 'rabarBold',
+                SvgPicture.asset(
+                  'assets/images/cats.svg',
+                  width: 200,
                 ),
-              ),
-              SizedBox(height: 15),
-              Text(
-                'ڕیزبەندی بکە، ڕیزبەندیاکانت ببینە، زانیاری لەسەر بەشەکان ببینە',
-                style: TextStyle(
-                  color: colorFile.kGreyTextColor,
-                  fontSize: 12,
+                SizedBox(
+                  height: 30,
                 ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  MyCard(
-                    imageAsset: 'assets/images/list3.svg',
-                    buttonTitle: 'بکە',
+                Text(
+                  'ڕیزبەندی بکە لەگەڵ ئەپڵیکەیشنی',
+                  style: TextStyle(
+                    fontSize: 18,
                     color: colorFile.kWhiteTextColor,
-                    text: 'ڕیزبەندی بکە',
+                    fontFamily: 'rabarBold',
                   ),
-                  MyCard(
-                    imageAsset: 'assets/images/zarabin.svg',
-                    buttonTitle: 'ببینە',
+                ),
+                Text(
+                  '🎓 بەشەکەم',
+                  style: TextStyle(
+                    fontSize: 18,
                     color: colorFile.kWhiteTextColor,
-                    text: 'ڕیزبەندیەکانم',
+                    fontFamily: 'rabarBold',
                   ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  MyCard(
-                    imageAsset: 'assets/images/list3.svg',
-                    buttonTitle: 'بکە',
-                    color: colorFile.kWhiteTextColor,
-                    text: 'ڕیزبەندی بکە',
+                ),
+                SizedBox(height: 15),
+                Text(
+                  'ڕیزبەندی بکە، ڕیزبەندیاکانت ببینە، زانیاری لەسەر بەشەکان ببینە',
+                  style: TextStyle(
+                    color: colorFile.kGreyTextColor,
+                    fontSize: 12,
                   ),
-                  MyCard(
-                    imageAsset: 'assets/images/zarabin.svg',
-                    buttonTitle: 'ببینە',
-                    color: colorFile.kWhiteTextColor,
-                    text: 'ڕیزبەندیەکانم',
-                  ),
-                ],
-              )
-            ],
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MyCard(
+                      imageAsset: 'assets/images/list3.svg',
+                      buttonTitle: 'بکە',
+                      color: colorFile.kWhiteTextColor,
+                      text: 'ڕیزبەندی بکە',
+                    ),
+                    MyCard(
+                      imageAsset: 'assets/images/zarabin.svg',
+                      buttonTitle: 'ببینە',
+                      color: colorFile.kWhiteTextColor,
+                      text: 'ڕیزبەندیەکانم',
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MyCard(
+                      imageAsset: 'assets/images/list3.svg',
+                      buttonTitle: 'بکە',
+                      color: colorFile.kWhiteTextColor,
+                      text: 'ڕیزبەندی بکە',
+                    ),
+                    MyCard(
+                      imageAsset: 'assets/images/zarabin.svg',
+                      buttonTitle: 'ببینە',
+                      color: colorFile.kWhiteTextColor,
+                      text: 'ڕیزبەندیەکانم',
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MyCard(
+                      imageAsset: 'assets/images/list3.svg',
+                      buttonTitle: 'بکە',
+                      color: colorFile.kWhiteTextColor,
+                      text: 'ڕیزبەندی بکە',
+                    ),
+                    MyCard(
+                      imageAsset: 'assets/images/zarabin.svg',
+                      buttonTitle: 'ببینە',
+                      color: colorFile.kWhiteTextColor,
+                      text: 'ڕیزبەندیەکانم',
+                    ),
+                  ],
+                ),
+                
+              ],
+            ),
           ),
         ),
       ),
