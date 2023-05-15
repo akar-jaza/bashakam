@@ -21,7 +21,10 @@ class _NmrakanmState extends State<Nmrakanm> {
     uiOverlayFunc.systemUiOverlay();
     return Scaffold(
       backgroundColor: colorFile.kbodyColor,
-      appBar: AppBar(),
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: colorFile.kWhiteTextColor),
+        backgroundColor: colorFile.kbodyColor,
+      ),
     );
   }
 }
