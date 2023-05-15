@@ -3,6 +3,7 @@ import 'package:bashakam_barawzanko/Screens/nmrakanm.dart';
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:bashakam_barawzanko/constantes/systemUiOverlayFunc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../components/card.dart';
 
@@ -21,12 +22,12 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     uiOverlayFunc.systemUiOverlay();
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: colorFile.kbodyColor));
   }
 
   @override
   Widget build(BuildContext context) {
-    uiOverlayFunc.systemUiOverlay();
-
     return SafeArea(
       child: Scaffold(
         backgroundColor: colorFile.kbodyColor,

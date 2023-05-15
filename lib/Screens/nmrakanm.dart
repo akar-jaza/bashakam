@@ -24,6 +24,13 @@ class _NmrakanmState extends State<Nmrakanm> {
       appBar: AppBar(
         iconTheme: IconThemeData(color: colorFile.kWhiteTextColor),
         backgroundColor: colorFile.kbodyColor,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            uiOverlayFunc.systemUiOverlay();
+            Navigator.pop(context);
+          },
+        ),
       ),
     );
   }
