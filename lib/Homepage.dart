@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:bashakam_barawzanko/Screens/nmrakanm.dart';
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
+import 'package:bashakam_barawzanko/constantes/systemUiOverlayFunc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -15,23 +17,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   ColorFile colorFile = ColorFile();
+  SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
 
   @override
   Widget build(BuildContext context) {
-    void systemUiOverlay() {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle.dark.copyWith(
-          systemNavigationBarColor: colorFile.kbodyColor,
-          statusBarColor: colorFile.kbodyColor,
-          statusBarIconBrightness:
-              Brightness.light, // Set the icon brightness to light
-          systemNavigationBarIconBrightness: Brightness
-              .light, // Set the system navigation bar icon brightness to light
-        ),
-      );
-    }
-
-    systemUiOverlay();
+    uiOverlayFunc.systemUiOverlay();
 
     return SafeArea(
       child: Scaffold(
@@ -80,6 +70,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         body: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           child: Center(
             child: Column(
               children: [
@@ -124,16 +115,23 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     MyCard(
+                      imageAsset: 'assets/images/id.svg',
+                      buttonTitle: 'ببینە',
+                      color: colorFile.kWhiteTextColor,
+                      text: 'نمرەکانم',
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Nmrakanm()),
+                        );
+                      },
+                    ),
+                    MyCard(
                       imageAsset: 'assets/images/list3.svg',
                       buttonTitle: 'بکە',
                       color: colorFile.kWhiteTextColor,
                       text: 'ڕیزبەندی بکە',
-                    ),
-                    MyCard(
-                      imageAsset: 'assets/images/zarabin.svg',
-                      buttonTitle: 'ببینە',
-                      color: colorFile.kWhiteTextColor,
-                      text: 'ڕیزبەندیەکانم',
                     ),
                   ],
                 ),
@@ -141,10 +139,10 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     MyCard(
-                      imageAsset: 'assets/images/list3.svg',
-                      buttonTitle: 'بکە',
+                      imageAsset: 'assets/images/zarabin.svg',
+                      buttonTitle: 'ببینە',
                       color: colorFile.kWhiteTextColor,
-                      text: 'ڕیزبەندی بکە',
+                      text: 'ڕیزبەندیەکانم',
                     ),
                     MyCard(
                       imageAsset: 'assets/images/zarabin.svg',
@@ -154,24 +152,6 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    MyCard(
-                      imageAsset: 'assets/images/list3.svg',
-                      buttonTitle: 'بکە',
-                      color: colorFile.kWhiteTextColor,
-                      text: 'ڕیزبەندی بکە',
-                    ),
-                    MyCard(
-                      imageAsset: 'assets/images/zarabin.svg',
-                      buttonTitle: 'ببینە',
-                      color: colorFile.kWhiteTextColor,
-                      text: 'ڕیزبەندیەکانم',
-                    ),
-                  ],
-                ),
-                
               ],
             ),
           ),

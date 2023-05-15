@@ -14,18 +14,20 @@ class MyCard extends StatelessWidget {
     required this.buttonTitle,
     required this.color,
     required this.text,
+    this.onTap,
   });
   final double? verticalMargin;
   final String imageAsset;
   final String buttonTitle;
   final Color color;
   final String text;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     ColorFile colorFile = ColorFile();
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       splashColor: colorFile.kappBarColor,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 7, vertical: 10),
@@ -44,10 +46,8 @@ class MyCard extends StatelessWidget {
                 child: Text(
                   text,
                   textAlign: TextAlign.right,
-                  style: TextStyle(
-                    color: colorFile.kWhiteTextColor,
-                    fontSize: 13
-                  ),
+                  style:
+                      TextStyle(color: colorFile.kWhiteTextColor, fontSize: 13),
                 ),
               ),
             ),
@@ -57,7 +57,7 @@ class MyCard extends StatelessWidget {
               height: 50,
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: onTap,
               child: Text(
                 buttonTitle,
                 style: TextStyle(color: colorFile.kblueColor),

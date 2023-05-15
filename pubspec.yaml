@@ -61,13 +61,12 @@ flutter:
   assets:
     - assets/
     - assets/images/list2.svg
-    - assets/images/calc.svg
-    - assets/images/earth.svg
     - assets/images/cats.svg
     - assets/images/flo.png
     - assets/images/list.svg
     - assets/images/zarabin.svg
     - assets/images/list3.svg
+    - assets/images/id.svg
 
 
   #   - images/a_dot_ham.jpeg
