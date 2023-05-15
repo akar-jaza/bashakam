@@ -8,7 +8,7 @@ void main() => runApp(Main());
 
 // ignore: use_key_in_widget_constructors
 class Main extends StatelessWidget {
-  ColorFile colorFile = ColorFile();
+  final ColorFile colorFile = ColorFile();
 
   @override
   Widget build(BuildContext context) {

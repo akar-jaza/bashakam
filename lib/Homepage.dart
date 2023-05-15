@@ -4,7 +4,6 @@ import 'package:bashakam_barawzanko/Screens/nmrakanm.dart';
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:bashakam_barawzanko/constantes/systemUiOverlayFunc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'components/card.dart';
 
