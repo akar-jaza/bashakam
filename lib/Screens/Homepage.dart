@@ -22,8 +22,6 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     uiOverlayFunc.systemUiOverlay();
-    SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: colorFile.kbodyColor));
   }
 
   @override

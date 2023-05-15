@@ -3,7 +3,9 @@
    <application
         android:label="bashakam_barawzanko"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+       android:statusBarColor="@color/status_bar_color"
+       >
         <activity
             android:name=".MainActivity"
             android:exported="true"
