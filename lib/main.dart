@@ -3,8 +3,13 @@
 import 'package:flutter/material.dart';
 import 'Homepage.dart';
 import 'constantes/Colors.dart';
+import 'constantes/SystemUiOverlayFunc.dart';
 
-void main() => runApp(Main());
+void main() {
+  SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
+  uiOverlayFunc.systemUiOverlay();
+  runApp(Main(),);
+}
 
 // ignore: use_key_in_widget_constructors
 class Main extends StatelessWidget {
@@ -17,7 +22,7 @@ class Main extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true, fontFamily: 'rabarBold',
         primaryColorDark: ColorFile().kblueColor,
-       
+
         // appBarTheme: AppBarTheme(
         //   color: colorFile.appBarColor,
         // ),
