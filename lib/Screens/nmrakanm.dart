@@ -1,6 +1,4 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-
-import 'package:bashakam_barawzanko/Screens/Homepage.dart';
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
 import '../constantes/SystemUiOverlayFunc.dart';
@@ -27,9 +25,15 @@ class _NmrakanmState extends State<Nmrakanm> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            
             Navigator.pop(context);
           },
+        ),
+        title: Align(
+          alignment: Alignment.centerRight,
+          child: Text(
+            'نمرەکانت تۆمار بکە',
+            style: TextStyle(color: colorFile.kWhiteTextColor),
+          ),
         ),
       ),
     );

@@ -26,7 +26,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    uiOverlayFunc.systemUiOverlay();
     return SafeArea(
       child: Scaffold(
         backgroundColor: colorFile.kbodyColor,
@@ -38,7 +37,6 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(
                 fontSize: 18,
                 color: colorFile.kWhiteTextColor,
-                fontFamily: 'rabarBold',
               ),
             ),
           ),
