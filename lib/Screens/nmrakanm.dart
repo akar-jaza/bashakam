@@ -59,7 +59,7 @@ class _NmrakanmState extends State<Nmrakanm> {
                           textController: _textController,
                           colorFile: colorFile),
                     ),
-                    SizedBox(width: 20),
+                    SizedBox(width: 0),
                     SizedBox(
                       width: 170,
                       child: TextFieldView(
