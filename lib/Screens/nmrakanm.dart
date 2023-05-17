@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
+import '../components/textfieldView.dart';
 import '../constantes/SystemUiOverlayFunc.dart';
 
 class Nmrakanm extends StatefulWidget {
@@ -13,6 +14,13 @@ class Nmrakanm extends StatefulWidget {
 class _NmrakanmState extends State<Nmrakanm> {
   ColorFile colorFile = ColorFile();
   SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
+  TextEditingController _textController = TextEditingController();
+
+  @override
+  void dispose() {
+    _textController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +41,27 @@ class _NmrakanmState extends State<Nmrakanm> {
           child: Text(
             'نمرەکانت تۆمار بکە',
             style: TextStyle(color: colorFile.kWhiteTextColor),
+          ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 200,
+                      child: TextFieldView(
+                          textController: _textController,
+                          colorFile: colorFile),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

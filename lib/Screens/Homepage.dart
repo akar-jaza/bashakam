@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(
                 fontSize: 18,
                 color: colorFile.kWhiteTextColor,
+                fontFamily: 'rabarBold',
               ),
             ),
           ),
