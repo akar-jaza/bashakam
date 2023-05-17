@@ -18,6 +18,7 @@ class TextFieldView extends StatelessWidget {
       controller: _textController,
       cursorColor: colorFile.kblueColor,
       decoration: InputDecoration(
+        contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 8),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: colorFile.kMyCardColor),
         ),

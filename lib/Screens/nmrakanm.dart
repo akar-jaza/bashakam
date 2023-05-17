@@ -51,9 +51,17 @@ class _NmrakanmState extends State<Nmrakanm> {
             child: Column(
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     SizedBox(
-                      width: 200,
+                      width: 170,
+                      child: TextFieldView(
+                          textController: _textController,
+                          colorFile: colorFile),
+                    ),
+                    SizedBox(width: 20),
+                    SizedBox(
+                      width: 170,
                       child: TextFieldView(
                           textController: _textController,
                           colorFile: colorFile),
