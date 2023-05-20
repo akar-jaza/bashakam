@@ -67,6 +67,7 @@ flutter:
     - assets/images/zarabin.svg
     - assets/images/list3.svg
     - assets/images/id.svg
+    - assets/images/ListIsEmpty.svg
 
 
   #   - images/a_dot_ham.jpeg

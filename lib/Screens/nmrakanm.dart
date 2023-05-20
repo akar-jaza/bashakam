@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../components/textfieldView.dart';
 import '../constantes/SystemUiOverlayFunc.dart';
 
@@ -39,7 +40,7 @@ class _NmrakanmState extends State<Nmrakanm> {
         title: Align(
           alignment: Alignment.centerRight,
           child: Text(
-            'نمرەکانت تۆمار بکە',
+            'نمرەکانم',
             style: TextStyle(color: colorFile.kWhiteTextColor),
           ),
         ),
@@ -50,28 +51,16 @@ class _NmrakanmState extends State<Nmrakanm> {
             padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    SizedBox(
-                      width: 170,
-                      child: TextFieldView(
-                          textController: _textController,
-                          colorFile: colorFile),
-                    ),
-                    SizedBox(width: 0),
-                    SizedBox(
-                      width: 170,
-                      child: TextFieldView(
-                          textController: _textController,
-                          colorFile: colorFile),
-                    ),
-                  ],
-                ),
+                SvgPicture.asset('')
               ],
             ),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: colorFile.kblueColor,
+        onPressed: () {},
+        child: const Icon(Icons.add),
       ),
     );
   }

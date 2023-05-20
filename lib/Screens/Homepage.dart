@@ -105,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(height: 15),
                 Text(
-                  'ڕیزبەندی بکە، ڕیزبەندیاکانت ببینە، زانیاری لەسەر بەشەکان ببینە',
+                  'ڕیزبەندی بکە، ڕیزبەندیەکانت ببینە، زانیاری لەسەر بەشەکان ببینە',
                   style: TextStyle(
                     color: colorFile.kGreyTextColor,
                     fontSize: 12,
