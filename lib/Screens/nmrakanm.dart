@@ -51,7 +51,7 @@ class _NmrakanmState extends State<Nmrakanm> {
             padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
             child: Column(
               children: [
-                SvgPicture.asset('')
+                SvgPicture.asset('assets/images/ListIsEmpty.svg'),
               ],
             ),
           ),
