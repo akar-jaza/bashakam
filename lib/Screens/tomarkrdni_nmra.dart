@@ -12,6 +12,14 @@ class TomarkrdniNmraPage extends StatefulWidget {
 }
 
 class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
+  TextEditingController _textController = TextEditingController();
+
+  @override
+  void dispose() {
+    _textController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     ColorFile colorFile = ColorFile();

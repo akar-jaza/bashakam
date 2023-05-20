@@ -15,13 +15,7 @@ class Nmrakanm extends StatefulWidget {
 class _NmrakanmState extends State<Nmrakanm> {
   ColorFile colorFile = ColorFile();
   SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
-  TextEditingController _textController = TextEditingController();
-
-  @override
-  void dispose() {
-    _textController.dispose();
-    super.dispose();
-  }
+  
 
   @override
   Widget build(BuildContext context) {
