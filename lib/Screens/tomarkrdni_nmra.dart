@@ -4,6 +4,8 @@ import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../components/textfieldView.dart';
+
 class TomarkrdniNmraPage extends StatefulWidget {
   const TomarkrdniNmraPage({super.key});
 
@@ -45,7 +47,22 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
       body: Center(
         child: Column(
           children: [
-            
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 170,
+                  child: TextFieldView(
+                      textController: _textController, colorFile: colorFile),
+                ),
+                SizedBox(width: 20),
+                SizedBox(
+                  width: 170,
+                  child: TextFieldView(
+                      textController: _textController, colorFile: colorFile),
+                ),
+              ],
+            ),
           ],
         ),
       ),
