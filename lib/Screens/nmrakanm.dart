@@ -70,10 +70,19 @@ class _NmrakanmState extends State<Nmrakanm> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: colorFile.kblueColor,
-        onPressed: () {},
-        child: const Icon(Icons.add),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          SvgPicture.asset(
+            'assets/images/arrow.svg',
+            height: 50,
+          ),
+          FloatingActionButton(
+            backgroundColor: colorFile.kblueColor,
+            onPressed: () {},
+            child: const Icon(Icons.add),
+          ),
+        ],
       ),
     );
   }
