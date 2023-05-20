@@ -50,8 +50,13 @@ class _NmrakanmState extends State<Nmrakanm> {
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset('assets/images/ListIsEmpty.svg'),
+                SvgPicture.asset(
+                  'assets/images/ListIsEmpty.svg',
+                ),
+                Text('نمرەکانت تۆمار نەکراوە!'),
+                Text('تکایە نمرەکانت تۆمار بکە'),
               ],
             ),
           ),
