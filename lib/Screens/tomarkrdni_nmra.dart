@@ -29,7 +29,7 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
         title: Align(
           alignment: Alignment.centerRight,
           child: Text(
-            'نمرەکانم',
+            'تۆمارکردنی نمرەکان',
             style: TextStyle(color: colorFile.kWhiteTextColor),
           ),
         ),
