@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+import 'package:bashakam_barawzanko/Screens/tomarkrdni_nmra.dart';
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -50,9 +51,8 @@ class _NmrakanmState extends State<Nmrakanm> {
           children: [
             SvgPicture.asset(
               'assets/images/ListIsEmpty.svg',
-              height: 300,
+              height: 350,
             ),
-            SizedBox(height: 10),
             Text(
               '! نمرەکانت تۆمار نەکراوە',
               style: TextStyle(
@@ -61,7 +61,7 @@ class _NmrakanmState extends State<Nmrakanm> {
               ),
             ),
             Text(
-              'تکایە نمرەکانت تۆمار بکە',
+              '.تکایە نمرەکانت تۆمار بکە',
               style: TextStyle(
                 color: colorFile.kWhiteTextColor,
                 fontSize: 18,
@@ -73,13 +73,26 @@ class _NmrakanmState extends State<Nmrakanm> {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          SvgPicture.asset(
-            'assets/images/arrow.svg',
-            height: 50,
+          Transform.translate(
+            offset: Offset(
+                20, -25), // Adjust the vertical offset as per your requirement
+            child: SvgPicture.asset(
+              'assets/images/arrow.svg',
+              height: 50,
+            ),
+          ),
+          SizedBox(
+            width: 50,
           ),
           FloatingActionButton(
             backgroundColor: colorFile.kblueColor,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const TomarkrdniNmraPage()),
+              );
+            },
             child: const Icon(Icons.add),
           ),
         ],
