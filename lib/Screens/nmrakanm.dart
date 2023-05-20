@@ -2,7 +2,6 @@
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../components/textfieldView.dart';
 import '../constantes/SystemUiOverlayFunc.dart';
 
 class Nmrakanm extends StatefulWidget {
@@ -45,21 +44,30 @@ class _NmrakanmState extends State<Nmrakanm> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  'assets/images/ListIsEmpty.svg',
-                ),
-                Text('نمرەکانت تۆمار نەکراوە!'),
-                Text('تکایە نمرەکانت تۆمار بکە'),
-              ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgPicture.asset(
+              'assets/images/ListIsEmpty.svg',
+              height: 300,
             ),
-          ),
+            SizedBox(height: 10),
+            Text(
+              '! نمرەکانت تۆمار نەکراوە',
+              style: TextStyle(
+                color: colorFile.kWhiteTextColor,
+                fontSize: 18,
+              ),
+            ),
+            Text(
+              'تکایە نمرەکانت تۆمار بکە',
+              style: TextStyle(
+                color: colorFile.kWhiteTextColor,
+                fontSize: 18,
+              ),
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
