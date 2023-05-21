@@ -20,11 +20,10 @@ class TextFieldView extends StatelessWidget {
       child: Theme(
         data: ThemeData(
             textSelectionTheme: TextSelectionThemeData(
-          cursorColor: colorFile.kblueColor, // Set the cursor color
-          selectionColor:
-              Colors.blue.withOpacity(0.4), // Set the selection highlight color
-          style: SystemUiOverlayStyle.light, //
-        )),
+                cursorColor: colorFile.kblueColor, // Set the cursor color
+                selectionColor: colorFile.kWhiteTextColor,
+                selectionHandleColor: colorFile.kWhiteTextColor,
+                )),
         child: TextField(
           controller: _textController,
           cursorColor: colorFile.kblueColor,
