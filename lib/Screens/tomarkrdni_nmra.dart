@@ -63,13 +63,19 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                      textController: _textController, colorFile: colorFile),
+                    textController: _textController,
+                    colorFile: colorFile,
+                    labelText: 'بیرکاری',
+                  ),
                 ),
                 SizedBox(width: 20),
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                      textController: _textController2, colorFile: colorFile),
+                    textController: _textController2,
+                    colorFile: colorFile,
+                    labelText: 'ئینگلیزی',
+                  ),
                 ),
               ],
             ),
@@ -82,13 +88,19 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                      textController: _textController, colorFile: colorFile),
+                    textController: _textController,
+                    colorFile: colorFile,
+                    labelText: 'کوردی',
+                  ),
                 ),
                 SizedBox(width: 20),
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                      textController: _textController2, colorFile: colorFile),
+                    textController: _textController2,
+                    colorFile: colorFile,
+                    labelText: 'کیمیا',
+                  ),
                 ),
               ],
             ),
@@ -101,13 +113,19 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                      textController: _textController, colorFile: colorFile),
+                    textController: _textController,
+                    colorFile: colorFile,
+                    labelText: 'زیندەوەرزانی',
+                  ),
                 ),
                 SizedBox(width: 20),
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                      textController: _textController2, colorFile: colorFile),
+                    textController: _textController2,
+                    colorFile: colorFile,
+                    labelText: 'کوردی',
+                  ),
                 ),
               ],
             ),
