@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../constantes/Colors.dart';
 
@@ -36,6 +37,11 @@ class TextFieldView extends StatelessWidget {
           fillColor: colorFile.kMyCardColor,
           filled: true,
         ),
+        keyboardType: TextInputType.number,
+        inputFormatters: <TextInputFormatter>[
+          FilteringTextInputFormatter
+              .digitsOnly // Restrict input to digits only
+        ],
       ),
     );
   }
