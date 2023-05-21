@@ -91,6 +91,9 @@ flutter:
     - family: rabarBold
       fonts:
         - asset: assets/fonts/rabarBold.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/RobotoFamily/
         
     
         
