@@ -28,9 +28,13 @@ class TextFieldView extends StatelessWidget {
         ),
         decoration: InputDecoration(
           labelText: labelText,
-          labelStyle: TextStyle(
-            color: colorFile.kblueColor,
-          ),
+          labelStyle:
+              MaterialStateTextStyle.resolveWith((Set<MaterialState> states) {
+            final Color color = states.contains(MaterialState.focused)
+                ? Colors.pink
+                : Colors.orange;
+            return TextStyle(color: color);
+          }),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
           enabledBorder: OutlineInputBorder(
