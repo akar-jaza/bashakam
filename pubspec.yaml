@@ -93,7 +93,7 @@ flutter:
         - asset: assets/fonts/rabarBold.ttf
     - family: Roboto
       fonts:
-        - asset: assets/fonts/RobotoFamily/
+        - asset: assets/fonts/RobotoFamily/Roboto-Medium.ttf
         
     
         
