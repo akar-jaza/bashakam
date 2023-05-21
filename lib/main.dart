@@ -22,6 +22,7 @@ class Main extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         fontFamily: 'rabarBold',
+        colorSchemeSeed: colorFile.kblueColor,
       ),
       home: HomePage(),
     );
