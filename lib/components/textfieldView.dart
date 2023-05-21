@@ -17,6 +17,7 @@ class TextFieldView extends StatelessWidget {
     return TextField(
       controller: _textController,
       cursorColor: colorFile.kblueColor,
+      style: TextStyle(color: colorFile.kWhiteTextColor),
       decoration: InputDecoration(
         labelText: 'وانە',
         contentPadding:
