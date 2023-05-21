@@ -2,7 +2,6 @@
 
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../components/textfieldView.dart';
 
@@ -14,13 +13,21 @@ class TomarkrdniNmraPage extends StatefulWidget {
 }
 
 class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
-  TextEditingController _textController = TextEditingController();
-  TextEditingController _textController2 = TextEditingController();
+  final TextEditingController _textController = TextEditingController();
+  final TextEditingController _textController2 = TextEditingController();
+  final TextEditingController _textController3 = TextEditingController();
+  final TextEditingController _textController4 = TextEditingController();
+  final TextEditingController _textController5 = TextEditingController();
+  final TextEditingController _textController6 = TextEditingController();
 
   @override
   void dispose() {
     _textController.dispose();
     _textController2.dispose();
+    _textController3.dispose();
+    _textController4.dispose();
+    _textController5.dispose();
+    _textController6.dispose();
 
     super.dispose();
   }
