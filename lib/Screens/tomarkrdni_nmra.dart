@@ -64,7 +64,6 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                   width: 170,
                   child: TextFieldView(
                     textController: _textController,
-                    colorFile: colorFile,
                     labelText: 'بیرکاری',
                   ),
                 ),
@@ -73,7 +72,6 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                   width: 170,
                   child: TextFieldView(
                     textController: _textController2,
-                    colorFile: colorFile,
                     labelText: 'ئینگلیزی',
                   ),
                 ),
@@ -89,7 +87,6 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                   width: 170,
                   child: TextFieldView(
                     textController: _textController,
-                    colorFile: colorFile,
                     labelText: 'کوردی',
                   ),
                 ),
@@ -98,7 +95,6 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                   width: 170,
                   child: TextFieldView(
                     textController: _textController2,
-                    colorFile: colorFile,
                     labelText: 'کیمیا',
                   ),
                 ),
@@ -114,7 +110,6 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                   width: 170,
                   child: TextFieldView(
                     textController: _textController,
-                    colorFile: colorFile,
                     labelText: 'زیندەوەرزانی',
                   ),
                 ),
@@ -123,7 +118,6 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                   width: 170,
                   child: TextFieldView(
                     textController: _textController2,
-                    colorFile: colorFile,
                     labelText: 'کوردی',
                   ),
                 ),
@@ -139,7 +133,6 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                   width: 170,
                   child: TextFieldView(
                     textController: _textController,
-                    colorFile: colorFile,
                     labelText: 'عەرەبی',
                   ),
                 ),
@@ -148,7 +141,6 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                   width: 170,
                   child: TextFieldView(
                     textController: _textController2,
-                    colorFile: colorFile,
                     labelText: 'کوردی',
                   ),
                 ),

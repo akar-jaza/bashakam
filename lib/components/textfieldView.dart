@@ -7,16 +7,16 @@ class TextFieldView extends StatelessWidget {
   const TextFieldView({
     super.key,
     required TextEditingController textController,
-    required this.colorFile,
     required this.labelText,
   }) : _textController = textController;
 
   final TextEditingController _textController;
-  final ColorFile colorFile;
   final String labelText;
 
   @override
   Widget build(BuildContext context) {
+    ColorFile colorFile = ColorFile();
+    
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: TextField(
@@ -31,8 +31,8 @@ class TextFieldView extends StatelessWidget {
           labelStyle:
               MaterialStateTextStyle.resolveWith((Set<MaterialState> states) {
             final Color color = states.contains(MaterialState.focused)
-                ? Colors.pink
-                : Colors.orange;
+                ? colorFile.kblueColor
+                : colorFile.kBoldBlueTextColor;
             return TextStyle(color: color);
           }),
           contentPadding:
