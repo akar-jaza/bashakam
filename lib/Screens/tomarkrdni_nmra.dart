@@ -73,6 +73,44 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 ),
               ],
             ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 170,
+                  child: TextFieldView(
+                      textController: _textController, colorFile: colorFile),
+                ),
+                SizedBox(width: 20),
+                SizedBox(
+                  width: 170,
+                  child: TextFieldView(
+                      textController: _textController2, colorFile: colorFile),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 170,
+                  child: TextFieldView(
+                      textController: _textController, colorFile: colorFile),
+                ),
+                SizedBox(width: 20),
+                SizedBox(
+                  width: 170,
+                  child: TextFieldView(
+                      textController: _textController2, colorFile: colorFile),
+                ),
+              ],
+            ),
           ],
         ),
       ),

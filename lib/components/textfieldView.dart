@@ -25,7 +25,7 @@ class TextFieldView extends StatelessWidget {
           fontFamily: 'Roboto',
         ),
         decoration: InputDecoration(
-          labelText: 'وانە',
+          labelText: labelText,
           labelStyle: TextStyle(color: colorFile.kblueColor),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
