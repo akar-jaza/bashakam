@@ -8,10 +8,12 @@ class TextFieldView extends StatelessWidget {
     super.key,
     required TextEditingController textController,
     required this.colorFile,
+    required this.labelText,
   }) : _textController = textController;
 
   final TextEditingController _textController;
   final ColorFile colorFile;
+  final String labelText;
 
   @override
   Widget build(BuildContext context) {
