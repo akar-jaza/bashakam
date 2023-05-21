@@ -17,31 +17,41 @@ class TextFieldView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
-      child: TextField(
-        controller: _textController,
-        cursorColor: colorFile.kblueColor,
-        style: TextStyle(
-          color: colorFile.kWhiteTextColor,
-          fontFamily: 'Roboto',
-        ),
-        decoration: InputDecoration(
-          labelText: 'وانە',
-          contentPadding:
-              const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: colorFile.kMyCardColor),
+      child: Theme(
+        data: ThemeData(
+            textSelectionTheme: TextSelectionThemeData(
+          cursorColor: colorFile.kblueColor, // Set the cursor color
+          selectionColor:
+              Colors.blue.withOpacity(0.4), // Set the selection highlight color
+          style: SystemUiOverlayStyle.light, //
+        )),
+        child: TextField(
+          controller: _textController,
+          cursorColor: colorFile.kblueColor,
+          style: TextStyle(
+            color: colorFile.kWhiteTextColor,
+            fontFamily: 'Roboto',
           ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: colorFile.kMyCardColor),
+          decoration: InputDecoration(
+            labelText: 'وانە',
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: colorFile.kMyCardColor),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: colorFile.kMyCardColor),
+            ),
+            fillColor: colorFile.kMyCardColor,
+            filled: true,
           ),
-          fillColor: colorFile.kMyCardColor,
-          filled: true,
+          enableInteractiveSelection: true,
+          keyboardType: TextInputType.number,
+          inputFormatters: <TextInputFormatter>[
+            FilteringTextInputFormatter
+                .digitsOnly // Restrict input to digits only
+          ],
         ),
-        keyboardType: TextInputType.number,
-        inputFormatters: <TextInputFormatter>[
-          FilteringTextInputFormatter
-              .digitsOnly // Restrict input to digits only
-        ],
       ),
     );
   }

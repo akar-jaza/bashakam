@@ -15,10 +15,13 @@ class TomarkrdniNmraPage extends StatefulWidget {
 
 class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
   TextEditingController _textController = TextEditingController();
+  TextEditingController _textController2 = TextEditingController();
 
   @override
   void dispose() {
     _textController.dispose();
+    _textController2.dispose();
+
     super.dispose();
   }
 
@@ -59,7 +62,7 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                      textController: _textController, colorFile: colorFile),
+                      textController: _textController2, colorFile: colorFile),
                 ),
               ],
             ),
