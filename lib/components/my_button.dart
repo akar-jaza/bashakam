@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class MyButton extends StatefulWidget {
@@ -10,9 +12,13 @@ class MyButton extends StatefulWidget {
 class _MyButtonState extends State<MyButton> {
   @override
   Widget build(BuildContext context) {
-    return FilledButton(
-      onPressed: () {},
-      child: Text('تۆمار بکە'),
+    return SizedBox(
+      height: 50,
+      width: 300,
+      child: FilledButton(
+        onPressed: () {},
+        child: Text('تۆمار بکە'),
+      ),
     );
   }
 }
