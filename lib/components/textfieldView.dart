@@ -38,7 +38,10 @@ class _TextFieldViewState extends State<TextFieldView> {
         ),
         decoration: InputDecoration(
           labelText: widget.labelText,
-          labelStyle: TextStyle(color: colorFile.kGreyTextColor),
+          labelStyle: TextStyle(
+            color: colorFile.kGreyTextColor,
+            fontSize: 14,
+          ),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
           enabledBorder: OutlineInputBorder(
