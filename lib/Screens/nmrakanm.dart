@@ -1,5 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-import 'package:bashakam_barawzanko/Screens/tomarkrdni_nmra.dart';
+import 'package:bashakam_barawzanko/Screens/ababy_or_3ilmy.dart';
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -15,7 +15,6 @@ class Nmrakanm extends StatefulWidget {
 class _NmrakanmState extends State<Nmrakanm> {
   ColorFile colorFile = ColorFile();
   SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
-  
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +83,7 @@ class _NmrakanmState extends State<Nmrakanm> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const TomarkrdniNmraPage()),
+                    builder: (context) => const AdabayOr3ilmyPage()),
               );
             },
             child: const Icon(Icons.add),

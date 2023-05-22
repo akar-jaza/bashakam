@@ -21,8 +21,7 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
       TextEditingController();
   final TextEditingController _biologyTextController = TextEditingController();
   final TextEditingController _physicTextController = TextEditingController();
-  final TextEditingController _arabicAndAiinTextController =
-      TextEditingController();
+  final TextEditingController _arabicAndAiinTextController = TextEditingController();
 
   @override
   void dispose() {
