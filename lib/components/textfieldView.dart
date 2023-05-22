@@ -27,12 +27,13 @@ class TextFieldView extends StatelessWidget {
           fontFamily: 'Roboto',
         ),
         decoration: InputDecoration(
+          hintText: labelText,
           labelText: labelText,
           labelStyle:
               MaterialStateTextStyle.resolveWith((Set<MaterialState> states) {
             final Color color = states.contains(MaterialState.focused)
                 ? Colors.white10
-                : colorFile.kBoldBlueTextColor;
+                : colorFile.kWhiteTextColor;
             return TextStyle(color: color);
           }),
           contentPadding:
