@@ -39,7 +39,7 @@ class AdabayOr3ilmyPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MyCard(
-                  imageAsset: 'assets/images/id.svg',
+                  imageAsset: 'assets/images/ilmy.svg',
                   buttonTitle: 'ببینە',
                   color: colorFile.kWhiteTextColor,
                   text: 'زانستی',
@@ -51,10 +51,10 @@ class AdabayOr3ilmyPage extends StatelessWidget {
                   },
                 ),
                 MyCard(
-                  imageAsset: 'assets/images/list3.svg',
-                  buttonTitle: 'بکە',
+                  imageAsset: 'assets/images/wezhayIcon.svg',
+                  buttonTitle: 'ببینە',
                   color: colorFile.kWhiteTextColor,
-                  text: 'ئەدەبی',
+                  text: 'وێژەیی',
                 ),
               ],
             ),

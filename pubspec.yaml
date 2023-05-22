@@ -69,6 +69,8 @@ flutter:
     - assets/images/id.svg
     - assets/images/ListIsEmpty.svg
     - assets/images/arrow.svg
+    - assets/images/ilmy.svg
+    - assets/images/wezhayIcon.svg
 
 
   #   - images/a_dot_ham.jpeg
