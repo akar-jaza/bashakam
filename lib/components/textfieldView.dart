@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../constantes/Colors.dart';
 
-class TextFieldView extends StatelessWidget {
+class TextFieldView extends StatefulWidget {
   const TextFieldView({
     super.key,
     required TextEditingController textController,
@@ -14,20 +14,27 @@ class TextFieldView extends StatelessWidget {
   final String labelText;
 
   @override
+  State<TextFieldView> createState() => _TextFieldViewState();
+}
+
+class _TextFieldViewState extends State<TextFieldView> {
+  bool _isFocused = false;
+
+  @override
   Widget build(BuildContext context) {
     ColorFile colorFile = ColorFile();
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: TextField(
-        controller: _textController,
+        controller: widget._textController,
         cursorColor: colorFile.kblueColor,
         style: TextStyle(
           color: colorFile.kWhiteTextColor,
           fontFamily: 'Roboto',
         ),
         decoration: InputDecoration(
-          labelText: labelText,
+          labelText: widget.labelText,
           labelStyle: TextStyle(
             color: colorFile.kblueColor,
           ),
