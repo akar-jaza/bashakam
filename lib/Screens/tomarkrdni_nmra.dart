@@ -14,25 +14,25 @@ class TomarkrdniNmraPage extends StatefulWidget {
 }
 
 class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
-  final TextEditingController _textController = TextEditingController();
-  final TextEditingController _textController2 = TextEditingController();
-  final TextEditingController _textController3 = TextEditingController();
-  final TextEditingController _textController4 = TextEditingController();
-  final TextEditingController _textController5 = TextEditingController();
-  final TextEditingController _textController6 = TextEditingController();
-  final TextEditingController _textController7 = TextEditingController();
-  final TextEditingController _textController8 = TextEditingController();
+  final TextEditingController _mathTextController = TextEditingController();
+  final TextEditingController _englishTextController = TextEditingController();
+  final TextEditingController _kurdiTextController = TextEditingController();
+  final TextEditingController _chemistryTextController =
+      TextEditingController();
+  final TextEditingController _biologyTextController = TextEditingController();
+  final TextEditingController _physicTextController = TextEditingController();
+  final TextEditingController _arabicAndAiinTextController =
+      TextEditingController();
 
   @override
   void dispose() {
-    _textController.dispose();
-    _textController2.dispose();
-    _textController3.dispose();
-    _textController4.dispose();
-    _textController5.dispose();
-    _textController6.dispose();
-    _textController7.dispose();
-    _textController8.dispose();
+    _mathTextController.dispose();
+    _englishTextController.dispose();
+    _kurdiTextController.dispose();
+    _chemistryTextController.dispose();
+    _biologyTextController.dispose();
+    _physicTextController.dispose();
+    _arabicAndAiinTextController.dispose();
 
     super.dispose();
   }
@@ -71,7 +71,7 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                    textController: _textController,
+                    textController: _mathTextController,
                     labelText: 'بیرکاری',
                   ),
                 ),
@@ -79,7 +79,7 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                    textController: _textController2,
+                    textController: _englishTextController,
                     labelText: 'ئینگلیزی',
                   ),
                 ),
@@ -94,7 +94,7 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                    textController: _textController3,
+                    textController: _kurdiTextController,
                     labelText: 'کوردی',
                   ),
                 ),
@@ -102,7 +102,7 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                    textController: _textController4,
+                    textController: _chemistryTextController,
                     labelText: 'کیمیا',
                   ),
                 ),
@@ -117,7 +117,7 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                    textController: _textController5,
+                    textController: _biologyTextController,
                     labelText: 'زیندەوەرزانی',
                   ),
                 ),
@@ -125,8 +125,8 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                    textController: _textController6,
-                    labelText: 'کوردی',
+                    textController: _physicTextController,
+                    labelText: 'فیزیا',
                   ),
                 ),
               ],
@@ -134,25 +134,20 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
             SizedBox(
               height: 20,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 170,
-                  child: TextFieldView(
-                    textController: _textController7,
-                    labelText: 'عەرەبی',
+            Padding(
+              padding: EdgeInsets.only(left: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: 170,
+                    child: TextFieldView(
+                      textController: _arabicAndAiinTextController,
+                      labelText: 'عەرەبی و ئایین',
+                    ),
                   ),
-                ),
-                SizedBox(width: 20),
-                SizedBox(
-                  width: 170,
-                  child: TextFieldView(
-                    textController: _textController8,
-                    labelText: 'کوردی',
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
             SizedBox(
               height: 20,
