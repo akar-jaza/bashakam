@@ -23,7 +23,7 @@ class _MyButtonState extends State<MyButton> {
         onPressed: () {},
         child: const Text(
           'تۆمار بکە',
-          style: TextStyle(fontSize: 14),
+          style: TextStyle(fontSize: 15),
         ),
       ),
     );
