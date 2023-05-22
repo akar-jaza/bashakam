@@ -42,7 +42,7 @@ class AdabayOr3ilmyPage extends StatelessWidget {
                   imageAsset: 'assets/images/id.svg',
                   buttonTitle: 'ببینە',
                   color: colorFile.kWhiteTextColor,
-                  text: 'نمرەکانم',
+                  text: 'زانستی',
                   onTap: () {
                     Navigator.push(
                       context,
@@ -54,7 +54,7 @@ class AdabayOr3ilmyPage extends StatelessWidget {
                   imageAsset: 'assets/images/list3.svg',
                   buttonTitle: 'بکە',
                   color: colorFile.kWhiteTextColor,
-                  text: 'ڕیزبەندی بکە',
+                  text: 'ئەدەبی',
                 ),
               ],
             ),
