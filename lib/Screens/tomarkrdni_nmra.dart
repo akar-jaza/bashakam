@@ -57,6 +57,9 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
       body: Center(
         child: Column(
           children: [
+            SizedBox(
+              height: 20,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
