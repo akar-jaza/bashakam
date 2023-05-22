@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:bashakam_barawzanko/components/my_button.dart';
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
 
@@ -149,6 +150,10 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 ),
               ],
             ),
+            SizedBox(
+              height: 20,
+            ),
+            MyButton()
           ],
         ),
       ),
