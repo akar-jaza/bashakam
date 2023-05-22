@@ -27,6 +27,7 @@ class MyCard extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       splashColor: colorFile.kappBarColor,
+      borderRadius: BorderRadius.circular(6),
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 7, vertical: 10),
         height: 150,
