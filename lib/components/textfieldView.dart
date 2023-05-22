@@ -18,7 +18,10 @@ class TextFieldView extends StatefulWidget {
 }
 
 class _TextFieldViewState extends State<TextFieldView> {
-  bool _isFocused = false;
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,17 +38,7 @@ class _TextFieldViewState extends State<TextFieldView> {
         ),
         decoration: InputDecoration(
           labelText: widget.labelText,
-          labelStyle: TextStyle(
-            color: colorFile.kblueColor,
-          ),
-          // labelStyle: MaterialStateTextStyle.resolveWith(
-          //   (Set<MaterialState> states) {
-          //     final Color color = states.contains(MaterialState.focused)
-          //         ? colorFile.kWhiteTextColor
-          //         : colorFile.kWhiteTextColor;
-          //     return TextStyle(color: color);
-          //   },
-          // ),
+          labelStyle: TextStyle(color: colorFile.kGreyTextColor),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
           enabledBorder: OutlineInputBorder(
