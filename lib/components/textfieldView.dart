@@ -28,13 +28,17 @@ class TextFieldView extends StatelessWidget {
         ),
         decoration: InputDecoration(
           labelText: labelText,
-          labelStyle:
-              MaterialStateTextStyle.resolveWith((Set<MaterialState> states) {
-            final Color color = states.contains(MaterialState.focused)
-                ? colorFile.kWhiteTextColor
-                : colorFile.kWhiteTextColor;
-            return TextStyle(color: color);
-          }),
+          labelStyle: TextStyle(
+            color: colorFile.kblueColor,
+          ),
+          // labelStyle: MaterialStateTextStyle.resolveWith(
+          //   (Set<MaterialState> states) {
+          //     final Color color = states.contains(MaterialState.focused)
+          //         ? colorFile.kWhiteTextColor
+          //         : colorFile.kWhiteTextColor;
+          //     return TextStyle(color: color);
+          //   },
+          // ),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
           enabledBorder: OutlineInputBorder(
