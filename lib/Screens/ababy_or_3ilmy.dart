@@ -3,7 +3,7 @@ import 'package:bashakam_barawzanko/Screens/nmrakanm.dart';
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
 
-import '../components/card.dart';
+import '../components/my_card.dart';
 
 class AdabayOr3ilmyPage extends StatelessWidget {
   const AdabayOr3ilmyPage({super.key});
