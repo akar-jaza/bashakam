@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:bashakam_barawzanko/Screens/nmrakanm.dart';
+import 'package:bashakam_barawzanko/Screens/tomarkrdni_nmra.dart';
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +47,8 @@ class AdabayOr3ilmyPage extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Nmrakanm()),
+                      MaterialPageRoute(
+                          builder: (context) => const TomarkrdniNmraPage()),
                     );
                   },
                 ),
