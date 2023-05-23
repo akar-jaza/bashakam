@@ -11,8 +11,8 @@ Bashakam is a mobile application designed to help students in Iraqi Kurdistan de
 
 ## Screenshots
 <img src="https://github.com/akar-jaza/bashakam/assets/64991287/f934a975-778c-4d73-9fc7-feda11cec681" width="200" height="400" />
-![Screenshot](https://github.com/akar-jaza/bashakam/assets/64991287/42acaba6-b80b-444a-ba5b-c8001ea938bb)
-![Screenshot](https://github.com/akar-jaza/bashakam/assets/64991287/50058993-8459-43e6-9020-4d6c05e50428)
+<img src="https://github.com/akar-jaza/bashakam/assets/64991287/42acaba6-b80b-444a-ba5b-c8001ea938bb" width="200" height="400" />
+<img src="https://github.com/akar-jaza/bashakam/assets/64991287/50058993-8459-43e6-9020-4d6c05e50428" width="200" height="400" />
 
 
 ## Technologies Used
