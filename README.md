@@ -9,6 +9,12 @@ Bashakam is a mobile application designed to help students in Iraqi Kurdistan de
 - Provides information about each department, including minimum grade requirements
 - Allows users to save and compare different sets of grades
 
+## Screenshots
+![Screenshot](https://imgur.com/a/4LXznGE)
+![Screenshot](https://imgur.com/a/9GlBUnj)
+![Screenshot](https://imgur.com/a/9GlBUnj)
+
+
 ## Technologies Used
 
 - Flutter for Android (Frontend)
