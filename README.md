@@ -12,8 +12,6 @@ Bashakam is a mobile application designed to help students in Iraqi Kurdistan de
 ## Technologies Used
 
 - Flutter for Android (Frontend)
-- SwiftUI for iOS (Frontend)
-- Firebase Realtime Database (Backend)
 - Firebase Authentication (Backend)
 
 ## Installation
