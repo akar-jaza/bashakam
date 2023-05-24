@@ -147,11 +147,8 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
                 SizedBox(width: 20),
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
-                    textController: _arabicAndAiinTextController,
-                    labelText: 'عەرەبی و ئایین',
-                  ),
-                ),
+                  child: null,
+                )
               ],
             ),
             SizedBox(
