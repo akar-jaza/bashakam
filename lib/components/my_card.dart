@@ -55,6 +55,9 @@ class MyCard extends StatelessWidget {
               imageAsset,
               height: 50,
             ),
+            SizedBox(
+              height: 10,
+            ),
             TextButton(
               onPressed: onTap,
               child: Text(
