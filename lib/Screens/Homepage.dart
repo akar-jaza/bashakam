@@ -147,10 +147,10 @@ class _HomePageState extends State<HomePage> {
                       text: 'ڕیزبەندیەکانم',
                     ),
                     MyCard(
-                      imageAsset: 'assets/images/zarabin.svg',
+                      imageAsset: 'assets/images/departments.svg',
                       buttonTitle: 'ببینە',
                       color: colorFile.kWhiteTextColor,
-                      text: 'ڕیزبەندیەکانم',
+                      text: 'بەشەکان',
                     ),
                   ],
                 ),
