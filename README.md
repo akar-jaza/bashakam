@@ -9,7 +9,7 @@ Bashakam is a mobile application designed to help students in Iraqi Kurdistan de
 - Provides information about each department, including minimum grade requirements
 - Allows users to save and compare different sets of grades
 
-## Features
+## Warning 
 This application is in early development !
 
 ## Screenshots
