@@ -21,7 +21,8 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
       TextEditingController();
   final TextEditingController _biologyTextController = TextEditingController();
   final TextEditingController _physicTextController = TextEditingController();
-  final TextEditingController _arabicAndAiinTextController = TextEditingController();
+  final TextEditingController _arabicAndAiinTextController =
+      TextEditingController();
 
   @override
   void dispose() {
@@ -133,20 +134,25 @@ class _TomarkrdniNmraPageState extends State<TomarkrdniNmraPage> {
             SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 16),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: 170,
-                    child: TextFieldView(
-                      textController: _arabicAndAiinTextController,
-                      labelText: 'عەرەبی و ئایین',
-                    ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 170,
+                  child: TextFieldView(
+                    textController: _arabicAndAiinTextController,
+                    labelText: 'عەرەبی و ئایین',
                   ),
-                ],
-              ),
+                ),
+                SizedBox(width: 20),
+                SizedBox(
+                  width: 170,
+                  child: TextFieldView(
+                    textController: _arabicAndAiinTextController,
+                    labelText: 'عەرەبی و ئایین',
+                  ),
+                ),
+              ],
             ),
             SizedBox(
               height: 20,
