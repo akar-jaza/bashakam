@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../components/my_card.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -148,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                       text: 'ڕیزبەندیەکانم',
                     ),
                     MyCard(
-                      imageAsset: 'assets/images/zarabin.svg',
+                      imageAsset: 'assets/images/departments.svg',
                       buttonTitle: 'ببینە',
                       color: colorFile.kWhiteTextColor,
                       text: 'بەشەکان',
