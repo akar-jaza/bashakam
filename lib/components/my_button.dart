@@ -1,4 +1,4 @@
-import 'package:bashakam_barawzanko/constantes/Colors.dart';
+import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
 class MyButton extends StatefulWidget {
@@ -9,7 +9,7 @@ class MyButton extends StatefulWidget {
 }
 
 class _MyButtonState extends State<MyButton> {
-  ColorFile colorFile = ColorFile();
+  ThemeColors colorFile = ThemeColors();
   @override
   Widget build(BuildContext context) {
     return SizedBox(

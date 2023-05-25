@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:bashakam_barawzanko/components/my_button.dart';
-import 'package:bashakam_barawzanko/constantes/Colors.dart';
+import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../components/textfieldView.dart';
+import '../components/textfield_view.dart';
 
 class TomarkrdniNmrayWezhayPage extends StatefulWidget {
   const TomarkrdniNmrayWezhayPage({super.key});
@@ -40,12 +40,12 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
 
   @override
   Widget build(BuildContext context) {
-    ColorFile colorFile = ColorFile();
+    ThemeColors colorFile = ThemeColors();
     return Scaffold(
-      backgroundColor: colorFile.kbodyColor,
+      backgroundColor: colorFile.kBodyColor,
       appBar: AppBar(
         iconTheme: IconThemeData(color: colorFile.kWhiteTextColor),
-        backgroundColor: colorFile.kbodyColor,
+        backgroundColor: colorFile.kBodyColor,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {

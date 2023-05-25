@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:bashakam_barawzanko/components/my_button.dart';
-import 'package:bashakam_barawzanko/constantes/Colors.dart';
+import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../components/textfieldView.dart';
+import '../components/textfield_view.dart';
 
 class TomarkrdniNmrayZanstiPage extends StatefulWidget {
   const TomarkrdniNmrayZanstiPage({super.key});
@@ -40,12 +40,12 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
 
   @override
   Widget build(BuildContext context) {
-    ColorFile colorFile = ColorFile();
+
     return Scaffold(
-      backgroundColor: colorFile.kbodyColor,
+      backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: colorFile.kWhiteTextColor),
-        backgroundColor: colorFile.kbodyColor,
+        iconTheme: IconThemeData(color: ThemeColors.kWhiteTextColor),
+        backgroundColor: ThemeColors.kBodyColor,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -56,7 +56,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
           alignment: Alignment.centerRight,
           child: Text(
             'تۆمارکردنی نمرەکان',
-            style: TextStyle(color: colorFile.kWhiteTextColor),
+            style: TextStyle(color: ThemeColors.kWhiteTextColor),
           ),
         ),
       ),

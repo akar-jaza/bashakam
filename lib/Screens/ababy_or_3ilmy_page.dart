@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-import 'package:bashakam_barawzanko/Screens/nmrakanm.dart';
 import 'package:bashakam_barawzanko/Screens/tomarkrdni_nmray_wezhay.dart';
 import 'package:bashakam_barawzanko/Screens/tomarkrdni_nmray_zansty.dart';
-import 'package:bashakam_barawzanko/constantes/Colors.dart';
+import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../components/my_card.dart';
@@ -12,13 +11,13 @@ class AdabayOr3ilmyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ColorFile colorFile = ColorFile();
+    ThemeColors colorFile = ThemeColors();
 
     return Scaffold(
-      backgroundColor: colorFile.kbodyColor,
+      backgroundColor: colorFile.kBodyColor,
       appBar: AppBar(
         iconTheme: IconThemeData(color: colorFile.kWhiteTextColor),
-        backgroundColor: colorFile.kbodyColor,
+        backgroundColor: colorFile.kBodyColor,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {

@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:bashakam_barawzanko/Screens/nmrakanm.dart';
-import 'package:bashakam_barawzanko/constantes/Colors.dart';
+import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:bashakam_barawzanko/constantes/systemUiOverlayFunc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  ColorFile colorFile = ColorFile();
+  ThemeColors colorFile = ThemeColors();
   SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
 
   @override
@@ -27,9 +27,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: colorFile.kbodyColor,
+        backgroundColor: colorFile.kBodyColor,
         appBar: AppBar(
-          backgroundColor: colorFile.kbodyColor,
+          backgroundColor: colorFile.kBodyColor,
           title: Center(
             child: Text(
               '🎓 بەشەکەم',

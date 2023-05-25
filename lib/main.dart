@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'Screens/Homepage.dart';
-import 'constantes/Colors.dart';
+import 'constantes/colors.dart';
 import 'constantes/SystemUiOverlayFunc.dart';
 
 void main() {
@@ -13,7 +13,7 @@ void main() {
 
 // ignore: use_key_in_widget_constructors
 class Main extends StatelessWidget {
-  final ColorFile colorFile = ColorFile();
+  final ThemeColors colorFile = ThemeColors();
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
-import 'package:bashakam_barawzanko/constantes/Colors.dart';
+import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +23,7 @@ class MyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ColorFile colorFile = ColorFile();
+    ThemeColors colorFile = ThemeColors();
     return InkWell(
       onTap: onTap,
       splashColor: colorFile.kappBarColor,

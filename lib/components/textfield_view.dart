@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../constantes/Colors.dart';
+import '../constantes/colors.dart';
 
 class TextFieldView extends StatefulWidget {
   const TextFieldView({
@@ -25,7 +25,7 @@ class _TextFieldViewState extends State<TextFieldView> {
 
   @override
   Widget build(BuildContext context) {
-    ColorFile colorFile = ColorFile();
+    ThemeColors colorFile = ThemeColors();
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
