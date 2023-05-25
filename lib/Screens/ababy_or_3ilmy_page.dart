@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:bashakam_barawzanko/Screens/nmrakanm.dart';
+import 'package:bashakam_barawzanko/Screens/tomarkrdni_nmray_wezhay.dart';
 import 'package:bashakam_barawzanko/Screens/tomarkrdni_nmray_zansty.dart';
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +64,7 @@ class AdabayOr3ilmyPage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              const TomarkrdniNmrayZanstiPage()),
+                              const TomarkrdniNmrayWezhayPage()),
                     );
                   },
                 ),

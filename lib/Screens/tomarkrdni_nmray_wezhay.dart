@@ -1,4 +1,3 @@
-
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:bashakam_barawzanko/components/my_button.dart';
@@ -11,28 +10,29 @@ class TomarkrdniNmrayWezhayPage extends StatefulWidget {
   const TomarkrdniNmrayWezhayPage({super.key});
 
   @override
-  State<TomarkrdniNmrayWezhayPage> createState() => _TomarkrdniNmrayWezhayPageState();
+  State<TomarkrdniNmrayWezhayPage> createState() =>
+      _TomarkrdniNmrayWezhayPageState();
 }
 
 class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
+  final TextEditingController _historyTextController = TextEditingController();
+  final TextEditingController _kurdishTextController = TextEditingController();
   final TextEditingController _mathTextController = TextEditingController();
-  final TextEditingController _englishTextController = TextEditingController();
-  final TextEditingController _kurdiTextController = TextEditingController();
-  final TextEditingController _chemistryTextController =
+  final TextEditingController _geographyTextController =
       TextEditingController();
-  final TextEditingController _biologyTextController = TextEditingController();
-  final TextEditingController _physicTextController = TextEditingController();
+  final TextEditingController _economyTextController = TextEditingController();
+  final TextEditingController _englishTextController = TextEditingController();
   final TextEditingController _arabicAndAiinTextController =
       TextEditingController();
 
   @override
   void dispose() {
+    _historyTextController.dispose();
+    _kurdishTextController.dispose();
     _mathTextController.dispose();
+    _geographyTextController.dispose();
+    _economyTextController.dispose();
     _englishTextController.dispose();
-    _kurdiTextController.dispose();
-    _chemistryTextController.dispose();
-    _biologyTextController.dispose();
-    _physicTextController.dispose();
     _arabicAndAiinTextController.dispose();
 
     super.dispose();
@@ -72,8 +72,54 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
+                    textController: _historyTextController,
+                    labelText: 'مێژوو',
+                  ),
+                ),
+                SizedBox(width: 20),
+                SizedBox(
+                  width: 170,
+                  child: TextFieldView(
+                    textController: _kurdishTextController,
+                    labelText: 'کوردی',
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 170,
+                  child: TextFieldView(
                     textController: _mathTextController,
                     labelText: 'بیرکاری',
+                  ),
+                ),
+                SizedBox(width: 20),
+                SizedBox(
+                  width: 170,
+                  child: TextFieldView(
+                    textController: _geographyTextController,
+                    labelText: 'ئایین و زمانی عەرەبی',
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 170,
+                  child: TextFieldView(
+                    textController: _economyTextController,
+                    labelText: 'ئابووری',
                   ),
                 ),
                 SizedBox(width: 20),
@@ -95,54 +141,8 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                 SizedBox(
                   width: 170,
                   child: TextFieldView(
-                    textController: _kurdiTextController,
-                    labelText: 'کوردی',
-                  ),
-                ),
-                SizedBox(width: 20),
-                SizedBox(
-                  width: 170,
-                  child: TextFieldView(
-                    textController: _chemistryTextController,
-                    labelText: 'کیمیا',
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 170,
-                  child: TextFieldView(
-                    textController: _biologyTextController,
-                    labelText: 'زیندەوەرزانی',
-                  ),
-                ),
-                SizedBox(width: 20),
-                SizedBox(
-                  width: 170,
-                  child: TextFieldView(
-                    textController: _physicTextController,
-                    labelText: 'فیزیا',
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 170,
-                  child: TextFieldView(
-                    textController: _arabicAndAiinTextController,
-                    labelText: 'عەرەبی و ئایین',
+                    textController: _geographyTextController,
+                    labelText: 'جوگرافیا',
                   ),
                 ),
                 SizedBox(width: 20),
