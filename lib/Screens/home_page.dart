@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:bashakam_barawzanko/Screens/nmrakanm.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
-import 'package:bashakam_barawzanko/constantes/systemUiOverlayFunc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../components/my_card.dart';
+import '../constantes/system_ui_overlay_func.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
