@@ -30,7 +30,7 @@ class MyCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(6),
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 7, vertical: 10),
-        height: 150,
+        height: 160,
         width: 135,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6),
