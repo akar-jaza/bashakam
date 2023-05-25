@@ -1,3 +1,4 @@
+
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:bashakam_barawzanko/components/my_button.dart';
@@ -6,15 +7,14 @@ import 'package:flutter/material.dart';
 
 import '../components/textfieldView.dart';
 
-class TomarkrdniNmrayZanstiPage extends StatefulWidget {
-  const TomarkrdniNmrayZanstiPage({super.key});
+class TomarkrdniNmrayWezhayPage extends StatefulWidget {
+  const TomarkrdniNmrayWezhayPage({super.key});
 
   @override
-  State<TomarkrdniNmrayZanstiPage> createState() =>
-      _TomarkrdniNmrayZanstiPageState();
+  State<TomarkrdniNmrayWezhayPage> createState() => _TomarkrdniNmrayWezhayPageState();
 }
 
-class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
+class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
   final TextEditingController _mathTextController = TextEditingController();
   final TextEditingController _englishTextController = TextEditingController();
   final TextEditingController _kurdiTextController = TextEditingController();

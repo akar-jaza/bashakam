@@ -48,7 +48,8 @@ class AdabayOr3ilmyPage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const TomarkrdniNmraPage()),
+                          builder: (context) =>
+                              const TomarkrdniNmrayZanstiPage()),
                     );
                   },
                 ),
@@ -57,6 +58,14 @@ class AdabayOr3ilmyPage extends StatelessWidget {
                   buttonTitle: 'ببینە',
                   color: colorFile.kWhiteTextColor,
                   text: 'وێژەیی',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const TomarkrdniNmrayZanstiPage()),
+                    );
+                  },
                 ),
               ],
             ),
