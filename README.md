@@ -9,11 +9,11 @@ Bashakam is a mobile application designed to help students in Iraqi Kurdistan de
 - Provides information about each department, including minimum grade requirements
 - Allows users to save and compare different sets of grades
 
-## Warning 
-This application is in early development !
+## Warning ⚠️
+This application is in early development ！
 
 ## Screenshots
-<img src="https://github.com/akar-jaza/bashakam/assets/64991287/efb00223-0d07-4c2c-8efd-b6f80e2f728b" width="200" height="400" />
+<img src="https://github.com/akar-jaza/bashakam/assets/64991287/1d114501-de5f-4bf0-a6d3-5977f66f878f" width="200" height="400" />
 <img src="https://github.com/akar-jaza/bashakam/assets/64991287/42acaba6-b80b-444a-ba5b-c8001ea938bb" width="200" height="400" />
 <img src="https://github.com/akar-jaza/bashakam/assets/64991287/50058993-8459-43e6-9020-4d6c05e50428" width="200" height="400" />
 
