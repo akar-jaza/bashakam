@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'Screens/Homepage.dart';
+import 'Screens/home_page.dart';
 import 'constantes/colors.dart';
-import 'constantes/SystemUiOverlayFunc.dart';
+import 'constantes/system_ui_overlay_func.dart';
 
 void main() {
   SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
