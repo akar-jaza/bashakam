@@ -14,7 +14,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  ThemeColors colorFile = ThemeColors();
   SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
 
   @override
@@ -27,15 +26,15 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: colorFile.kBodyColor,
+        backgroundColor: ThemeColors.kBodyColor,
         appBar: AppBar(
-          backgroundColor: colorFile.kBodyColor,
+          backgroundColor: ThemeColors.kBodyColor,
           title: Center(
             child: Text(
               '🎓 بەشەکەم',
               style: TextStyle(
                 fontSize: 18,
-                color: colorFile.kWhiteTextColor,
+                color: ThemeColors.kWhiteTextColor,
                 fontFamily: 'rabarBold',
               ),
             ),
@@ -90,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                   'ڕیزبەندی بکە لەگەڵ ئەپڵیکەیشنی',
                   style: TextStyle(
                     fontSize: 18,
-                    color: colorFile.kWhiteTextColor,
+                    color: ThemeColors.kWhiteTextColor,
                     fontFamily: 'rabarBold',
                   ),
                 ),
@@ -98,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                   '🎓 بەشەکەم',
                   style: TextStyle(
                     fontSize: 18,
-                    color: colorFile.kWhiteTextColor,
+                    color: ThemeColors.kWhiteTextColor,
                     fontFamily: 'rabarBold',
                   ),
                 ),
@@ -106,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   'ڕیزبەندی بکە، ڕیزبەندیەکانت ببینە، زانیاری لەسەر بەشەکان ببینە',
                   style: TextStyle(
-                    color: colorFile.kGreyTextColor,
+                    color: ThemeColors.kGreyTextColor,
                     fontSize: 12,
                   ),
                 ),
@@ -119,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                     MyCard(
                       imageAsset: 'assets/images/id.svg',
                       buttonTitle: 'ببینە',
-                      color: colorFile.kWhiteTextColor,
+                      color: ThemeColors.kWhiteTextColor,
                       text: 'نمرەکانم',
                       onTap: () {
                         Navigator.push(
@@ -132,7 +131,7 @@ class _HomePageState extends State<HomePage> {
                     MyCard(
                       imageAsset: 'assets/images/list3.svg',
                       buttonTitle: 'بکە',
-                      color: colorFile.kWhiteTextColor,
+                      color: ThemeColors.kWhiteTextColor,
                       text: 'ڕیزبەندی بکە',
                     ),
                   ],
@@ -143,13 +142,13 @@ class _HomePageState extends State<HomePage> {
                     MyCard(
                       imageAsset: 'assets/images/zarabin.svg',
                       buttonTitle: 'ببینە',
-                      color: colorFile.kWhiteTextColor,
+                      color: ThemeColors.kWhiteTextColor,
                       text: 'ڕیزبەندیەکانم',
                     ),
                     MyCard(
                       imageAsset: 'assets/images/departments.svg',
                       buttonTitle: 'ببینە',
-                      color: colorFile.kWhiteTextColor,
+                      color: ThemeColors.kWhiteTextColor,
                       text: 'بەشەکان',
                     ),
                   ],
