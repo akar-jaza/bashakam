@@ -25,32 +25,31 @@ class _TextFieldViewState extends State<TextFieldView> {
 
   @override
   Widget build(BuildContext context) {
-    ThemeColors colorFile = ThemeColors();
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: TextField(
         controller: widget._textController,
-        cursorColor: colorFile.kblueColor,
-        style: TextStyle(
-          color: colorFile.kWhiteTextColor,
+        cursorColor: ThemeColors.kblueColor,
+        style: const TextStyle(
+          color: ThemeColors.kWhiteTextColor,
           fontFamily: 'Roboto',
         ),
         decoration: InputDecoration(
           labelText: widget.labelText,
-          labelStyle: TextStyle(
-            color: colorFile.kGreyTextColor,
+          labelStyle: const TextStyle(
+            color: ThemeColors.kGreyTextColor,
             fontSize: 14,
           ),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: colorFile.kMyCardColor),
+          enabledBorder: const OutlineInputBorder(
+            borderSide: BorderSide(color: ThemeColors.kMyCardColor),
           ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: colorFile.kMyCardColor),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(color: ThemeColors.kMyCardColor),
           ),
-          fillColor: colorFile.kMyCardColor,
+          fillColor: ThemeColors.kMyCardColor,
           filled: true,
         ),
         enableInteractiveSelection: true,

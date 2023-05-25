@@ -40,12 +40,11 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
 
   @override
   Widget build(BuildContext context) {
-    ThemeColors colorFile = ThemeColors();
     return Scaffold(
-      backgroundColor: colorFile.kBodyColor,
+      backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: colorFile.kWhiteTextColor),
-        backgroundColor: colorFile.kBodyColor,
+        iconTheme: IconThemeData(color: ThemeColors.kWhiteTextColor),
+        backgroundColor: ThemeColors.kBodyColor,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -56,7 +55,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
           alignment: Alignment.centerRight,
           child: Text(
             'تۆمارکردنی نمرەکان',
-            style: TextStyle(color: colorFile.kWhiteTextColor),
+            style: TextStyle(color: ThemeColors.kWhiteTextColor),
           ),
         ),
       ),

@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:bashakam_barawzanko/Screens/ababy_or_3ilmy_page.dart';
-import 'package:bashakam_barawzanko/constantes/Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../constantes/Colors.dart';
 import '../constantes/SystemUiOverlayFunc.dart';
 
 class Nmrakanm extends StatefulWidget {
@@ -13,17 +13,16 @@ class Nmrakanm extends StatefulWidget {
 }
 
 class _NmrakanmState extends State<Nmrakanm> {
-  ColorFile colorFile = ColorFile();
   SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
 
   @override
   Widget build(BuildContext context) {
     uiOverlayFunc.systemUiOverlay();
     return Scaffold(
-      backgroundColor: colorFile.kbodyColor,
+      backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: colorFile.kWhiteTextColor),
-        backgroundColor: colorFile.kbodyColor,
+        iconTheme: IconThemeData(color: ThemeColors.kWhiteTextColor),
+        backgroundColor: ThemeColors.kBodyColor,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -34,7 +33,7 @@ class _NmrakanmState extends State<Nmrakanm> {
           alignment: Alignment.centerRight,
           child: Text(
             'نمرەکانم',
-            style: TextStyle(color: colorFile.kWhiteTextColor),
+            style: TextStyle(color: ThemeColors.kWhiteTextColor),
           ),
         ),
       ),
@@ -49,14 +48,14 @@ class _NmrakanmState extends State<Nmrakanm> {
             Text(
               '! نمرەکانت تۆمار نەکراوە',
               style: TextStyle(
-                color: colorFile.kWhiteTextColor,
+                color: ThemeColors.kWhiteTextColor,
                 fontSize: 18,
               ),
             ),
             Text(
               '.تکایە نمرەکانت تۆمار بکە',
               style: TextStyle(
-                color: colorFile.kWhiteTextColor,
+                color: ThemeColors.kWhiteTextColor,
                 fontSize: 18,
               ),
             ),
@@ -78,7 +77,7 @@ class _NmrakanmState extends State<Nmrakanm> {
             width: 50,
           ),
           FloatingActionButton(
-            backgroundColor: colorFile.kblueColor,
+            backgroundColor: ThemeColors.kblueColor,
             onPressed: () {
               Navigator.push(
                 context,

@@ -11,13 +11,12 @@ class AdabayOr3ilmyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ThemeColors colorFile = ThemeColors();
 
     return Scaffold(
-      backgroundColor: colorFile.kBodyColor,
+      backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: colorFile.kWhiteTextColor),
-        backgroundColor: colorFile.kBodyColor,
+        iconTheme: IconThemeData(color: ThemeColors.kWhiteTextColor),
+        backgroundColor: ThemeColors.kBodyColor,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -28,7 +27,7 @@ class AdabayOr3ilmyPage extends StatelessWidget {
           alignment: Alignment.centerRight,
           child: Text(
             '🧐 زانستیت یان ئەدەبی',
-            style: TextStyle(color: colorFile.kWhiteTextColor),
+            style: TextStyle(color: ThemeColors.kWhiteTextColor),
           ),
         ),
       ),
@@ -42,7 +41,7 @@ class AdabayOr3ilmyPage extends StatelessWidget {
                 MyCard(
                   imageAsset: 'assets/images/ilmy.svg',
                   buttonTitle: 'ببینە',
-                  color: colorFile.kWhiteTextColor,
+                  color: ThemeColors.kWhiteTextColor,
                   text: 'زانستی',
                   onTap: () {
                     Navigator.push(
@@ -56,7 +55,7 @@ class AdabayOr3ilmyPage extends StatelessWidget {
                 MyCard(
                   imageAsset: 'assets/images/wezhayIcon.svg',
                   buttonTitle: 'ببینە',
-                  color: colorFile.kWhiteTextColor,
+                  color: ThemeColors.kWhiteTextColor,
                   text: 'وێژەیی',
                   onTap: () {
                     Navigator.push(

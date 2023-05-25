@@ -9,7 +9,6 @@ class MyButton extends StatefulWidget {
 }
 
 class _MyButtonState extends State<MyButton> {
-  ThemeColors colorFile = ThemeColors();
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -17,9 +16,9 @@ class _MyButtonState extends State<MyButton> {
       width: 300,
       child: FilledButton(
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(colorFile.kblueColor),
+            backgroundColor: MaterialStateProperty.all(ThemeColors.kblueColor),
             foregroundColor:
-                MaterialStateProperty.all(colorFile.kBoldBlueTextColor)),
+                MaterialStateProperty.all(ThemeColors.kBoldBlueTextColor)),
         onPressed: () {},
         child: const Text(
           'تۆمار بکە',

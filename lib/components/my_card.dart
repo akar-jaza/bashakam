@@ -23,10 +23,9 @@ class MyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ThemeColors colorFile = ThemeColors();
     return InkWell(
       onTap: onTap,
-      splashColor: colorFile.kappBarColor,
+      splashColor: ThemeColors.kappBarColor,
       borderRadius: BorderRadius.circular(6),
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 7, vertical: 10),
@@ -34,7 +33,7 @@ class MyCard extends StatelessWidget {
         width: 135,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6),
-          color: colorFile.kMyCardColor,
+          color: ThemeColors.kMyCardColor,
         ),
         child: Column(
           children: [
@@ -46,7 +45,7 @@ class MyCard extends StatelessWidget {
                   text,
                   textAlign: TextAlign.right,
                   style:
-                      TextStyle(color: colorFile.kWhiteTextColor, fontSize: 13),
+                      TextStyle(color: ThemeColors.kWhiteTextColor, fontSize: 13),
                 ),
               ),
             ),
@@ -62,7 +61,7 @@ class MyCard extends StatelessWidget {
               onPressed: onTap,
               child: Text(
                 buttonTitle,
-                style: TextStyle(color: colorFile.kblueColor),
+                style: TextStyle(color: ThemeColors.kblueColor),
               ),
             ),
           ],
