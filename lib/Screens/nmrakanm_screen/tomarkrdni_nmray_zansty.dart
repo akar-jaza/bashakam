@@ -170,111 +170,41 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
             ),
             MyButton(
               onPressed: () {
+                bool anyFieldIsEmpty = false;
+
                 if (_mathTextController.text.isEmpty) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        'تکایە نمرەی وانەکان تۆمار بکە و بە بەتاڵی جێی مەهێڵە',
-                        textAlign: TextAlign.end,
-                        style: TextStyle(
-                          fontFamily: 'rabarBold',
-                        ),
-                      ),
-                    ),
-                  );
-                  setState(() {
-                    _mathTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
-                  });
-                  return;
+                  anyFieldIsEmpty = true;
+                  _mathTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
                 }
                 if (_englishTextController.text.isEmpty) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        'تکایە نمرەی وانەکان تۆمار بکە و بە بەتاڵی جێی مەهێڵە',
-                        textAlign: TextAlign.end,
-                        style: TextStyle(
-                          fontFamily: 'rabarBold',
-                        ),
-                      ),
-                    ),
-                  );
-                  setState(() {
-                    _englishTextfieldcolor =
-                        ThemeColors.kTextfieledIsEmptyColor;
-                  });
+                  anyFieldIsEmpty = true;
+                  _englishTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
                 }
                 if (_kurdiTextController.text.isEmpty) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        'تکایە نمرەی وانەکان تۆمار بکە و بە بەتاڵی جێی مەهێڵە',
-                        textAlign: TextAlign.end,
-                        style: TextStyle(
-                          fontFamily: 'rabarBold',
-                        ),
-                      ),
-                    ),
-                  );
-                  setState(() {
-                    _kurdishTextfieldcolor =
-                        ThemeColors.kTextfieledIsEmptyColor;
-                  });
+                  anyFieldIsEmpty = true;
+                  _kurdishTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
                 }
                 if (_chemistryTextController.text.isEmpty) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        'تکایە نمرەی وانەکان تۆمار بکە و بە بەتاڵی جێی مەهێڵە',
-                        textAlign: TextAlign.end,
-                        style: TextStyle(
-                          fontFamily: 'rabarBold',
-                        ),
-                      ),
-                    ),
-                  );
-                  setState(() {
-                    _chemistryTextfieldcolor =
-                        ThemeColors.kTextfieledIsEmptyColor;
-                  });
-                  return;
+                  anyFieldIsEmpty = true;
+                  _chemistryTextfieldcolor =
+                      ThemeColors.kTextfieledIsEmptyColor;
                 }
                 if (_biologyTextController.text.isEmpty) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        'تکایە نمرەی وانەکان تۆمار بکە و بە بەتاڵی جێی مەهێڵە',
-                        textAlign: TextAlign.end,
-                        style: TextStyle(
-                          fontFamily: 'rabarBold',
-                        ),
-                      ),
-                    ),
-                  );
-                  setState(() {
-                    _biologyTextfieldcolor =
-                        ThemeColors.kTextfieledIsEmptyColor;
-                  });
-                  return;
+                  anyFieldIsEmpty = true;
+                  _biologyTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
                 }
                 if (_physicTextController.text.isEmpty) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        'تکایە نمرەی وانەکان تۆمار بکە و بە بەتاڵی جێی مەهێڵە',
-                        textAlign: TextAlign.end,
-                        style: TextStyle(
-                          fontFamily: 'rabarBold',
-                        ),
-                      ),
-                    ),
-                  );
-                  setState(() {
-                    _physicTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
-                  });
-                  return;
+                  anyFieldIsEmpty = true;
+                  _physicTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
                 }
                 if (_arabicAndAiinTextController.text.isEmpty) {
+                  anyFieldIsEmpty = true;
+                  _arabicAndAiinTextfieldcolor =
+                      ThemeColors.kTextfieledIsEmptyColor;
+                }
+
+                if (anyFieldIsEmpty) {
+                  setState(() {});
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
@@ -286,13 +216,10 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                       ),
                     ),
                   );
-                  setState(() {
-                    _arabicAndAiinTextfieldcolor =
-                        ThemeColors.kTextfieledIsEmptyColor;
-                  });
                   return;
                 }
 
+                // At least one field is filled, continue with your logic
                 double mathScore =
                     double.tryParse(_mathTextController.text) ?? 0;
                 double englishScore =
