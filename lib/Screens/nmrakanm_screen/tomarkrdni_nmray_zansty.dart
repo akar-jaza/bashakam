@@ -4,7 +4,7 @@ import 'package:bashakam_barawzanko/components/my_button.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/textfield_view.dart';
+import '../../components/my_textfiled.dart';
 
 class TomarkrdniNmrayZanstiPage extends StatefulWidget {
   const TomarkrdniNmrayZanstiPage({super.key});
@@ -72,7 +72,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
               children: [
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _mathTextController,
                     labelText: 'بیرکاری',
                   ),
@@ -80,7 +80,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                 SizedBox(width: 20),
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _englishTextController,
                     labelText: 'ئینگلیزی',
                   ),
@@ -95,7 +95,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
               children: [
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _kurdiTextController,
                     labelText: 'کوردی',
                   ),
@@ -103,7 +103,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                 SizedBox(width: 20),
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _chemistryTextController,
                     labelText: 'کیمیا',
                   ),
@@ -118,7 +118,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
               children: [
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _biologyTextController,
                     labelText: 'زیندەوەرزانی',
                   ),
@@ -126,7 +126,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                 SizedBox(width: 20),
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _physicTextController,
                     labelText: 'فیزیا',
                   ),
@@ -141,7 +141,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
               children: [
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _arabicAndAiinTextController,
                     labelText: 'عەرەبی و ئایین',
                   ),

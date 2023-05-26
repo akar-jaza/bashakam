@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 
 import '../constantes/colors.dart';
 
-class TextFieldView extends StatefulWidget {
-  const TextFieldView({
+class MyTextField extends StatefulWidget {
+  const MyTextField({
     super.key,
     required TextEditingController textController,
     required this.labelText,
@@ -14,10 +14,10 @@ class TextFieldView extends StatefulWidget {
   final String labelText;
 
   @override
-  State<TextFieldView> createState() => _TextFieldViewState();
+  State<MyTextField> createState() => _MyTextFieldState();
 }
 
-class _TextFieldViewState extends State<TextFieldView> {
+class _MyTextFieldState extends State<MyTextField> {
   @override
   void dispose() {
     super.dispose();
@@ -25,7 +25,6 @@ class _TextFieldViewState extends State<TextFieldView> {
 
   @override
   Widget build(BuildContext context) {
-
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: TextField(

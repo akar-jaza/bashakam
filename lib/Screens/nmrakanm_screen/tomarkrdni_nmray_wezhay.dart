@@ -4,7 +4,7 @@ import 'package:bashakam_barawzanko/components/my_button.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/textfield_view.dart';
+import '../../components/my_textfiled.dart';
 
 class TomarkrdniNmrayWezhayPage extends StatefulWidget {
   const TomarkrdniNmrayWezhayPage({super.key});
@@ -70,7 +70,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
               children: [
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _historyTextController,
                     labelText: 'مێژوو',
                   ),
@@ -78,7 +78,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                 SizedBox(width: 20),
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _kurdishTextController,
                     labelText: 'کوردی',
                   ),
@@ -93,7 +93,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
               children: [
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _mathTextController,
                     labelText: 'بیرکاری',
                   ),
@@ -101,7 +101,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                 SizedBox(width: 20),
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _geographyTextController,
                     labelText: 'ئایین و زمانی عەرەبی',
                   ),
@@ -116,7 +116,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
               children: [
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _economyTextController,
                     labelText: 'ئابووری',
                   ),
@@ -124,7 +124,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                 SizedBox(width: 20),
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _englishTextController,
                     labelText: 'ئینگلیزی',
                   ),
@@ -139,7 +139,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
               children: [
                 SizedBox(
                   width: 170,
-                  child: TextFieldView(
+                  child: MyTextField(
                     textController: _geographyTextController,
                     labelText: 'جوگرافیا',
                   ),
