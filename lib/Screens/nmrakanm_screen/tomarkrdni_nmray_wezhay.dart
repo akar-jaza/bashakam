@@ -4,7 +4,7 @@ import 'package:bashakam_barawzanko/components/my_button.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../components/textfield_view.dart';
+import '../../components/textfield_view.dart';
 
 class TomarkrdniNmrayWezhayPage extends StatefulWidget {
   const TomarkrdniNmrayWezhayPage({super.key});

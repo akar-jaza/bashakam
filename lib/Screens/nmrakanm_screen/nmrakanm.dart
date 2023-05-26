@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-import 'package:bashakam_barawzanko/Screens/ababy_or_3ilmy_page.dart';
+import 'package:bashakam_barawzanko/Screens/nmrakanm_screen/ababy_or_3ilmy_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../constantes/Colors.dart';
-import '../constantes/system_ui_overlay_func.dart';
+import '../../constantes/Colors.dart';
+import '../../constantes/system_ui_overlay_func.dart';
 
 class Nmrakanm extends StatefulWidget {
   const Nmrakanm({super.key});

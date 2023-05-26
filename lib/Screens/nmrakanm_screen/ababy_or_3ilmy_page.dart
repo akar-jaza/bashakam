@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-import 'package:bashakam_barawzanko/Screens/tomarkrdni_nmray_wezhay.dart';
-import 'package:bashakam_barawzanko/Screens/tomarkrdni_nmray_zansty.dart';
+import 'package:bashakam_barawzanko/Screens/nmrakanm_screen/tomarkrdni_nmray_wezhay.dart';
+import 'package:bashakam_barawzanko/Screens/nmrakanm_screen/tomarkrdni_nmray_zansty.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../components/my_card.dart';
+import '../../components/my_card.dart';
 
 class AdabayOr3ilmyPage extends StatelessWidget {
   const AdabayOr3ilmyPage({super.key});

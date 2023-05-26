@@ -1,5 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-import 'package:bashakam_barawzanko/Screens/nmrakanm.dart';
+import 'package:bashakam_barawzanko/Screens/nmrakanm_screen/nmrakanm.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
