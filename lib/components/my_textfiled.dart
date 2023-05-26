@@ -23,25 +23,15 @@ class MyTextField extends StatefulWidget {
 }
 
 class _MyTextFieldState extends State<MyTextField> {
-  bool _isEmpty = false;
 
   @override
   void initState() {
     super.initState();
-    widget._textController.addListener(_updateEmptyStatus);
-    _updateEmptyStatus();
   }
 
   @override
   void dispose() {
-    widget._textController.removeListener(_updateEmptyStatus);
     super.dispose();
-  }
-
-  void _updateEmptyStatus() {
-    setState(() {
-      _isEmpty = widget._textController.text.isEmpty;
-    });
   }
 
   @override
@@ -61,7 +51,8 @@ class _MyTextFieldState extends State<MyTextField> {
             color: ThemeColors.kGreyTextColor,
             fontSize: 14,
           ),
-          contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: widget.color,
