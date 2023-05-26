@@ -74,7 +74,6 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _historyTextController,
                     labelText: 'مێژوو',
-                    isButtonPressed: _isButtonPressed,
                     color: ThemeColors.kblueColor
                   ),
                 ),
@@ -84,7 +83,6 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _kurdishTextController,
                     labelText: 'کوردی',
-                    isButtonPressed: _isButtonPressed,
                     color: ThemeColors.kblueColor,
                   ),
                 ),
@@ -101,7 +99,6 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _mathTextController,
                     labelText: 'بیرکاری',
-                    isButtonPressed: _isButtonPressed,
                     color: ThemeColors.kblueColor,
                   ),
                 ),
@@ -111,7 +108,6 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _geographyTextController,
                     labelText: 'ئایین و زمانی عەرەبی',
-                    isButtonPressed: _isButtonPressed,
                     color: ThemeColors.kblueColor,
                   ),
                 ),
@@ -128,7 +124,6 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _economyTextController,
                     labelText: 'ئابووری',
-                    isButtonPressed: _isButtonPressed,
                     color: ThemeColors.kblueColor,
                   ),
                 ),
@@ -138,7 +133,6 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _englishTextController,
                     labelText: 'ئینگلیزی',
-                    isButtonPressed: _isButtonPressed,
                     color: ThemeColors.kblueColor,
                   ),
                 ),
@@ -155,7 +149,6 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _geographyTextController,
                     labelText: 'جوگرافیا',
-                    isButtonPressed: _isButtonPressed,
                     color: ThemeColors.kblueColor,
                   ),
                 ),

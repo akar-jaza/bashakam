@@ -8,14 +8,13 @@ class MyTextField extends StatefulWidget {
       {Key? key,
       required TextEditingController textController,
       required this.labelText,
-      required this.isButtonPressed,
       required this.color})
       : _textController = textController,
         super(key: key);
 
   final TextEditingController _textController;
   final String labelText;
-  final bool isButtonPressed;
+
   final Color color;
 
   @override

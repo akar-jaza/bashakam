@@ -78,7 +78,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _mathTextController,
                     labelText: 'بیرکاری',
-                    isButtonPressed: _isButtonPressed,
+                    
                     color: _color,
                   ),
                 ),
@@ -88,7 +88,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _englishTextController,
                     labelText: 'ئینگلیزی',
-                    isButtonPressed: _isButtonPressed,
+                   
                     color: _TextFieldColor,
                   ),
                 ),
@@ -105,7 +105,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _kurdiTextController,
                     labelText: 'کوردی',
-                    isButtonPressed: _isButtonPressed,
+                   
                     color: _TextFieldColor,
                   ),
                 ),
@@ -115,7 +115,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _chemistryTextController,
                     labelText: 'کیمیا',
-                    isButtonPressed: _isButtonPressed,
+                   
                     color: _TextFieldColor,
                   ),
                 ),
@@ -132,7 +132,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _biologyTextController,
                     labelText: 'زیندەوەرزانی',
-                    isButtonPressed: _isButtonPressed,
+                   
                     color: _TextFieldColor,
                   ),
                 ),
@@ -142,7 +142,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _physicTextController,
                     labelText: 'فیزیا',
-                    isButtonPressed: _isButtonPressed,
+                    
                     color: _TextFieldColor,
                   ),
                 ),
@@ -159,7 +159,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _arabicAndAiinTextController,
                     labelText: 'عەرەبی و ئایین',
-                    isButtonPressed: _isButtonPressed,
+                   
                     color: _TextFieldColor,
                   ),
                 ),
