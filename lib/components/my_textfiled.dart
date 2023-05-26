@@ -4,17 +4,19 @@ import 'package:flutter/services.dart';
 import '../constantes/colors.dart';
 
 class MyTextField extends StatefulWidget {
-  const MyTextField({
-    Key? key,
-    required TextEditingController textController,
-    required this.labelText,
-    required this.isButtonPressed,
-  })  : _textController = textController,
+  const MyTextField(
+      {Key? key,
+      required TextEditingController textController,
+      required this.labelText,
+      required this.isButtonPressed,
+      required this.color})
+      : _textController = textController,
         super(key: key);
 
   final TextEditingController _textController;
   final String labelText;
   final bool isButtonPressed;
+  final Color color;
 
   @override
   State<MyTextField> createState() => _MyTextFieldState();
@@ -59,20 +61,15 @@ class _MyTextFieldState extends State<MyTextField> {
             color: ThemeColors.kGreyTextColor,
             fontSize: 14,
           ),
-          contentPadding:
-              const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+          contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: (_isEmpty && widget.isButtonPressed)
-                  ? Colors.red
-                  : ThemeColors.kWhiteTextColor,
+              color: widget.color,
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: (_isEmpty && widget.isButtonPressed)
-                  ? Colors.red
-                  : ThemeColors.kblueColor,
+              color: widget.color,
             ),
           ),
           fillColor: ThemeColors.kMyCardColor,

@@ -28,6 +28,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
   static double zanstyFinalScore = 0;
 
   bool _isButtonPressed = false;
+  bool _isEmpty = false;
 
   @override
   void dispose() {
@@ -40,6 +41,19 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
     _arabicAndAiinTextController.dispose();
 
     super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _mathTextController.addListener(_updateEmptyStatus);
+    _updateEmptyStatus();
+  }
+
+  void _updateEmptyStatus() {
+    setState(() {
+      _isEmpty = _mathTextController.text.isEmpty;
+    });
   }
 
   @override
@@ -78,6 +92,9 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _mathTextController,
                     labelText: 'بیرکاری',
                     isButtonPressed: _isButtonPressed,
+                    color: (_isEmpty && _isButtonPressed)
+                        ? Colors.red
+                        : ThemeColors.kblueColor,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -87,6 +104,9 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _englishTextController,
                     labelText: 'ئینگلیزی',
                     isButtonPressed: _isButtonPressed,
+                    color: (_isEmpty && _isButtonPressed)
+                        ? Colors.red
+                        : ThemeColors.kblueColor,
                   ),
                 ),
               ],
@@ -103,6 +123,9 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _kurdiTextController,
                     labelText: 'کوردی',
                     isButtonPressed: _isButtonPressed,
+                    color: (_isEmpty && _isButtonPressed)
+                        ? Colors.red
+                        : ThemeColors.kblueColor,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -112,6 +135,9 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _chemistryTextController,
                     labelText: 'کیمیا',
                     isButtonPressed: _isButtonPressed,
+                    color: (_isEmpty && _isButtonPressed)
+                        ? Colors.red
+                        : ThemeColors.kblueColor,
                   ),
                 ),
               ],
@@ -128,6 +154,9 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _biologyTextController,
                     labelText: 'زیندەوەرزانی',
                     isButtonPressed: _isButtonPressed,
+                    color: (_isEmpty && _isButtonPressed)
+                        ? Colors.red
+                        : ThemeColors.kblueColor,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -137,6 +166,9 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _physicTextController,
                     labelText: 'فیزیا',
                     isButtonPressed: _isButtonPressed,
+                    color: (_isEmpty && _isButtonPressed)
+                        ? Colors.red
+                        : ThemeColors.kblueColor,
                   ),
                 ),
               ],
@@ -153,6 +185,9 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _arabicAndAiinTextController,
                     labelText: 'عەرەبی و ئایین',
                     isButtonPressed: _isButtonPressed,
+                    color: (_isEmpty && _isButtonPressed)
+                        ? Colors.red
+                        : ThemeColors.kblueColor,
                   ),
                 ),
                 SizedBox(width: 20),
