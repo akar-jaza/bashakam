@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_print
 
 import 'package:bashakam_barawzanko/components/my_button.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
@@ -25,6 +25,8 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
   final TextEditingController _arabicAndAiinTextController =
       TextEditingController();
 
+  static double zanstyFinalScore = 0;
+
   @override
   void dispose() {
     _mathTextController.dispose();
@@ -40,7 +42,6 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(
@@ -155,7 +156,35 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
             SizedBox(
               height: 20,
             ),
-            MyButton()
+            MyButton(
+              onPressed: () {
+                double mathScore =
+                    double.tryParse(_mathTextController.text) ?? 0;
+                double englishScore =
+                    double.tryParse(_englishTextController.text) ?? 0;
+                double kurdiScore =
+                    double.tryParse(_kurdiTextController.text) ?? 0;
+                double chemistryScore =
+                    double.tryParse(_chemistryTextController.text) ?? 0;
+                double biologyScore =
+                    double.tryParse(_biologyTextController.text) ?? 0;
+                double physicScore =
+                    double.tryParse(_physicTextController.text) ?? 0;
+                double arabicAndAiinScore =
+                    double.tryParse(_arabicAndAiinTextController.text) ?? 0;
+
+                zanstyFinalScore = mathScore +
+                    englishScore +
+                    kurdiScore +
+                    chemistryScore +
+                    biologyScore +
+                    physicScore +
+                    arabicAndAiinScore;
+
+                setState(() {});
+                print(zanstyFinalScore);
+              },
+            ),
           ],
         ),
       ),

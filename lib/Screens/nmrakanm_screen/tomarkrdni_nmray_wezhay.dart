@@ -154,7 +154,9 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
             SizedBox(
               height: 20,
             ),
-            MyButton()
+            MyButton(
+              onPressed: () {},
+            )
           ],
         ),
       ),

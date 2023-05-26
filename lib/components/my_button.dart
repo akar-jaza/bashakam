@@ -2,7 +2,12 @@ import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
 class MyButton extends StatefulWidget {
-  const MyButton({super.key});
+  const MyButton({
+    super.key,
+    required this.onPressed,
+  });
+
+  final void Function() onPressed;
 
   @override
   State<MyButton> createState() => _MyButtonState();
@@ -19,7 +24,7 @@ class _MyButtonState extends State<MyButton> {
             backgroundColor: MaterialStateProperty.all(ThemeColors.kblueColor),
             foregroundColor:
                 MaterialStateProperty.all(ThemeColors.kBoldBlueTextColor)),
-        onPressed: () {},
+        onPressed: widget.onPressed,
         child: const Text(
           'تۆمار بکە',
           style: TextStyle(fontSize: 15),
