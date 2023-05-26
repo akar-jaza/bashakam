@@ -19,6 +19,11 @@ class MyTextField extends StatefulWidget {
 
 class _MyTextFieldState extends State<MyTextField> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   void dispose() {
     super.dispose();
   }
@@ -43,10 +48,12 @@ class _MyTextFieldState extends State<MyTextField> {
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
           enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: ThemeColors.kMyCardColor),
+            borderSide: BorderSide(color: ThemeColors.kWhiteTextColor),
           ),
           focusedBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: ThemeColors.kMyCardColor),
+            borderSide: BorderSide(
+              color: ThemeColors.kblueColor,
+            ),
           ),
           fillColor: ThemeColors.kMyCardColor,
           filled: true,
