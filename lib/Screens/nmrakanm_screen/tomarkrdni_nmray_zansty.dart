@@ -28,32 +28,58 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
   static double zanstyFinalScore = 0;
 
   bool _isButtonPressed = false;
-  bool _isEmpty = false;
+  final Color _TextFieldColor = Color(0xFF948F9A);
+  final Color _isEmptyColor = Color(0xFFF2B9B6);
 
-  @override
-  void dispose() {
-    _mathTextController.dispose();
-    _englishTextController.dispose();
-    _kurdiTextController.dispose();
-    _chemistryTextController.dispose();
-    _biologyTextController.dispose();
-    _physicTextController.dispose();
-    _arabicAndAiinTextController.dispose();
-
-    super.dispose();
-  }
+  Color _color = Color(0xFF948F9A);
 
   @override
   void initState() {
     super.initState();
-    _mathTextController.addListener(_updateEmptyStatus);
-    _updateEmptyStatus();
+
+    // Add listeners to text controllers
+    // _mathTextController.addListener(_updateButtonPressed);
+    // _englishTextController.addListener(_updateButtonPressed);
+    // _kurdiTextController.addListener(_updateButtonPressed);
+    // _chemistryTextController.addListener(_updateButtonPressed);
+    // _biologyTextController.addListener(_updateButtonPressed);
+    // _physicTextController.addListener(_updateButtonPressed);
+    // _arabicAndAiinTextController.addListener(_updateButtonPressed);
   }
 
-  void _updateEmptyStatus() {
-    setState(() {
-      _isEmpty = _mathTextController.text.isEmpty;
-    });
+  @override
+  void dispose() {
+    // Remove listeners from text controllers
+    // _mathTextController.removeListener(_updateButtonPressed);
+    // _englishTextController.removeListener(_updateButtonPressed);
+    // _kurdiTextController.removeListener(_updateButtonPressed);
+    // _chemistryTextController.removeListener(_updateButtonPressed);
+    // _biologyTextController.removeListener(_updateButtonPressed);
+    // _physicTextController.removeListener(_updateButtonPressed);
+    // _arabicAndAiinTextController.removeListener(_updateButtonPressed);
+
+    // // Dispose text controllers
+    // _mathTextController.dispose();
+    // _englishTextController.dispose();
+    // _kurdiTextController.dispose();
+    // _chemistryTextController.dispose();
+    // _biologyTextController.dispose();
+    // _physicTextController.dispose();
+    // _arabicAndAiinTextController.dispose();
+
+    super.dispose();
+  }
+
+  void _updateButtonPressed() {
+    // setState(() {
+    //   _isButtonPressed = _mathTextController.text.isEmpty ||
+    //       _englishTextController.text.isEmpty ||
+    //       _kurdiTextController.text.isEmpty ||
+    //       _chemistryTextController.text.isEmpty ||
+    //       _biologyTextController.text.isEmpty ||
+    //       _physicTextController.text.isEmpty ||
+    //       _arabicAndAiinTextController.text.isEmpty;
+    // });
   }
 
   @override
@@ -92,9 +118,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _mathTextController,
                     labelText: 'بیرکاری',
                     isButtonPressed: _isButtonPressed,
-                    color: (_isEmpty && _isButtonPressed)
-                        ? Colors.red
-                        : ThemeColors.kblueColor,
+                    color: _color,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -104,9 +128,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _englishTextController,
                     labelText: 'ئینگلیزی',
                     isButtonPressed: _isButtonPressed,
-                    color: (_isEmpty && _isButtonPressed)
-                        ? Colors.red
-                        : ThemeColors.kblueColor,
+                    color: _TextFieldColor,
                   ),
                 ),
               ],
@@ -123,9 +145,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _kurdiTextController,
                     labelText: 'کوردی',
                     isButtonPressed: _isButtonPressed,
-                    color: (_isEmpty && _isButtonPressed)
-                        ? Colors.red
-                        : ThemeColors.kblueColor,
+                    color: _TextFieldColor,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -135,9 +155,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _chemistryTextController,
                     labelText: 'کیمیا',
                     isButtonPressed: _isButtonPressed,
-                    color: (_isEmpty && _isButtonPressed)
-                        ? Colors.red
-                        : ThemeColors.kblueColor,
+                    color: _TextFieldColor,
                   ),
                 ),
               ],
@@ -154,9 +172,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _biologyTextController,
                     labelText: 'زیندەوەرزانی',
                     isButtonPressed: _isButtonPressed,
-                    color: (_isEmpty && _isButtonPressed)
-                        ? Colors.red
-                        : ThemeColors.kblueColor,
+                    color: _TextFieldColor,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -166,9 +182,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _physicTextController,
                     labelText: 'فیزیا',
                     isButtonPressed: _isButtonPressed,
-                    color: (_isEmpty && _isButtonPressed)
-                        ? Colors.red
-                        : ThemeColors.kblueColor,
+                    color: _TextFieldColor,
                   ),
                 ),
               ],
@@ -185,9 +199,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     textController: _arabicAndAiinTextController,
                     labelText: 'عەرەبی و ئایین',
                     isButtonPressed: _isButtonPressed,
-                    color: (_isEmpty && _isButtonPressed)
-                        ? Colors.red
-                        : ThemeColors.kblueColor,
+                    color: _TextFieldColor,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -209,6 +221,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     _biologyTextController.text.isEmpty ||
                     _physicTextController.text.isEmpty ||
                     _arabicAndAiinTextController.text.isEmpty) {
+                  _color = _isEmptyColor;
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
@@ -220,6 +233,9 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                       ),
                     ),
                   );
+                  setState(() {
+                    _color = _isEmptyColor;
+                  });
                   return;
                 }
                 double mathScore =
@@ -245,9 +261,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     physicScore +
                     arabicAndAiinScore;
 
-                setState(() {
-                  _isButtonPressed = true;
-                });
+                setState(() {});
                 print(zanstyFinalScore);
               },
             ),

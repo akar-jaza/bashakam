@@ -61,7 +61,7 @@ class _MyTextFieldState extends State<MyTextField> {
             color: ThemeColors.kGreyTextColor,
             fontSize: 14,
           ),
-          contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+          contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: widget.color,

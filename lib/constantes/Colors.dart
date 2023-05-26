@@ -10,4 +10,5 @@ class ThemeColors {
   static const Color kWhiteTextColor = Color(0xFFE4E2E6);
   static const Color kGreyTextColor = Color(0xFFC5C6D1);
   static const Color kMyCardColor = Color(0xFF22232B);
+  static const Color kOutlinedTextfieldCOlor = Color(0xFF948F9A);
 }
