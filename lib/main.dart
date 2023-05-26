@@ -5,7 +5,7 @@ import 'constantes/system_ui_overlay_func.dart';
 void main() {
   SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
   uiOverlayFunc.systemUiOverlay();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
