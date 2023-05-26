@@ -27,6 +27,8 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
 
   static double zanstyFinalScore = 0;
 
+  bool _isButtonPressed = false;
+
   @override
   void dispose() {
     _mathTextController.dispose();
@@ -75,6 +77,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _mathTextController,
                     labelText: 'بیرکاری',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -83,6 +86,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _englishTextController,
                     labelText: 'ئینگلیزی',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
               ],
@@ -98,6 +102,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _kurdiTextController,
                     labelText: 'کوردی',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -106,6 +111,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _chemistryTextController,
                     labelText: 'کیمیا',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
               ],
@@ -121,6 +127,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _biologyTextController,
                     labelText: 'زیندەوەرزانی',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -129,6 +136,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _physicTextController,
                     labelText: 'فیزیا',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
               ],
@@ -144,6 +152,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   child: MyTextField(
                     textController: _arabicAndAiinTextController,
                     labelText: 'عەرەبی و ئایین',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -201,7 +210,9 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                     physicScore +
                     arabicAndAiinScore;
 
-                setState(() {});
+                setState(() {
+                  _isButtonPressed = true;
+                });
                 print(zanstyFinalScore);
               },
             ),

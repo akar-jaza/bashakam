@@ -5,27 +5,41 @@ import '../constantes/colors.dart';
 
 class MyTextField extends StatefulWidget {
   const MyTextField({
-    super.key,
+    Key? key,
     required TextEditingController textController,
     required this.labelText,
-  }) : _textController = textController;
+    required this.isButtonPressed,
+  })  : _textController = textController,
+        super(key: key);
 
   final TextEditingController _textController;
   final String labelText;
+  final bool isButtonPressed;
 
   @override
   State<MyTextField> createState() => _MyTextFieldState();
 }
 
 class _MyTextFieldState extends State<MyTextField> {
+  bool _isEmpty = false;
+
   @override
   void initState() {
     super.initState();
+    widget._textController.addListener(_updateEmptyStatus);
+    _updateEmptyStatus();
   }
 
   @override
   void dispose() {
+    widget._textController.removeListener(_updateEmptyStatus);
     super.dispose();
+  }
+
+  void _updateEmptyStatus() {
+    setState(() {
+      _isEmpty = widget._textController.text.isEmpty;
+    });
   }
 
   @override
@@ -47,12 +61,18 @@ class _MyTextFieldState extends State<MyTextField> {
           ),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-          enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: ThemeColors.kWhiteTextColor),
-          ),
-          focusedBorder: const OutlineInputBorder(
+          enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: ThemeColors.kblueColor,
+              color: (_isEmpty && widget.isButtonPressed)
+                  ? Colors.red
+                  : ThemeColors.kWhiteTextColor,
+            ),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: (_isEmpty && widget.isButtonPressed)
+                  ? Colors.red
+                  : ThemeColors.kblueColor,
             ),
           ),
           fillColor: ThemeColors.kMyCardColor,

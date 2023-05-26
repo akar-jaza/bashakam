@@ -40,6 +40,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
 
   @override
   Widget build(BuildContext context) {
+    bool _isButtonPressed = false;
     return Scaffold(
       backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(
@@ -73,6 +74,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _historyTextController,
                     labelText: 'مێژوو',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -81,6 +83,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _kurdishTextController,
                     labelText: 'کوردی',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
               ],
@@ -96,6 +99,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _mathTextController,
                     labelText: 'بیرکاری',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -104,6 +108,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _geographyTextController,
                     labelText: 'ئایین و زمانی عەرەبی',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
               ],
@@ -119,6 +124,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _economyTextController,
                     labelText: 'ئابووری',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
                 SizedBox(width: 20),
@@ -127,6 +133,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _englishTextController,
                     labelText: 'ئینگلیزی',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
               ],
@@ -142,6 +149,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                   child: MyTextField(
                     textController: _geographyTextController,
                     labelText: 'جوگرافیا',
+                    isButtonPressed: _isButtonPressed,
                   ),
                 ),
                 SizedBox(width: 20),
