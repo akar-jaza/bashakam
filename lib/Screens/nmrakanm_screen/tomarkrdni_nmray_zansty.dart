@@ -158,6 +158,26 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
             ),
             MyButton(
               onPressed: () {
+                if (_mathTextController.text.isEmpty ||
+                    _englishTextController.text.isEmpty ||
+                    _kurdiTextController.text.isEmpty ||
+                    _chemistryTextController.text.isEmpty ||
+                    _biologyTextController.text.isEmpty ||
+                    _physicTextController.text.isEmpty ||
+                    _arabicAndAiinTextController.text.isEmpty) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(
+                        'تکایە نمرەی وانەکان تۆمار بکە و بە بەتاڵی جێی مەهێڵە',
+                        textAlign: TextAlign.end,
+                        style: TextStyle(
+                          fontFamily: 'rabarBold',
+                        ),
+                      ),
+                    ),
+                  );
+                  return;
+                }
                 double mathScore =
                     double.tryParse(_mathTextController.text) ?? 0;
                 double englishScore =
