@@ -45,6 +45,30 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
     super.dispose();
   }
 
+  void _calculateFinalScore() {
+    double mathScore = double.tryParse(_mathTextController.text) ?? 0;
+    double englishScore = double.tryParse(_englishTextController.text) ?? 0;
+    double kurdiScore = double.tryParse(_kurdiTextController.text) ?? 0;
+    double chemistryScore = double.tryParse(_chemistryTextController.text) ?? 0;
+    double biologyScore = double.tryParse(_biologyTextController.text) ?? 0;
+    double physicScore = double.tryParse(_physicTextController.text) ?? 0;
+    double arabicAndAiinScore =
+        double.tryParse(_arabicAndAiinTextController.text) ?? 0;
+
+    zanstyFinalScore = mathScore +
+        englishScore +
+        kurdiScore +
+        chemistryScore +
+        biologyScore +
+        physicScore +
+        arabicAndAiinScore;
+
+    // setState(() {});
+    print(zanstyFinalScore);
+  }
+
+  void _validateFields() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -204,7 +228,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                 }
 
                 if (anyFieldIsEmpty) {
-                  setState(() {});
+                  // setState(() {});
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
@@ -219,32 +243,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                   return;
                 }
 
-                // At least one field is filled, continue with your logic
-                double mathScore =
-                    double.tryParse(_mathTextController.text) ?? 0;
-                double englishScore =
-                    double.tryParse(_englishTextController.text) ?? 0;
-                double kurdiScore =
-                    double.tryParse(_kurdiTextController.text) ?? 0;
-                double chemistryScore =
-                    double.tryParse(_chemistryTextController.text) ?? 0;
-                double biologyScore =
-                    double.tryParse(_biologyTextController.text) ?? 0;
-                double physicScore =
-                    double.tryParse(_physicTextController.text) ?? 0;
-                double arabicAndAiinScore =
-                    double.tryParse(_arabicAndAiinTextController.text) ?? 0;
-
-                zanstyFinalScore = mathScore +
-                    englishScore +
-                    kurdiScore +
-                    chemistryScore +
-                    biologyScore +
-                    physicScore +
-                    arabicAndAiinScore;
-
-                setState(() {});
-                print(zanstyFinalScore);
+                _calculateFinalScore();
               },
             ),
           ],
