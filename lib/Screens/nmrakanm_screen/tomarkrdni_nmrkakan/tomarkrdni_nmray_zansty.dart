@@ -113,11 +113,13 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          backgroundColor: ThemeColors.kTextfieledIsEmptyColor,
           content: Text(
             'تکایە نمرەی وانەکان تۆمار بکە و بە بەتاڵی جێی مەهێڵە',
             textAlign: TextAlign.end,
             style: TextStyle(
               fontFamily: 'rabarBold',
+              color: Colors.black,
             ),
           ),
         ),
