@@ -67,7 +67,64 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
     print(zanstyFinalScore);
   }
 
-  void _validateFields() {}
+  void _validateFields() {
+    bool anyFieldIsEmpty = false;
+
+    if (_mathTextController.text.isEmpty) {
+      anyFieldIsEmpty = true;
+      _mathTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
+    }
+    if (_englishTextController.text.isEmpty) {
+      anyFieldIsEmpty = true;
+      _englishTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
+    }
+    if (_kurdiTextController.text.isEmpty) {
+      anyFieldIsEmpty = true;
+      _kurdishTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
+    }
+    if (_chemistryTextController.text.isEmpty) {
+      anyFieldIsEmpty = true;
+      _chemistryTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
+    }
+    if (_biologyTextController.text.isEmpty) {
+      anyFieldIsEmpty = true;
+      _biologyTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
+    }
+    if (_physicTextController.text.isEmpty) {
+      anyFieldIsEmpty = true;
+      _physicTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
+    }
+    if (_arabicAndAiinTextController.text.isEmpty) {
+      anyFieldIsEmpty = true;
+      _arabicAndAiinTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
+    }
+
+    if (anyFieldIsEmpty) {
+      setState(() {
+        // Trigger a rebuild to update text field colors
+        _mathTextfieldcolor = _mathTextfieldcolor;
+        _englishTextfieldcolor = _englishTextfieldcolor;
+        _kurdishTextfieldcolor = _kurdishTextfieldcolor;
+        _chemistryTextfieldcolor = _chemistryTextfieldcolor;
+        _biologyTextfieldcolor = _biologyTextfieldcolor;
+        _physicTextfieldcolor = _physicTextfieldcolor;
+        _arabicAndAiinTextfieldcolor = _arabicAndAiinTextfieldcolor;
+      });
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'تکایە نمرەی وانەکان تۆمار بکە و بە بەتاڵی جێی مەهێڵە',
+            textAlign: TextAlign.end,
+            style: TextStyle(
+              fontFamily: 'rabarBold',
+            ),
+          ),
+        ),
+      );
+      return;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -194,55 +251,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
             ),
             MyButton(
               onPressed: () {
-                bool anyFieldIsEmpty = false;
-
-                if (_mathTextController.text.isEmpty) {
-                  anyFieldIsEmpty = true;
-                  _mathTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
-                }
-                if (_englishTextController.text.isEmpty) {
-                  anyFieldIsEmpty = true;
-                  _englishTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
-                }
-                if (_kurdiTextController.text.isEmpty) {
-                  anyFieldIsEmpty = true;
-                  _kurdishTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
-                }
-                if (_chemistryTextController.text.isEmpty) {
-                  anyFieldIsEmpty = true;
-                  _chemistryTextfieldcolor =
-                      ThemeColors.kTextfieledIsEmptyColor;
-                }
-                if (_biologyTextController.text.isEmpty) {
-                  anyFieldIsEmpty = true;
-                  _biologyTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
-                }
-                if (_physicTextController.text.isEmpty) {
-                  anyFieldIsEmpty = true;
-                  _physicTextfieldcolor = ThemeColors.kTextfieledIsEmptyColor;
-                }
-                if (_arabicAndAiinTextController.text.isEmpty) {
-                  anyFieldIsEmpty = true;
-                  _arabicAndAiinTextfieldcolor =
-                      ThemeColors.kTextfieledIsEmptyColor;
-                }
-
-                if (anyFieldIsEmpty) {
-                  // setState(() {});
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        'تکایە نمرەی وانەکان تۆمار بکە و بە بەتاڵی جێی مەهێڵە',
-                        textAlign: TextAlign.end,
-                        style: TextStyle(
-                          fontFamily: 'rabarBold',
-                        ),
-                      ),
-                    ),
-                  );
-                  return;
-                }
-
+                _validateFields();
                 _calculateFinalScore();
               },
             ),
