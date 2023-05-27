@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:bashakam_barawzanko/components/my_button.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
@@ -152,7 +151,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
 
     if (anyFieldIsEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
+        const SnackBar(
           backgroundColor: ThemeColors.kTextfieledIsEmptyColor,
           content: Text(
             'تکایە نمرەی وانەکان تۆمار بکە و بە بەتاڵی جێی مەهێڵە',
@@ -177,15 +176,15 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
     return Scaffold(
       backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: ThemeColors.kWhiteTextColor),
+        iconTheme: const IconThemeData(color: ThemeColors.kWhiteTextColor),
         backgroundColor: ThemeColors.kBodyColor,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: Align(
+        title: const Align(
           alignment: Alignment.centerRight,
           child: Text(
             'تۆمارکردنی نمرەکان',
@@ -196,7 +195,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
       body: Center(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -210,7 +209,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                     color: _historyTextfieldcolor,
                   ),
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 SizedBox(
                   width: 170,
                   child: MyTextField(
@@ -221,7 +220,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -235,7 +234,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                     color: _mathTextfieldcolor,
                   ),
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 SizedBox(
                   width: 170,
                   child: MyTextField(
@@ -246,7 +245,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -260,7 +259,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                     color: _economyTextfieldcolor,
                   ),
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 SizedBox(
                   width: 170,
                   child: MyTextField(
@@ -271,7 +270,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -285,14 +284,14 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                     color: _geographyTextfieldcolor,
                   ),
                 ),
-                SizedBox(width: 20),
-                SizedBox(
+                const SizedBox(width: 20),
+                const SizedBox(
                   width: 170,
                   child: null,
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             MyButton(

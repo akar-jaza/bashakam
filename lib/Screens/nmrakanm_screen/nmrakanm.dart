@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:bashakam_barawzanko/Screens/nmrakanm_screen/tomarkrdni_nmrkakan/ababy_or_3ilmy_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -21,15 +20,15 @@ class _NmrakanmState extends State<Nmrakanm> {
     return Scaffold(
       backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: ThemeColors.kWhiteTextColor),
+        iconTheme: const IconThemeData(color: ThemeColors.kWhiteTextColor),
         backgroundColor: ThemeColors.kBodyColor,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: Align(
+        title: const Align(
           alignment: Alignment.centerRight,
           child: Text(
             'نمرەکانم',
@@ -45,14 +44,14 @@ class _NmrakanmState extends State<Nmrakanm> {
               'assets/images/ListIsEmpty.svg',
               height: 350,
             ),
-            Text(
+            const Text(
               '! نمرەکانت تۆمار نەکراوە',
               style: TextStyle(
                 color: ThemeColors.kWhiteTextColor,
                 fontSize: 18,
               ),
             ),
-            Text(
+            const Text(
               '.تکایە نمرەکانت تۆمار بکە',
               style: TextStyle(
                 color: ThemeColors.kWhiteTextColor,
@@ -66,14 +65,14 @@ class _NmrakanmState extends State<Nmrakanm> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Transform.translate(
-            offset: Offset(
+            offset: const Offset(
                 20, -25), // Adjust the vertical offset as per your requirement
             child: SvgPicture.asset(
               'assets/images/arrow.svg',
               height: 50,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 50,
           ),
           FloatingActionButton(

@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -28,7 +27,7 @@ class MyCard extends StatelessWidget {
       splashColor: ThemeColors.kappBarColor,
       borderRadius: BorderRadius.circular(6),
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 7, vertical: 10),
+        margin: const EdgeInsets.symmetric(horizontal: 7, vertical: 10),
         height: 160,
         width: 135,
         decoration: BoxDecoration(
@@ -44,24 +43,24 @@ class MyCard extends StatelessWidget {
                 child: Text(
                   text,
                   textAlign: TextAlign.right,
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: ThemeColors.kWhiteTextColor, fontSize: 13),
                 ),
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             SvgPicture.asset(
               imageAsset,
               height: 50,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             TextButton(
               onPressed: onTap,
               child: Text(
                 buttonTitle,
-                style: TextStyle(color: ThemeColors.kblueColor),
+                style: const TextStyle(color: ThemeColors.kblueColor),
               ),
             ),
           ],

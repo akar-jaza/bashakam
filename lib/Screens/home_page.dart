@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:bashakam_barawzanko/Screens/nmrakanm_screen/nmrakanm.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +28,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: ThemeColors.kBodyColor,
         appBar: AppBar(
           backgroundColor: ThemeColors.kBodyColor,
-          title: Center(
+          title: const Center(
             child: Text(
               '🎓 بەشەکەم',
               style: TextStyle(
@@ -43,7 +42,7 @@ class _HomePageState extends State<HomePage> {
             builder: (BuildContext context) {
               return IconButton(
                 color: Colors.white,
-                icon: Icon(
+                icon: const Icon(
                   Icons.menu_outlined,
                   size: 18,
                 ),
@@ -71,21 +70,21 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         body: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Center(
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 SvgPicture.asset(
                   'assets/images/cats.svg',
                   width: 200,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Text(
+                const Text(
                   'ڕیزبەندی بکە لەگەڵ ئەپڵیکەیشنی',
                   style: TextStyle(
                     fontSize: 18,
@@ -93,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                     fontFamily: 'rabarBold',
                   ),
                 ),
-                Text(
+                const Text(
                   '🎓 بەشەکەم',
                   style: TextStyle(
                     fontSize: 18,
@@ -101,15 +100,15 @@ class _HomePageState extends State<HomePage> {
                     fontFamily: 'rabarBold',
                   ),
                 ),
-                SizedBox(height: 15),
-                Text(
+                const SizedBox(height: 15),
+                const Text(
                   'ڕیزبەندی بکە، ڕیزبەندیەکانت ببینە، زانیاری لەسەر بەشەکان ببینە',
                   style: TextStyle(
                     color: ThemeColors.kGreyTextColor,
                     fontSize: 12,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(
@@ -128,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                     ),
-                    MyCard(
+                    const MyCard(
                       imageAsset: 'assets/images/list3.svg',
                       buttonTitle: 'بکە',
                       color: ThemeColors.kWhiteTextColor,
@@ -136,7 +135,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     MyCard(

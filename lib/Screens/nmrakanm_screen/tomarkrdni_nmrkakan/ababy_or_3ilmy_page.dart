@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:bashakam_barawzanko/Screens/nmrakanm_screen/tomarkrdni_nmrkakan/tomarkrdni_nmray_wezhay.dart';
 import 'package:bashakam_barawzanko/Screens/nmrakanm_screen/tomarkrdni_nmrkakan/tomarkrdni_nmray_zansty.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
@@ -14,15 +13,15 @@ class AdabayOr3ilmyPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: ThemeColors.kWhiteTextColor),
+        iconTheme: const IconThemeData(color: ThemeColors.kWhiteTextColor),
         backgroundColor: ThemeColors.kBodyColor,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: Align(
+        title: const Align(
           alignment: Alignment.centerRight,
           child: Text(
             '🧐 زانستیت یان وێژەیی',
