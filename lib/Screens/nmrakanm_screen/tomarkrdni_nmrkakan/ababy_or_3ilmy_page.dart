@@ -24,22 +24,9 @@ class AdabayOr3ilmyPage extends StatelessWidget {
         ),
         title: Align(
           alignment: Alignment.centerRight,
-          child: Text.rich(
-            TextSpan(
-              text: '🧐',
-              style: TextStyle(
-                color: ThemeColors.kWhiteTextColor,
-                fontFamily: 'AppleEmoji',
-              ),
-              children: [
-                TextSpan(
-                  text: ' زانستیت یان وێژەیی',
-                  style: TextStyle(
-                    fontFamily: 'rabarBold',
-                  ),
-                ),
-              ],
-            ),
+          child: Text(
+            '🧐 زانستیت یان وێژەیی',
+            style: TextStyle(color: ThemeColors.kWhiteTextColor),
           ),
         ),
       ),

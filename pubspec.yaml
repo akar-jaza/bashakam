@@ -97,9 +97,7 @@ flutter:
     - family: Roboto
       fonts:
         - asset: assets/fonts/RobotoFamily/Roboto-Medium.ttf
-    - family: AppleEmoji
-      fonts:
-        - asset: assets/fonts/AppleColorEmoji.ttf
+    
         
     
         
