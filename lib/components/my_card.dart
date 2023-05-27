@@ -44,8 +44,8 @@ class MyCard extends StatelessWidget {
                 child: Text(
                   text,
                   textAlign: TextAlign.right,
-                  style:
-                      TextStyle(color: ThemeColors.kWhiteTextColor, fontSize: 13),
+                  style: TextStyle(
+                      color: ThemeColors.kWhiteTextColor, fontSize: 13),
                 ),
               ),
             ),
