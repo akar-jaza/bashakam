@@ -239,7 +239,7 @@ class _TomarkrdniNmrayWezhayPageState extends State<TomarkrdniNmrayWezhayPage> {
                 SizedBox(
                   width: 170,
                   child: MyTextField(
-                    textController: _geographyTextController,
+                    textController: _arabicAndAiinTextController,
                     labelText: 'ئایین و زمانی عەرەبی',
                     color: _arabicAndAiinTextfieldcolor,
                   ),
