@@ -11,7 +11,6 @@ class AdabayOr3ilmyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(
@@ -25,9 +24,22 @@ class AdabayOr3ilmyPage extends StatelessWidget {
         ),
         title: Align(
           alignment: Alignment.centerRight,
-          child: Text(
-            '🧐 زانستیت یان ئەدەبی',
-            style: TextStyle(color: ThemeColors.kWhiteTextColor),
+          child: Text.rich(
+            TextSpan(
+              text: '🧐',
+              style: TextStyle(
+                color: ThemeColors.kWhiteTextColor,
+                fontFamily: 'AppleEmoji',
+              ),
+              children: [
+                TextSpan(
+                  text: ' زانستیت یان وێژەیی',
+                  style: TextStyle(
+                    fontFamily: 'rabarBold',
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
