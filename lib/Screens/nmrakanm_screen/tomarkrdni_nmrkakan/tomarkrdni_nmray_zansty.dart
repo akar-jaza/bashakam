@@ -4,7 +4,7 @@ import 'package:bashakam_barawzanko/components/my_button.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/my_textfiled.dart';
+import '../../../components/my_textfiled.dart';
 
 class TomarkrdniNmrayZanstiPage extends StatefulWidget {
   const TomarkrdniNmrayZanstiPage({super.key});
