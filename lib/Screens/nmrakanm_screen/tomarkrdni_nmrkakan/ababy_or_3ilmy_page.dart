@@ -72,4 +72,3 @@ class AdabayOr3ilmyPage extends StatelessWidget {
     );
   }
 }
-
