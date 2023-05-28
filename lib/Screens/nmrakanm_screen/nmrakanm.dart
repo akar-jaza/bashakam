@@ -40,6 +40,7 @@ class _NmrakanmState extends State<Nmrakanm> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+
             SvgPicture.asset(
               'assets/images/ListIsEmpty.svg',
               height: 350,
