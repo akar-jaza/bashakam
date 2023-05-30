@@ -1,4 +1,3 @@
-
 import 'package:bashakam_barawzanko/components/my_button.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
@@ -127,6 +126,10 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
     }
   }
 
+  void _dismissKeyboard() {
+    FocusScope.of(context).unfocus();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -252,6 +255,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
             ),
             MyButton(
               onPressed: () {
+                _dismissKeyboard();
                 _validateFields();
                 _calculateFinalScore();
               },
