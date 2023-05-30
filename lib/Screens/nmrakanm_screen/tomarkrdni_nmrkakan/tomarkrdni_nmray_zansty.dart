@@ -3,6 +3,7 @@ import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/my_textfiled.dart';
+import '../grades_page.dart';
 
 class TomarkrdniNmrayZanstiPage extends StatefulWidget {
   const TomarkrdniNmrayZanstiPage({super.key});
@@ -43,6 +44,16 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
     super.dispose();
   }
 
+  double mathScore = 0, englishScore = 0;
+
+  // double mathScore = 0,
+  //     englishScore = 0,
+  //     kurdiScore = 0,
+  //     chemistryScore = 0,
+  //     biologyScore = 0,
+  //     physicScore = 0,
+  //     arabicAndAiinScore = 0;
+
   void _calculateFinalScore() {
     double mathScore = double.tryParse(_mathTextController.text) ?? 0;
     double englishScore = double.tryParse(_englishTextController.text) ?? 0;
@@ -62,7 +73,44 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
         arabicAndAiinScore;
 
     // setState(() {});
-    print(zanstyFinalScore);
+  }
+
+  void _navigateToScorePage() {
+    if (_mathTextController.text.isEmpty ||
+        _englishTextController.text.isEmpty ||
+        _kurdiTextController.text.isEmpty ||
+        _chemistryTextController.text.isEmpty ||
+        _biologyTextController.text.isEmpty ||
+        _physicTextController.text.isEmpty ||
+        _arabicAndAiinTextController.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          backgroundColor: ThemeColors.kTextfieledIsEmptyColor,
+          content: Text(
+            'تکایە نمرەی وانەکان تۆمار بکە و بە بەتاڵی جێی مەهێڵە',
+            textAlign: TextAlign.end,
+            style: TextStyle(
+              fontFamily: 'rabarBold',
+              color: Colors.black,
+            ),
+          ),
+        ),
+      );
+    } else {
+      // Calculate the final score before navigating to the ScorePage
+      _calculateFinalScore();
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ScorePage(
+            mathScore: mathScore,
+            englishScore: englishScore,
+            // Pass other scores as well
+          ),
+        ),
+      );
+    }
   }
 
   void _validateFields() {
@@ -258,6 +306,8 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
                 _dismissKeyboard();
                 _validateFields();
                 _calculateFinalScore();
+
+                _navigateToScorePage();
               },
             ),
           ],
