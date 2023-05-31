@@ -74,7 +74,6 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
 
     // setState(() {});
   }
-  
 
   void _navigateToScorePage() {
     if (_mathTextController.text.isEmpty ||
