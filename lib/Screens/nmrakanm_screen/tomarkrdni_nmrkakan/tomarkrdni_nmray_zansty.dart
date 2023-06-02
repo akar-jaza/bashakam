@@ -44,7 +44,8 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
     super.dispose();
   }
 
-  // double mathScore = 0, englishScore = 0;
+  // double mathScore = 0,
+  double englishScore = 0;
 
   // double mathScore = 0,
   //     englishScore = 0,
@@ -105,7 +106,9 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
       _calculateFinalScore();
 
       List<LessonModal> lessons = [
-        LessonModal(lessonName: 'Math', score: 90.5),
+        LessonModal(
+            lessonName: 'Math',
+            score: double.tryParse(_mathTextController.text) ?? 0.0),
         LessonModal(lessonName: 'English', score: 85.0),
         // Add more lessons with their scores
       ];
@@ -115,8 +118,6 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
         MaterialPageRoute(
           builder: (context) => ScorePage(
             lessons: lessons,
-            mathScore: mathScore,
-            englishScore: englishScore,
           ),
         ),
       );
