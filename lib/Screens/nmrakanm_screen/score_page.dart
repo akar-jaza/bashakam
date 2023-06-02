@@ -62,12 +62,12 @@ class _ScorePageState extends State<ScorePage> {
                 LessonCard(
                   color: ThemeColors.kWhiteTextColor,
                   text: 'بیرکاری',
-                  onTap: () {},
+                  onTap: () {}, lessonScore: '',
                 ),
                 LessonCard(
                   color: ThemeColors.kWhiteTextColor,
                   text: 'ئینگلیزی',
-                  onTap: () {},
+                  onTap: () {}, lessonScore: '',
                 ),
               ],
             ),
