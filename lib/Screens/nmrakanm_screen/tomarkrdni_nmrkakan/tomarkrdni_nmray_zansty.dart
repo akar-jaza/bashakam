@@ -44,16 +44,8 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
     super.dispose();
   }
 
-  // double mathScore = 0,
   double englishScore = 0;
 
-  // double mathScore = 0,
-  //     englishScore = 0,
-  //     kurdiScore = 0,
-  //     chemistryScore = 0,
-  //     biologyScore = 0,
-  //     physicScore = 0,
-  //     arabicAndAiinScore = 0;
 
   void _calculateFinalScore() {
     double mathScore = double.tryParse(_mathTextController.text) ?? 0;

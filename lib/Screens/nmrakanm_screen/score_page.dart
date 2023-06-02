@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 
+import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../Modals/lesson_modal.dart';
@@ -29,14 +30,33 @@ class _ScorePageState extends State<ScorePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(
-        title: Text('Score Page'),
+        iconTheme: const IconThemeData(color: ThemeColors.kWhiteTextColor),
+        backgroundColor: ThemeColors.kBodyColor,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: const Align(
+          alignment: Alignment.centerRight,
+          child: Text(
+            'نمرەکانم',
+            style: TextStyle(color: ThemeColors.kWhiteTextColor),
+          ),
+        ),
       ),
-      body: Container(
+      body: Center(
         child: Column(
           children: [
-            Text('Math Score: ${mathScore.toString()}'),
-            Text('English Score: ${widget.englishScore.toString()}'),
+            Text(
+              'Math Score: ${mathScore.toString()}',
+            ),
+            Text(
+              'English Score: ${widget.englishScore.toString()}',
+            ),
             // Display other scores similarly
           ],
         ),
