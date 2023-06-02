@@ -62,12 +62,14 @@ class _ScorePageState extends State<ScorePage> {
                 LessonCard(
                   color: ThemeColors.kWhiteTextColor,
                   text: 'بیرکاری',
-                  onTap: () {}, lessonScore: '',
+                  onTap: () {},
+                  lessonScore: mathScore.toInt().toString(),
                 ),
                 LessonCard(
                   color: ThemeColors.kWhiteTextColor,
                   text: 'ئینگلیزی',
-                  onTap: () {}, lessonScore: '',
+                  onTap: () {},
+                  lessonScore: '',
                 ),
               ],
             ),
@@ -77,9 +79,7 @@ class _ScorePageState extends State<ScorePage> {
                 color: ThemeColors.kWhiteTextColor,
               ),
             ),
-            Text(
-              'English Score: ${widget.englishScore.toString()}',
-            ),
+
             // Display other scores similarly
           ],
         ),

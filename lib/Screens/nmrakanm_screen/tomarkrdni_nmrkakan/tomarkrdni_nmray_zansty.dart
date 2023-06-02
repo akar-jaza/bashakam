@@ -44,9 +44,6 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
     super.dispose();
   }
 
-  double englishScore = 0;
-
-
   void _calculateFinalScore() {
     double mathScore = double.tryParse(_mathTextController.text) ?? 0;
     double englishScore = double.tryParse(_englishTextController.text) ?? 0;
@@ -94,15 +91,15 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
         ),
       );
     } else {
-      // Calculate the final score before navigating to the ScorePage
       _calculateFinalScore();
 
       List<LessonModal> lessons = [
         LessonModal(
-            lessonName: 'Math',
-            score: double.tryParse(_mathTextController.text) ?? 0.0),
+          lessonName: 'Math',
+          score: double.tryParse(_mathTextController.text) ?? 0.0,
+          
+        ),
         LessonModal(lessonName: 'English', score: 85.0),
-        // Add more lessons with their scores
       ];
 
       Navigator.push(
