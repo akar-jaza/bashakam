@@ -8,12 +8,10 @@ import '../../Modals/lesson_modal.dart';
 
 class ScorePage extends StatefulWidget {
   final List<LessonModal> lessons;
-  double? englishScore;
 
   ScorePage({
     super.key,
     required this.lessons,
-    this.englishScore,
   });
 
   @override
@@ -21,16 +19,15 @@ class ScorePage extends StatefulWidget {
 }
 
 class _ScorePageState extends State<ScorePage> {
-  late double mathScore;
-
   @override
   void initState() {
     super.initState();
-    mathScore = widget.lessons.isNotEmpty ? widget.lessons[0].score : 0.0;
+    // mathScore = (widget.lessons.isNotEmpty ? widget.lessons[0].score : null);
   }
 
   @override
   Widget build(BuildContext context) {
+    double mathScore = 1;
     return Scaffold(
       backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(

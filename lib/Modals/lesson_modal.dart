@@ -1,9 +1,11 @@
 class LessonModal {
-  final String lessonName;
-  final double score;
+  // final String lessonName;
+  double? score;
+  final double mathScore;
 
   LessonModal({
-    required this.lessonName,
-    required this.score,
+    // required this.lessonName,
+    required this.mathScore,
+    this.score,
   });
 }

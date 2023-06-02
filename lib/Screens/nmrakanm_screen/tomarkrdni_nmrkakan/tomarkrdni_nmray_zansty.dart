@@ -55,16 +55,17 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
         double.tryParse(_arabicAndAiinTextController.text) ?? 0;
 
     List<LessonModal> lessons = [
-      LessonModal(lessonName: "Math", score: mathScore),
-      LessonModal(lessonName: "English", score: englishScore),
-      LessonModal(lessonName: "Kurdi", score: kurdiScore),
-      LessonModal(lessonName: "Chemistry", score: chemistryScore),
-      LessonModal(lessonName: "Biology", score: biologyScore),
-      LessonModal(lessonName: "Physics", score: physicScore),
-      LessonModal(lessonName: "Arabic_and_Aiin", score: arabicAndAiinScore),
+      LessonModal(mathScore: mathScore),
+      // LessonModal(lessonName: "English", score: englishScore),
+      // LessonModal(lessonName: "Kurdi", score: kurdiScore),
+      // LessonModal(lessonName: "Chemistry", score: chemistryScore),
+      // LessonModal(lessonName: "Biology", score: biologyScore),
+      // LessonModal(lessonName: "Physics", score: physicScore),
+      // LessonModal(lessonName: "Arabic_and_Aiin", score: arabicAndAiinScore),
     ];
 
-    zanstyFinalScore = lessons.fold(0, (sum, lesson) => sum + lesson.score);
+    zanstyFinalScore =
+        lessons.fold(0.0, (sum, lesson) => sum + (lesson.score ?? 0.0));
 
     // setState(() {});
   }
@@ -95,11 +96,8 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
 
       List<LessonModal> lessons = [
         LessonModal(
-          lessonName: 'Math',
-          score: double.tryParse(_mathTextController.text) ?? 0.0,
-          
+          mathScore: double.tryParse(_mathTextController.text) ?? 0.0,
         ),
-        LessonModal(lessonName: 'English', score: 85.0),
       ];
 
       Navigator.push(
