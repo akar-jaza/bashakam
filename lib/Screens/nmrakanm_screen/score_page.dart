@@ -1,5 +1,6 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, must_be_immutable
 
+import 'package:bashakam_barawzanko/components/lesson_card.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,7 @@ class ScorePage extends StatefulWidget {
   double? englishScore;
 
   ScorePage({
+    super.key,
     required this.lessons,
     this.englishScore,
   });
@@ -51,8 +53,29 @@ class _ScorePageState extends State<ScorePage> {
       body: Center(
         child: Column(
           children: [
+            const SizedBox(
+              height: 25,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                LessonCard(
+                  color: ThemeColors.kWhiteTextColor,
+                  text: 'بیرکاری',
+                  onTap: () {},
+                ),
+                LessonCard(
+                  color: ThemeColors.kWhiteTextColor,
+                  text: 'ئینگلیزی',
+                  onTap: () {},
+                ),
+              ],
+            ),
             Text(
               'Math Score: ${mathScore.toString()}',
+              style: TextStyle(
+                color: ThemeColors.kWhiteTextColor,
+              ),
             ),
             Text(
               'English Score: ${widget.englishScore.toString()}',
