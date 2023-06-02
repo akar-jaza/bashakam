@@ -1,9 +1,9 @@
 import 'package:bashakam_barawzanko/components/my_button.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
-
+import 'package:bashakam_barawzanko/Modals/lesson_modal.dart';
 import '../../../components/my_textfiled.dart';
-import '../grades_page.dart';
+import '../score_page.dart';
 
 class TomarkrdniNmrayZanstiPage extends StatefulWidget {
   const TomarkrdniNmrayZanstiPage({super.key});
@@ -44,7 +44,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
     super.dispose();
   }
 
-  double mathScore = 0, englishScore = 0;
+  // double mathScore = 0, englishScore = 0;
 
   // double mathScore = 0,
   //     englishScore = 0,
@@ -64,17 +64,21 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
     double arabicAndAiinScore =
         double.tryParse(_arabicAndAiinTextController.text) ?? 0;
 
-    zanstyFinalScore = mathScore +
-        englishScore +
-        kurdiScore +
-        chemistryScore +
-        biologyScore +
-        physicScore +
-        arabicAndAiinScore;
+    List<LessonModal> lessons = [
+      LessonModal(lessonName: "Math", score: mathScore),
+      LessonModal(lessonName: "English", score: englishScore),
+      LessonModal(lessonName: "Kurdi", score: kurdiScore),
+      LessonModal(lessonName: "Chemistry", score: chemistryScore),
+      LessonModal(lessonName: "Biology", score: biologyScore),
+      LessonModal(lessonName: "Physics", score: physicScore),
+      LessonModal(lessonName: "Arabic_and_Aiin", score: arabicAndAiinScore),
+    ];
+
+    zanstyFinalScore = lessons.fold(0, (sum, lesson) => sum + lesson.score);
 
     // setState(() {});
   }
-  
+
   void _navigateToScorePage() {
     if (_mathTextController.text.isEmpty ||
         _englishTextController.text.isEmpty ||
@@ -100,13 +104,19 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
       // Calculate the final score before navigating to the ScorePage
       _calculateFinalScore();
 
+      List<LessonModal> lessons = [
+        LessonModal(lessonName: 'Math', score: 90.5),
+        LessonModal(lessonName: 'English', score: 85.0),
+        // Add more lessons with their scores
+      ];
+
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => ScorePage(
+            lessons: lessons,
             mathScore: mathScore,
             englishScore: englishScore,
-            // Pass other scores as well
           ),
         ),
       );
