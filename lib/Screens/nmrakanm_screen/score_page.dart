@@ -19,15 +19,20 @@ class ScorePage extends StatefulWidget {
 }
 
 class _ScorePageState extends State<ScorePage> {
+  double? mathScore;
+
   @override
   void initState() {
     super.initState();
-    // mathScore = (widget.lessons.isNotEmpty ? widget.lessons[0].score : null);
+    if (widget.lessons.isNotEmpty) {
+      setState(() {
+        mathScore = widget.lessons[0].mathScore;
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    double mathScore = 1;
     return Scaffold(
       backgroundColor: ThemeColors.kBodyColor,
       appBar: AppBar(
@@ -60,7 +65,9 @@ class _ScorePageState extends State<ScorePage> {
                   color: ThemeColors.kWhiteTextColor,
                   text: 'بیرکاری',
                   onTap: () {},
-                  lessonScore: mathScore.toInt().toString(),
+                  lessonScore: mathScore?.toInt().toString() ?? 'null',
+
+                  // lessonScore: mathScore.toInt().toString(),
                 ),
                 LessonCard(
                   color: ThemeColors.kWhiteTextColor,
