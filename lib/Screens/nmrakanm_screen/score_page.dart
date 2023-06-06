@@ -8,10 +8,14 @@ import '../../Modals/lesson_modal.dart';
 
 class ScorePage extends StatefulWidget {
   final List<LessonModal> lessons;
+  final double englishScore;
+  final double mathScore;
 
   ScorePage({
     super.key,
     required this.lessons,
+    required this.englishScore,
+    required this.mathScore,
   });
 
   @override
@@ -20,13 +24,15 @@ class ScorePage extends StatefulWidget {
 
 class _ScorePageState extends State<ScorePage> {
   double? mathScore;
+  double? englishScore;
 
   @override
   void initState() {
     super.initState();
     if (widget.lessons.isNotEmpty) {
       setState(() {
-        mathScore = widget.lessons[0].mathScore;
+        mathScore = widget.mathScore;
+        englishScore = widget.englishScore;
       });
     }
   }
@@ -53,40 +59,88 @@ class _ScorePageState extends State<ScorePage> {
         ),
       ),
       body: Center(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 25,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                LessonCard(
-                  color: ThemeColors.kWhiteTextColor,
-                  text: 'بیرکاری',
-                  onTap: () {},
-                  lessonScore: mathScore?.toInt().toString() ?? 'null',
-
-                  // lessonScore: mathScore.toInt().toString(),
-                ),
-                LessonCard(
-                  color: ThemeColors.kWhiteTextColor,
-                  text: 'ئینگلیزی',
-                  onTap: () {},
-                  lessonScore: '',
-                ),
-              ],
-            ),
-
-            Text(
-              'Math Score: ${mathScore.toString()}',
-              style: TextStyle(
-                color: ThemeColors.kWhiteTextColor,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 25,
               ),
-            ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  LessonCard(
+                    color: ThemeColors.kWhiteTextColor,
+                    text: 'زیندەوەرزانی',
+                    onTap: () {},
+                    lessonScore: mathScore?.toInt().toString() ?? 'null',
+                    // lessonScore: mathScore.toInt().toString(),
+                  ),
+                  LessonCard(
+                    color: ThemeColors.kWhiteTextColor,
+                    text: 'کوردی',
+                    onTap: () {},
+                    lessonScore: englishScore?.toInt().toString() ?? 'null',
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  LessonCard(
+                    color: ThemeColors.kWhiteTextColor,
+                    text: 'بیرکاری',
+                    onTap: () {},
+                    lessonScore: mathScore?.toInt().toString() ?? 'null',
+                    // lessonScore: mathScore.toInt().toString(),
+                  ),
+                  LessonCard(
+                    color: ThemeColors.kWhiteTextColor,
+                    text: 'ئایین و عەرەبی',
+                    onTap: () {},
+                    lessonScore: englishScore?.toInt().toString() ?? 'null',
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  LessonCard(
+                    color: ThemeColors.kWhiteTextColor,
+                    text: 'کیمیا',
+                    onTap: () {},
+                    lessonScore: mathScore?.toInt().toString() ?? 'null',
+                    // lessonScore: mathScore.toInt().toString(),
+                  ),
+                  LessonCard(
+                    color: ThemeColors.kWhiteTextColor,
+                    text: 'ئینگلیزی',
+                    onTap: () {},
+                    lessonScore: englishScore?.toInt().toString() ?? 'null',
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  LessonCard(
+                    color: ThemeColors.kWhiteTextColor,
+                    text: 'فیزیا',
+                    onTap: () {},
+                    lessonScore: mathScore?.toInt().toString() ?? 'null',
+                    // lessonScore: mathScore.toInt().toString(),
+                  ),
+                  LessonCard(
+                    color: ThemeColors.kWhiteTextColor,
+                    text: 'ئینگلیزی',
+                    onTap: () {},
+                    lessonScore: englishScore?.toInt().toString() ?? 'null',
+                  ),
+                ],
+              ),
 
-            // Display other scores similarly
-          ],
+              // Display other scores similarly
+            ],
+          ),
         ),
       ),
     );

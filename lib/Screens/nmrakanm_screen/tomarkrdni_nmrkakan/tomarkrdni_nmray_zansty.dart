@@ -55,13 +55,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
         double.tryParse(_arabicAndAiinTextController.text) ?? 0;
 
     List<LessonModal> lessons = [
-      LessonModal(mathScore: mathScore),
-      // LessonModal(lessonName: "English", score: englishScore),
-      // LessonModal(lessonName: "Kurdi", score: kurdiScore),
-      // LessonModal(lessonName: "Chemistry", score: chemistryScore),
-      // LessonModal(lessonName: "Biology", score: biologyScore),
-      // LessonModal(lessonName: "Physics", score: physicScore),
-      // LessonModal(lessonName: "Arabic_and_Aiin", score: arabicAndAiinScore),
+      LessonModal(mathScore: mathScore, englishScore: englishScore),
     ];
 
     zanstyFinalScore =
@@ -97,6 +91,7 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
       List<LessonModal> lessons = [
         LessonModal(
           mathScore: double.tryParse(_mathTextController.text) ?? 0.0,
+          englishScore: double.tryParse(_englishTextController.text) ?? 0.0,
         ),
       ];
 
@@ -104,6 +99,8 @@ class _TomarkrdniNmrayZanstiPageState extends State<TomarkrdniNmrayZanstiPage> {
         context,
         MaterialPageRoute(
           builder: (context) => ScorePage(
+            englishScore: double.tryParse(_englishTextController.text) ?? 0.0,
+            mathScore: double.tryParse(_mathTextController.text) ?? 0.0,
             lessons: lessons,
           ),
         ),
