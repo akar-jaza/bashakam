@@ -31,6 +31,7 @@ class _NmrakanmState extends State<Nmrakanm> {
         title: const Align(
           alignment: Alignment.centerRight,
           child: Text(
+
             'نمرەکانم',
             style: TextStyle(color: ThemeColors.kWhiteTextColor),
           ),

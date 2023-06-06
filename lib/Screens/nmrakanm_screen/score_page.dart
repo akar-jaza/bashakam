@@ -77,6 +77,7 @@ class _ScorePageState extends State<ScorePage> {
                 ),
               ],
             ),
+
             Text(
               'Math Score: ${mathScore.toString()}',
               style: TextStyle(
