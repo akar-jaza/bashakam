@@ -50,7 +50,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions or suggestions regarding Bashakam, please feel free to contact the project maintainer at [akar.jaza1212@gmail.com].
+If you have any questions or suggestions regarding Bashakam, please feel free to contact the project maintainer at akar.jaza1212@gmail.com
 
 
 
