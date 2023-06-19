@@ -1,3 +1,4 @@
+import 'package:bashakam_barawzanko/Screens/kamtrin_konmra/kamtrin_konmra.dart';
 import 'package:bashakam_barawzanko/Screens/nmrakanm_screen/nmrakanm.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
@@ -114,6 +115,19 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                     MyCard(
+                      imageAsset: 'assets/images/list3.svg',
+                      buttonTitle: 'ببینە',
+                      color: ThemeColors.kWhiteTextColor,
+                      text: 'کەمترین کۆنمرە',
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const KamtrinKonmra()),
+                        );
+                      },
+                    ),
                     MyCard(
                       imageAsset: 'assets/images/id.svg',
                       buttonTitle: 'ببینە',
@@ -126,12 +140,6 @@ class _HomePageState extends State<HomePage> {
                               builder: (context) => const Nmrakanm()),
                         );
                       },
-                    ),
-                    const MyCard(
-                      imageAsset: 'assets/images/list3.svg',
-                      buttonTitle: 'بکە',
-                      color: ThemeColors.kWhiteTextColor,
-                      text: 'ڕیزبەندی بکە',
                     ),
                   ],
                 ),
