@@ -31,42 +31,43 @@ class _MyTextFieldState extends State<MyTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: widget._textController,
-      cursorColor: ThemeColors.kblueColor,
-      style: const TextStyle(
-        color: ThemeColors.kWhiteTextColor,
-        fontFamily: 'Roboto',
-      ),
-      decoration: InputDecoration(
-        labelText: widget.labelText,
-        labelStyle: const TextStyle(
-          color: ThemeColors.kGreyTextColor,
-          fontSize: 14,
-        ),
-        hintStyle: const TextStyle(
-          color: ThemeColors.kGreyTextColor,
-        ),
-        contentPadding:
-            const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-            
-        enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-            color: ThemeColors.kGreyTextColor,
-          ),
-        ),
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-            color: ThemeColors.kGreyTextColor,
-          ),
-        ),
-        fillColor: ThemeColors.kMyCardColor,
-        filled: true,
-      ),
-      enableInteractiveSelection: true,
+    return Directionality(
       textDirection: TextDirection.rtl,
-      textAlign: TextAlign.right,
-      
+      child: TextField(
+        controller: widget._textController,
+        cursorColor: ThemeColors.kblueColor,
+        style: const TextStyle(
+          color: ThemeColors.kWhiteTextColor,
+          fontFamily: 'Roboto',
+        ),
+        decoration: InputDecoration(
+          labelText: widget.labelText,
+          labelStyle: const TextStyle(
+            color: ThemeColors.kGreyTextColor,
+            fontSize: 14,
+          ),
+          hintStyle: const TextStyle(
+            color: ThemeColors.kGreyTextColor,
+          ),
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+          enabledBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+              color: ThemeColors.kGreyTextColor,
+            ),
+          ),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+              color: ThemeColors.kGreyTextColor,
+            ),
+          ),
+          fillColor: ThemeColors.kMyCardColor,
+          filled: true,
+        ),
+        enableInteractiveSelection: true,
+        textDirection: TextDirection.rtl,
+        textAlign: TextAlign.right,
+      ),
     );
   }
 }
