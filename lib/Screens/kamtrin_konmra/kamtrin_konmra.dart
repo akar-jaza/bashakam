@@ -40,50 +40,11 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: MyTextField(
               textController: _textEditingController,
-              labelText: 'ناوی بەش یاخود کۆنمرە بنووسە',
+              labelText: '',
             ),
-          ),
-          SvgPicture.asset(
-            'assets/images/ListIsEmpty.svg',
-            height: 350,
-          ),
-          const Text(
-            '! نمرەکانت تۆمار نەکراوە',
-            style: TextStyle(
-              color: ThemeColors.kWhiteTextColor,
-              fontSize: 18,
-            ),
-          ),
-          const Text(
-            '.تکایە نمرەکانت تۆمار بکە',
-            style: TextStyle(
-              color: ThemeColors.kWhiteTextColor,
-              fontSize: 18,
-            ),
-          ),
-        ],
-      ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Transform.translate(
-            offset: const Offset(
-                20, -25), // Adjust the vertical offset as per your requirement
-            child: SvgPicture.asset(
-              'assets/images/arrow.svg',
-              height: 50,
-            ),
-          ),
-          const SizedBox(
-            width: 50,
-          ),
-          FloatingActionButton(
-            backgroundColor: ThemeColors.kblueColor,
-            onPressed: () {},
-            child: const Icon(Icons.add),
           ),
         ],
       ),
