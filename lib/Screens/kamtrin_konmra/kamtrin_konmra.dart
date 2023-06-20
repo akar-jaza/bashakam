@@ -1,4 +1,4 @@
-import 'package:bashakam_barawzanko/Screens/nmrakanm_screen/tomarkrdni_nmrkakan/ababy_or_3ilmy_page.dart';
+import 'package:bashakam_barawzanko/components/my_textfiled.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../constantes/Colors.dart';
@@ -13,6 +13,7 @@ class KamtrinKonmra extends StatefulWidget {
 
 class _KamtrinKonmraState extends State<KamtrinKonmra> {
   SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
+  TextEditingController _textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -36,31 +37,34 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-
-            SvgPicture.asset(
-              'assets/images/ListIsEmpty.svg',
-              height: 350,
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+            child: MyTextField(
+              textController: _textEditingController,
+              labelText: 'ناوی بەش یاخود کۆنمرە بنووسە',
             ),
-            const Text(
-              '! نمرەکانت تۆمار نەکراوە',
-              style: TextStyle(
-                color: ThemeColors.kWhiteTextColor,
-                fontSize: 18,
-              ),
+          ),
+          SvgPicture.asset(
+            'assets/images/ListIsEmpty.svg',
+            height: 350,
+          ),
+          const Text(
+            '! نمرەکانت تۆمار نەکراوە',
+            style: TextStyle(
+              color: ThemeColors.kWhiteTextColor,
+              fontSize: 18,
             ),
-            const Text(
-              '.تکایە نمرەکانت تۆمار بکە',
-              style: TextStyle(
-                color: ThemeColors.kWhiteTextColor,
-                fontSize: 18,
-              ),
+          ),
+          const Text(
+            '.تکایە نمرەکانت تۆمار بکە',
+            style: TextStyle(
+              color: ThemeColors.kWhiteTextColor,
+              fontSize: 18,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -78,13 +82,7 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
           ),
           FloatingActionButton(
             backgroundColor: ThemeColors.kblueColor,
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const AdabayOr3ilmyPage()),
-              );
-            },
+            onPressed: () {},
             child: const Icon(Icons.add),
           ),
         ],

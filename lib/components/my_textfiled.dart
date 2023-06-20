@@ -4,25 +4,21 @@ import 'package:flutter/services.dart';
 import '../constantes/colors.dart';
 
 class MyTextField extends StatefulWidget {
-  const MyTextField(
-      {Key? key,
-      required TextEditingController textController,
-      required this.labelText,
-      required this.color})
-      : _textController = textController,
+  const MyTextField({
+    Key? key,
+    required TextEditingController textController,
+    required this.labelText,
+  })  : _textController = textController,
         super(key: key);
 
   final TextEditingController _textController;
   final String labelText;
-
-  final Color color;
 
   @override
   State<MyTextField> createState() => _MyTextFieldState();
 }
 
 class _MyTextFieldState extends State<MyTextField> {
-
   @override
   void initState() {
     super.initState();
@@ -35,43 +31,42 @@ class _MyTextFieldState extends State<MyTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: TextField(
-        controller: widget._textController,
-        cursorColor: ThemeColors.kblueColor,
-        style: const TextStyle(
-          color: ThemeColors.kWhiteTextColor,
-          fontFamily: 'Roboto',
-        ),
-        decoration: InputDecoration(
-          labelText: widget.labelText,
-          labelStyle: const TextStyle(
-            color: ThemeColors.kGreyTextColor,
-            fontSize: 14,
-          ),
-          contentPadding:
-              const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: widget.color,
-            ),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: widget.color,
-            ),
-          ),
-          fillColor: ThemeColors.kMyCardColor,
-          filled: true,
-        ),
-        enableInteractiveSelection: true,
-        keyboardType: TextInputType.number,
-        inputFormatters: <TextInputFormatter>[
-          FilteringTextInputFormatter
-              .digitsOnly // Restrict input to digits only
-        ],
+    return TextField(
+      controller: widget._textController,
+      cursorColor: ThemeColors.kblueColor,
+      style: const TextStyle(
+        color: ThemeColors.kWhiteTextColor,
+        fontFamily: 'Roboto',
       ),
+      decoration: InputDecoration(
+        labelText: widget.labelText,
+        labelStyle: const TextStyle(
+          color: ThemeColors.kGreyTextColor,
+          fontSize: 14,
+        ),
+        hintStyle: const TextStyle(
+          color: ThemeColors.kGreyTextColor,
+        ),
+        contentPadding:
+            const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+            
+        enabledBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: ThemeColors.kGreyTextColor,
+          ),
+        ),
+        focusedBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: ThemeColors.kGreyTextColor,
+          ),
+        ),
+        fillColor: ThemeColors.kMyCardColor,
+        filled: true,
+      ),
+      enableInteractiveSelection: true,
+      textDirection: TextDirection.rtl,
+      textAlign: TextAlign.right,
+      
     );
   }
 }

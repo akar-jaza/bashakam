@@ -1,5 +1,4 @@
 import 'package:bashakam_barawzanko/Screens/kamtrin_konmra/kamtrin_konmra.dart';
-import 'package:bashakam_barawzanko/Screens/nmrakanm_screen/nmrakanm.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -115,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                     MyCard(
+                    MyCard(
                       imageAsset: 'assets/images/list3.svg',
                       buttonTitle: 'ببینە',
                       color: ThemeColors.kWhiteTextColor,
@@ -133,13 +132,7 @@ class _HomePageState extends State<HomePage> {
                       buttonTitle: 'ببینە',
                       color: ThemeColors.kWhiteTextColor,
                       text: 'نمرەکانم',
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Nmrakanm()),
-                        );
-                      },
+                      onTap: () {},
                     ),
                   ],
                 ),
