@@ -2,6 +2,7 @@
 
 Bashakam is a mobile application designed to help students in Iraqi Kurdistan determine which university departments they are eligible for based on their exam grades. The app allows students to enter their grades and provides a sorted list of departments they can apply to according to their grades.
 
+
 ## Features
 
 - User-friendly interface for entering exam grades
