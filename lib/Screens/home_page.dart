@@ -1,4 +1,4 @@
-import 'package:bashakam_barawzanko/Screens/kamtrin_konmra/kamtrin_konmra.dart';
+import 'package:bashakam_barawzanko/Screens/kamtrin_konmra/kamtrin_konmra_page.dart';
 import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
