@@ -72,7 +72,7 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
                 // Replace this with your custom widget for displaying each item
                 return Text(
                   fetchedData[index].toString(),
-                  style: TextStyle(color: ThemeColors.kWhiteTextColor),
+                  style: const TextStyle(color: ThemeColors.kWhiteTextColor),
                 );
               }),
               itemCount: fetchedData.length,
