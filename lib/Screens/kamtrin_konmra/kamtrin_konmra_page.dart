@@ -3,12 +3,12 @@
 import 'package:bashakam_barawzanko/components/my_textfiled.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../API/fetch_department_names.dart';
+import '../../API/fetch_slemani.dart';
 import '../../constantes/Colors.dart';
 import '../../constantes/system_ui_overlay_func.dart';
 
 class KamtrinKonmra extends StatefulWidget {
-  const KamtrinKonmra({super.key});
+  const KamtrinKonmra({Key? key}) : super(key: key);
 
   @override
   State<KamtrinKonmra> createState() => _KamtrinKonmraState();
@@ -18,13 +18,13 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
   SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
   TextEditingController _textEditingController = TextEditingController();
 
-  List<dynamic> fetchedData = [];
+  Map<String, dynamic> fetchedData = {};
 
   @override
   void initState() {
     super.initState();
     fetchData().then((data) {
-      // Assign the fetched data to the list and update the UI
+      // Assign the fetched data to the map and update the UI
       setState(() {
         fetchedData = data;
       });
@@ -67,15 +67,40 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
           ),
           Expanded(
             child: ListView.builder(
-              itemBuilder: ((context, index) {
+              itemBuilder: (context, index) {
                 // Use the fetched data to populate your list view
+                final departmentName =
+                    fetchedData['departmentName'] as List<dynamic>;
+                final parezga = fetchedData['parezga'] as List<dynamic>;
+                final gshty = fetchedData['gshty'] as List<dynamic>;
+
                 // Replace this with your custom widget for displaying each item
-                return Text(
-                  fetchedData[index].toString(),
-                  style: const TextStyle(color: ThemeColors.kWhiteTextColor),
+                return ListTile(
+                  title: Text(
+                    departmentName[index],
+                    style:
+                        const TextStyle(color: ThemeColors.kWhiteTextColor),
+                  ),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        'پارێزگا: ${parezga[index]}',
+                        style: const TextStyle(
+                            color: ThemeColors.kWhiteTextColor),
+                      ),
+                      Text(
+                        'گشتی: ${gshty[index]}',
+                        style: const TextStyle(
+                            color: ThemeColors.kWhiteTextColor),
+                      ),
+                    ],
+                  ),
                 );
-              }),
-              itemCount: fetchedData.length,
+              },
+              itemCount: fetchedData['departmentName'] != null
+                  ? fetchedData['departmentName'].length
+                  : 0,
             ),
           )
         ],
