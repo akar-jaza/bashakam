@@ -42,6 +42,7 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
       appBar: AppBar(
         iconTheme: const IconThemeData(color: ThemeColors.kWhiteTextColor),
         backgroundColor: ThemeColors.kBodyColor,
+        surfaceTintColor: ThemeColors.kblueColor,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
@@ -66,48 +67,51 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
             ),
           ),
           Expanded(
-            child: ListView.builder(
-              itemBuilder: (context, index) {
-                // Use the fetched data to populate your list view
-                final departmentName =
-                    fetchedData['departmentName'] as List<dynamic>;
-                final parezga = fetchedData['parezga'] as List<dynamic>;
-                final gshty = fetchedData['gshty'] as List<dynamic>;
+              child: ListView.builder(
+            itemBuilder: (context, index) {
+              final departmentName =
+                  fetchedData['departmentName'] as List<dynamic>;
+              final parezga = fetchedData['parezga'] as List<dynamic>;
+              final gshty = fetchedData['gshty'] as List<dynamic>;
 
-                // Replace this with your custom widget for displaying each item
-                return Directionality(
-                  textDirection: TextDirection.rtl,
-                  child: ListTile(
-                    title: Text(
-                      departmentName[index],
-                      style: const TextStyle(
-                        color: ThemeColors.kWhiteTextColor,
+              if (index.isOdd) {
+                // Odd index represents the divider
+                return const Divider(
+                  color: Color.fromARGB(72, 197, 198, 209),
+                );
+              } else {
+                // Even index represents the actual item
+                final itemIndex = index ~/ 2;
+                return ListTile(
+                  title: Text(
+                    departmentName[itemIndex],
+                    style: const TextStyle(
+                      color: ThemeColors.kWhiteTextColor,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        'پارێزگا: ${parezga[itemIndex]}',
+                        style:
+                            const TextStyle(color: ThemeColors.kWhiteTextColor),
                       ),
-                      textAlign: TextAlign.center,
-                    ),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          'پارێزگا: ${parezga[index]}',
-                          style: const TextStyle(
-                              color: ThemeColors.kWhiteTextColor),
-                        ),
-                        Text(
-                          'گشتی: ${gshty[index]}',
-                          style: const TextStyle(
-                              color: ThemeColors.kWhiteTextColor),
-                        ),
-                      ],
-                    ),
+                      Text(
+                        'گشتی: ${gshty[itemIndex]}',
+                        style:
+                            const TextStyle(color: ThemeColors.kWhiteTextColor),
+                      ),
+                    ],
                   ),
                 );
-              },
-              itemCount: fetchedData['departmentName'] != null
-                  ? fetchedData['departmentName'].length
-                  : 0,
-            ),
-          )
+              }
+            },
+            itemCount: fetchedData['departmentName'] != null
+                ? fetchedData['departmentName'].length * 2 - 1
+                : 0,
+          ))
         ],
       ),
     );
