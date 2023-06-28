@@ -75,26 +75,31 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
                 final gshty = fetchedData['gshty'] as List<dynamic>;
 
                 // Replace this with your custom widget for displaying each item
-                return ListTile(
-                  title: Text(
-                    departmentName[index],
-                    style:
-                        const TextStyle(color: ThemeColors.kWhiteTextColor),
-                  ),
-                  subtitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        'پارێزگا: ${parezga[index]}',
-                        style: const TextStyle(
-                            color: ThemeColors.kWhiteTextColor),
+                return Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: ListTile(
+                    title: Text(
+                      departmentName[index],
+                      style: const TextStyle(
+                        color: ThemeColors.kWhiteTextColor,
                       ),
-                      Text(
-                        'گشتی: ${gshty[index]}',
-                        style: const TextStyle(
-                            color: ThemeColors.kWhiteTextColor),
-                      ),
-                    ],
+                      textAlign: TextAlign.center,
+                    ),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'پارێزگا: ${parezga[index]}',
+                          style: const TextStyle(
+                              color: ThemeColors.kWhiteTextColor),
+                        ),
+                        Text(
+                          'گشتی: ${gshty[index]}',
+                          style: const TextStyle(
+                              color: ThemeColors.kWhiteTextColor),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },
