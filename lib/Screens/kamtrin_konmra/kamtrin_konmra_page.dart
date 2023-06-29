@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../API/fetch_slemani.dart';
 import '../../constantes/Colors.dart';
 import '../../constantes/system_ui_overlay_func.dart';
+import 'package:incrementally_loading_listview/incrementally_loading_listview.dart';
 
 class KamtrinKonmra extends StatefulWidget {
   const KamtrinKonmra({Key? key}) : super(key: key);
@@ -33,6 +34,8 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
       print('Error: $error');
     });
   }
+
+  _getMoreData() {}
 
   @override
   Widget build(BuildContext context) {

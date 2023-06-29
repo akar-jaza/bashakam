@@ -13,7 +13,3 @@ Future<Map<String, dynamic>> fetchData() async {
     throw Exception('Failed to fetch data');
   }
 }
-
-
-
-
