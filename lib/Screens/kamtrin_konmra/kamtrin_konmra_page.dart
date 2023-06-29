@@ -93,6 +93,9 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      const SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         'پارێزگا: ${parezga[itemIndex]}',
                         style:
