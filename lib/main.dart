@@ -1,3 +1,4 @@
+import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 import 'Screens/home_page.dart';
 import 'constantes/system_ui_overlay_func.dart';
@@ -18,6 +19,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         fontFamily: 'rabarBold',
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: ThemeColors.kblueColor,
+        ),
       ),
       home: const HomePage(),
     );
