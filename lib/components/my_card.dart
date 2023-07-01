@@ -26,13 +26,11 @@ class MyCard extends StatelessWidget {
     final platform = Theme.of(context).platform;
     final isIOS = platform == TargetPlatform.iOS;
 
-    double cardHeight = isIOS ? 170 : 160;
+    double cardHeight = isIOS ? 174 : 160;
     double cardWidth = isIOS ? 145 : 135;
 
-    return InkWell(
+    return GestureDetector(
       onTap: onTap,
-      splashColor: ThemeColors.kappBarColor,
-      borderRadius: BorderRadius.circular(6),
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 7, vertical: 10),
         height: cardHeight,
@@ -44,7 +42,7 @@ class MyCard extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Text(
@@ -63,26 +61,28 @@ class MyCard extends StatelessWidget {
               height: 50,
             ),
             const SizedBox(height: 10),
-            Container(
-              child: isIOS
-                  ? CupertinoButton(
-                      onPressed: onTap,
-                      child: Text(
-                        buttonTitle,
-                        style: const TextStyle(
-                          color: ThemeColors.kblueColor,
-                          fontFamily: 'rabarBold',
-                        ),
+            isIOS
+                ? CupertinoButton(
+                    onPressed: onTap,
+                    child: Text(
+                      buttonTitle,
+                      style: const TextStyle(
+                        color: ThemeColors.kblueColor,
+                        fontFamily: 'rabarBold',
                       ),
-                    )
-                  : TextButton(
+                    ),
+                  )
+                : InkWell(
+                    onTap: onTap,
+                    borderRadius: BorderRadius.circular(6),
+                    child: TextButton(
                       onPressed: onTap,
                       child: Text(
                         buttonTitle,
                         style: const TextStyle(color: ThemeColors.kblueColor),
                       ),
                     ),
-            ),
+                  ),
           ],
         ),
       ),
