@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:io';
 
 import 'package:bashakam_barawzanko/components/my_textfiled.dart';
@@ -6,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../API/fetch_slemani.dart';
 import '../../components/my_app_bar.dart';
+import '../../components/my_show_dialog.dart';
 import '../../constantes/Colors.dart';
 import '../../constantes/system_ui_overlay_func.dart';
 import 'package:connectivity/connectivity.dart';
@@ -75,26 +78,17 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
             gshty.addAll(data['gshty'].cast<String>());
           });
         } else {
-          _showConnectionSnackBar();
+          showConnectionDialog(context);
         }
       } catch (error) {
         print('Error: $error');
-        _showConnectionSnackBar();
+        showConnectionDialog(context);
       } finally {
         setState(() {
           isLoading = false;
         });
       }
     }
-  }
-
-  void _showConnectionSnackBar() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content:
-            Text('Failed to connect. Please check your network connection.'),
-      ),
-    );
   }
 
   Future<void> checkConnectivity(BuildContext context) async {
@@ -104,64 +98,6 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
     }
   }
 
-  void showConnectionDialog(BuildContext context) async {
-    if (Theme.of(context).platform == TargetPlatform.iOS) {
-      showCupertinoDialog(
-        context: context,
-        barrierDismissible: true,
-        builder: (BuildContext dialogContext) {
-          return CupertinoAlertDialog(
-            title: const Text('Network Connection Required'),
-            content: const Text('Please connect to a network and try again.'),
-            actions: <Widget>[
-              CupertinoDialogAction(
-                child: const Text(
-                  'OK',
-                  style: TextStyle(color: Colors.blue),
-                ),
-                onPressed: () {
-                  Navigator.pop(dialogContext);
-                },
-              ),
-            ],
-          );
-        },
-      );
-    } else {
-      showDialog(
-        context: context,
-        barrierDismissible: true,
-        builder: (BuildContext context) {
-          return Theme(
-            data: Theme.of(context).copyWith(
-              dialogBackgroundColor:
-                  ThemeColors.kBodyColor, // Set the background color
-              textTheme: const TextTheme(
-                // Set the text colors
-                titleLarge: TextStyle(color: ThemeColors.kWhiteTextColor),
-                bodyMedium: TextStyle(color: ThemeColors.kWhiteTextColor),
-              ),
-            ),
-            child: AlertDialog(
-              title: const Text('Network Connection Required'),
-              content: const Text('Please connect to a network and try again.'),
-              actions: <Widget>[
-                TextButton(
-                  child: const Text(
-                    'OK',
-                    style: TextStyle(color: ThemeColors.kblueColor),
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-              ],
-            ),
-          );
-        },
-      );
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -197,12 +133,8 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
                         _getMoreData();
                       }
 
-                      return const SizedBox(
-                        height: 40,
-                        child: Center(
-                          child: CupertinoActivityIndicator(),
-                        ),
-                      );
+                      return const SizedBox
+                          .shrink(); // Return an empty SizedBox
                     }
 
                     return ListTile(
@@ -237,6 +169,14 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
                 itemCount: departmentName.length * 2,
               ),
             ),
+            if (isLoading)
+              const SizedBox(
+                height: 40,
+                child: Center(
+                    child: CupertinoActivityIndicator(
+                  color: ThemeColors.kWhiteTextColor,
+                )),
+              ),
           ],
         ),
       ),
