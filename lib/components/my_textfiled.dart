@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../constantes/colors.dart';
 
@@ -34,6 +33,7 @@ class _MyTextFieldState extends State<MyTextField> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: TextField(
+        keyboardType: TextInputType.text,
         controller: widget._textController,
         cursorColor: ThemeColors.kblueColor,
         style: const TextStyle(

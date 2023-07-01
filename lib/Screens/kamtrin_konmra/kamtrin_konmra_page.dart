@@ -163,93 +163,96 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
   @override
   Widget build(BuildContext context) {
     uiOverlayFunc.systemUiOverlay();
-    return Scaffold(
-      backgroundColor: ThemeColors.kBodyColor,
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: ThemeColors.kWhiteTextColor),
+    return GestureDetector(
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+      child: Scaffold(
         backgroundColor: ThemeColors.kBodyColor,
-        surfaceTintColor: ThemeColors.kblueColor,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        title: const Align(
-          alignment: Alignment.centerRight,
-          child: Text(
-            'کەمترین کۆنمرەی وەرگیراو',
-            style: TextStyle(color: ThemeColors.kWhiteTextColor),
+        appBar: AppBar(
+          iconTheme: const IconThemeData(color: ThemeColors.kWhiteTextColor),
+          backgroundColor: ThemeColors.kBodyColor,
+          surfaceTintColor: ThemeColors.kblueColor,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
-        ),
-      ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-            child: MyTextField(
-              textController: _textEditingController,
-              labelText: 'ناوی بەش یاخود کۆنمرە بنووسە',
+          title: const Align(
+            alignment: Alignment.centerRight,
+            child: Text(
+              'کەمترین کۆنمرەی وەرگیراو',
+              style: TextStyle(color: ThemeColors.kWhiteTextColor),
             ),
           ),
-          Expanded(
-            child: ListView.builder(
-              controller: _scrollController,
-              itemBuilder: (context, index) {
-                if (index.isOdd) {
-                  // Odd index represents the divider
-                  return const Divider(
-                    color: Color.fromARGB(72, 197, 198, 209),
-                  );
-                } else {
-                  final itemIndex = index ~/ 2;
+        ),
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              child: MyTextField(
+                textController: _textEditingController,
+                labelText: 'ناوی بەش یاخود کۆنمرە بنووسە',
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                controller: _scrollController,
+                itemBuilder: (context, index) {
+                  if (index.isOdd) {
+                    // Odd index represents the divider
+                    return const Divider(
+                      color: Color.fromARGB(72, 197, 198, 209),
+                    );
+                  } else {
+                    final itemIndex = index ~/ 2;
 
-                  if (itemIndex >= departmentName.length) {
-                    if (!isLoading) {
-                      _getMoreData();
+                    if (itemIndex >= departmentName.length) {
+                      if (!isLoading) {
+                        _getMoreData();
+                      }
+
+                      return const SizedBox(
+                        height: 40,
+                        child: Center(
+                          child: CupertinoActivityIndicator(),
+                        ),
+                      );
                     }
 
-                    return const SizedBox(
-                      height: 40,
-                      child: Center(
-                        child: CupertinoActivityIndicator(),
+                    return ListTile(
+                      title: Text(
+                        departmentName[itemIndex],
+                        style: const TextStyle(
+                          color: ThemeColors.kWhiteTextColor,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            'پارێزگا: ${parezga[itemIndex]}',
+                            style: const TextStyle(
+                                color: ThemeColors.kWhiteTextColor),
+                          ),
+                          Text(
+                            'گشتی: ${gshty[itemIndex]}',
+                            style: const TextStyle(
+                                color: ThemeColors.kWhiteTextColor),
+                          ),
+                        ],
                       ),
                     );
                   }
-
-                  return ListTile(
-                    title: Text(
-                      departmentName[itemIndex],
-                      style: const TextStyle(
-                        color: ThemeColors.kWhiteTextColor,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          'پارێزگا: ${parezga[itemIndex]}',
-                          style: const TextStyle(
-                              color: ThemeColors.kWhiteTextColor),
-                        ),
-                        Text(
-                          'گشتی: ${gshty[itemIndex]}',
-                          style: const TextStyle(
-                              color: ThemeColors.kWhiteTextColor),
-                        ),
-                      ],
-                    ),
-                  );
-                }
-              },
-              itemCount: departmentName.length * 2,
+                },
+                itemCount: departmentName.length * 2,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
