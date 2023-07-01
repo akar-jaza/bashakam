@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:bashakam_barawzanko/components/my_textfiled.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../API/fetch_slemani.dart';
+import '../../components/my_app_bar.dart';
 import '../../constantes/Colors.dart';
 import '../../constantes/system_ui_overlay_func.dart';
 import 'package:connectivity/connectivity.dart';
@@ -167,24 +170,7 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
         backgroundColor: ThemeColors.kBodyColor,
-        appBar: AppBar(
-          iconTheme: const IconThemeData(color: ThemeColors.kWhiteTextColor),
-          backgroundColor: ThemeColors.kBodyColor,
-          surfaceTintColor: ThemeColors.kblueColor,
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-          title: const Align(
-            alignment: Alignment.centerRight,
-            child: Text(
-              'کەمترین کۆنمرەی وەرگیراو',
-              style: TextStyle(color: ThemeColors.kWhiteTextColor),
-            ),
-          ),
-        ),
+        appBar: const myAppBar(),
         body: Column(
           children: [
             Padding(
