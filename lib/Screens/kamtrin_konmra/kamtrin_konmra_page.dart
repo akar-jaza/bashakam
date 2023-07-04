@@ -1,6 +1,7 @@
-// ignore_for_file: use_build_context_synchronously
+// ignore_for_file: use_build_context_synchronously, avoid_print
 
 import 'package:bashakam_barawzanko/components/my_textfiled.dart';
+import 'package:bashakam_barawzanko/widgets/slemani_konmra_list_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -20,7 +21,7 @@ class KamtrinKonmra extends StatefulWidget {
 
 class _KamtrinKonmraState extends State<KamtrinKonmra> {
   SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
-  TextEditingController _textEditingController = TextEditingController();
+  final TextEditingController _textEditingController = TextEditingController();
 
   List<String> departmentName = [];
   List<String> parezga = [];
@@ -30,34 +31,51 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
   int pageSize = 10;
   bool isLoading = false;
 
-  ScrollController _scrollController = ScrollController();
+  final ScrollController _scrollController = ScrollController();
 
   @override
   void initState() {
     super.initState();
     checkConnectivity(context);
-    fetchData(currentPage, pageSize).then((data) {
-      setState(() {
-        departmentName = data?['departmentName'].cast<String>();
-        parezga = data?['parezga'].cast<String>();
-        gshty = data?['gshty'].cast<String>();
-      });
-    }).catchError((error) {
-      print('Error: $error');
-    });
-
-    _scrollController.addListener(() {
-      if (_scrollController.position.pixels ==
-          _scrollController.position.maxScrollExtent) {
-        _getMoreData();
-      }
-    });
+    _initScrollController();
+    _fetchData();
   }
 
   @override
   void dispose() {
     _scrollController.dispose();
     super.dispose();
+  }
+
+  Future<void> _fetchData() async {
+    try {
+      final data = await fetchData(currentPage, pageSize);
+      if (data != null) {
+        setState(() {
+          departmentName = data['departmentName'].cast<String>();
+          parezga = data['parezga'].cast<String>();
+          gshty = data['gshty'].cast<String>();
+        });
+      } else {
+        showConnectionDialog(context);
+      }
+    } catch (error) {
+      print('Error: $error');
+      showConnectionDialog(context);
+    } finally {
+      setState(() {
+        isLoading = false;
+      });
+    }
+  }
+
+  void _initScrollController() {
+    _scrollController.addListener(() {
+      if (_scrollController.position.pixels ==
+          _scrollController.position.maxScrollExtent) {
+        _getMoreData();
+      }
+    });
   }
 
   Future<void> _getMoreData() async {
@@ -116,53 +134,12 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
             Expanded(
               child: ListView.builder(
                 controller: _scrollController,
-                itemBuilder: (context, index) {
-                  if (index.isOdd) {
-                    // Odd index represents the divider
-                    return const Divider(
-                      color: Color.fromARGB(72, 197, 198, 209),
-                    );
-                  } else {
-                    final itemIndex = index ~/ 2;
-
-                    if (itemIndex >= departmentName.length) {
-                      if (!isLoading) {
-                        _getMoreData();
-                      }
-
-                      return const SizedBox
-                          .shrink(); // Return an empty SizedBox
-                    }
-
-                    return ListTile(
-                      title: Text(
-                        departmentName[itemIndex],
-                        style: const TextStyle(
-                          color: ThemeColors.kWhiteTextColor,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      subtitle: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            'پارێزگا: ${parezga[itemIndex]}',
-                            style: const TextStyle(
-                                color: ThemeColors.kWhiteTextColor),
-                          ),
-                          Text(
-                            'گشتی: ${gshty[itemIndex]}',
-                            style: const TextStyle(
-                                color: ThemeColors.kWhiteTextColor),
-                          ),
-                        ],
-                      ),
-                    );
-                  }
-                },
+                itemBuilder: (context, index) => SlemaniKonmraListItem(
+                  departmentName: departmentName,
+                  gshty: gshty,
+                  parezga: parezga,
+                  index: index,
+                ),
                 itemCount: departmentName.length * 2,
               ),
             ),
