@@ -5,7 +5,7 @@ import 'package:bashakam_barawzanko/widgets/slemani_konmra_list_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../API/fetch_slemani.dart';
+import '../../API/fetch_all_cities.dart';
 import '../../components/my_app_bar.dart';
 import '../../components/my_show_dialog.dart';
 import '../../constantes/Colors.dart';
@@ -28,7 +28,7 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
   List<String> gshty = [];
 
   int currentPage = 1;
-  int pageSize = 10;
+  int pageSize = 20;
   bool isLoading = false;
 
   final ScrollController _scrollController = ScrollController();

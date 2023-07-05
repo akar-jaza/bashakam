@@ -1,9 +1,11 @@
+// ignore_for_file: avoid_print
+
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 Future<Map<String, dynamic>?> fetchData(int page, int size) async {
   final url =
-      'http://192.168.0.112/Konmra_project/endpoints/2020-2021/fetch_slemani.php?page=$page&size=$size';
+      'https://5b6e-185-56-194-8.ngrok-free.app/konmra_project/endpoints/2020-2021/fetch_all_cities.php?page=$page&size=$size';
 
   try {
     final response = await http.get(Uri.parse(url));
