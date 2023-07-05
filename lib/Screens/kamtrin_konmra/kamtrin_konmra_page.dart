@@ -127,6 +127,7 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: MyTextField(
+                onPressed: () {},
                 textController: _textEditingController,
                 labelText: 'ناوی بەش یاخود کۆنمرە بنووسە',
               ),

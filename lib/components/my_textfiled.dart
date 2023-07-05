@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter/cupertino.dart';
 import '../constantes/colors.dart';
+import 'dart:io';
 
 class MyTextField extends StatefulWidget {
   const MyTextField({
     Key? key,
     required TextEditingController textController,
     required this.labelText,
+    required this.onPressed,
   })  : _textController = textController,
         super(key: key);
 
   final TextEditingController _textController;
   final String labelText;
+  final void Function()? onPressed;
 
   @override
   State<MyTextField> createState() => _MyTextFieldState();
@@ -42,6 +45,28 @@ class _MyTextFieldState extends State<MyTextField> {
         ),
         decoration: InputDecoration(
           labelText: widget.labelText,
+          suffixIcon: Platform.isIOS
+              ? SizedBox(
+                  height: 24, // Set the desired height for the button
+                  child: CupertinoTheme(
+                    data: const CupertinoThemeData(
+                      primaryColor: ThemeColors.kWhiteTextColor,
+                    ),
+                    child: CupertinoButton(
+                      onPressed: widget.onPressed,
+                      padding: EdgeInsets.zero,
+                      child: const Icon(
+                        CupertinoIcons.search,
+                        size: 20, // Set the desired size for the icon
+                      ),
+                    ),
+                  ),
+                )
+              : IconButton(
+                  onPressed: widget.onPressed,
+                  icon: const Icon(Icons.search),
+                  color: ThemeColors.kWhiteTextColor,
+                ),
           labelStyle: const TextStyle(
             color: ThemeColors.kGreyTextColor,
             fontSize: 14,
