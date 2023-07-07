@@ -12,6 +12,8 @@ import '../../constantes/Colors.dart';
 import '../../constantes/system_ui_overlay_func.dart';
 import 'package:connectivity/connectivity.dart';
 
+
+
 class KamtrinKonmra extends StatefulWidget {
   const KamtrinKonmra({Key? key}) : super(key: key);
 

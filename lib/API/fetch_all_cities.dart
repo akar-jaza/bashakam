@@ -5,7 +5,7 @@ import 'dart:convert';
 
 Future<Map<String, dynamic>?> fetchData(int page, int size) async {
   final url =
-      'https://5b6e-185-56-194-8.ngrok-free.app/konmra_project/endpoints/2020-2021/fetch_all_cities.php?page=$page&size=$size';
+      'https://dc0e-185-56-194-8.ngrok-free.app/konmra_project/endpoints/2020-2021/fetch_all_cities.php?page=$page&size=$size';
 
   try {
     final response = await http.get(Uri.parse(url));
