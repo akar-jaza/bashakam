@@ -62,7 +62,7 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
         showConnectionDialog(context);
       }
     } catch (error) {
-      print('Error: $error');
+      print('Fetch Data Error: $error');
       showConnectionDialog(context);
     } finally {
       setState(() {
