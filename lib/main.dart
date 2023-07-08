@@ -1,7 +1,7 @@
 import 'package:bashakam_barawzanko/constantes/them_colors.dart';
 import 'package:flutter/material.dart';
 import 'Screens/home_page.dart';
-import 'constantes/system_ui_overlay_func.dart';
+import 'constantes/systemUi_overlay_helper.dart';
 
 void main() {
   SystemUiOverlayHelper uiOverlayFunc = SystemUiOverlayHelper();
