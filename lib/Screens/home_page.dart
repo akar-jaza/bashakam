@@ -1,5 +1,5 @@
 import 'package:bashakam_barawzanko/Screens/kamtrin_konmra/kamtrin_konmra_page.dart';
-import 'package:bashakam_barawzanko/constantes/colors.dart';
+import 'package:bashakam_barawzanko/constantes/them_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../components/my_card.dart';
@@ -14,12 +14,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
+  SystemUiOverlayHelper uiOverlayFunc = SystemUiOverlayHelper();
 
   @override
   void initState() {
     super.initState();
-    uiOverlayFunc.systemUiOverlay();
+    uiOverlayFunc.setSystemUiOverlayStyle();
   }
 
   @override

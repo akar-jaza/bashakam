@@ -20,7 +20,7 @@ class KamtrinKonmra extends StatefulWidget {
 }
 
 class _KamtrinKonmraState extends State<KamtrinKonmra> {
-  SystemUiOverlayFunc uiOverlayFunc = SystemUiOverlayFunc();
+  SystemUiOverlayHelper uiOverlayFunc = SystemUiOverlayHelper();
   final TextEditingController _textEditingController = TextEditingController();
 
   List<String> departmentName = [];
@@ -116,12 +116,12 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
 
   @override
   Widget build(BuildContext context) {
-    uiOverlayFunc.systemUiOverlay();
+    uiOverlayFunc.setSystemUiOverlayStyle();
     return GestureDetector(
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
         backgroundColor: ThemeColors.kBodyColor,
-        appBar: const myAppBar(
+        appBar: const MyAppBar(
           text: 'کەمترین کۆنمرەی وەرگیراو',
         ),
         body: Column(

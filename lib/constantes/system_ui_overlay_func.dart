@@ -1,8 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:bashakam_barawzanko/constantes/Colors.dart';
 
-class SystemUiOverlayFunc {
-  void systemUiOverlay() {
+class SystemUiOverlayHelper {
+  void setSystemUiOverlayStyle() {
     SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle.dark.copyWith(
         systemNavigationBarColor: ThemeColors.kBodyColor,

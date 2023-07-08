@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import '../constantes/colors.dart';
+import '../constantes/them_colors.dart';
 import 'dart:io';
 
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bashakam_barawzanko/constantes/colors.dart';
+import 'package:bashakam_barawzanko/constantes/them_colors.dart';
 
 class SlemaniKonmraListItem extends StatelessWidget {
   final List<String> departmentName;

@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 
 import '../constantes/Colors.dart';
 
-class myAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const myAppBar({
+class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const MyAppBar({
     required this.text,
     super.key,
   });
