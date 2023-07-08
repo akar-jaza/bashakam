@@ -26,7 +26,7 @@ class MyCard extends StatelessWidget {
     final platform = Theme.of(context).platform;
     final isIOS = platform == TargetPlatform.iOS;
 
-    double cardHeight = isIOS ? 174 : 160;
+    double cardHeight = isIOS ? 174 : 162;
     double cardWidth = isIOS ? 145 : 135;
 
     return GestureDetector(

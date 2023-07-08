@@ -6,13 +6,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../API/fetch_all_cities.dart';
-import '../../components/my_app_bar.dart';
+import '../../components/my_appbar.dart';
 import '../../components/my_show_dialog.dart';
 import '../../constantes/Colors.dart';
 import '../../constantes/system_ui_overlay_func.dart';
 import 'package:connectivity/connectivity.dart';
-
-
 
 class KamtrinKonmra extends StatefulWidget {
   const KamtrinKonmra({Key? key}) : super(key: key);
@@ -123,7 +121,9 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
         backgroundColor: ThemeColors.kBodyColor,
-        appBar: const myAppBar(),
+        appBar: const myAppBar(
+          text: 'کەمترین کۆنمرەی وەرگیراو',
+        ),
         body: Column(
           children: [
             Padding(

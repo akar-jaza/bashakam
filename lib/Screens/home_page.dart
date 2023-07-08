@@ -3,6 +3,7 @@ import 'package:bashakam_barawzanko/constantes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../components/my_card.dart';
+import '../components/my_homepage_appbar.dart';
 import '../constantes/system_ui_overlay_func.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,49 +26,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ThemeColors.kBodyColor,
-      appBar: AppBar(
-        backgroundColor: ThemeColors.kBodyColor,
-        title: const Center(
-          child: Text(
-            '🎓 بەشەکەم',
-            style: TextStyle(
-              fontSize: 18,
-              color: ThemeColors.kWhiteTextColor,
-              fontFamily: 'rabarBold',
-            ),
-          ),
-        ),
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              color: Colors.white,
-              icon: const Icon(
-                Icons.menu_outlined,
-                size: 18,
-              ),
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-            );
-          },
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: IconButton(
-              onPressed: () {},
-              icon: ClipRRect(
-                borderRadius: BorderRadius.circular(12.0),
-                child: Image.asset(
-                  'assets/images/flo.png',
-                ),
-              ),
-            ),
-            color: Colors.white,
-          ),
-        ],
-      ),
+      appBar: const HomePageAppBar(),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Center(

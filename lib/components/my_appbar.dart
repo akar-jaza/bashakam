@@ -7,8 +7,10 @@ import '../constantes/Colors.dart';
 
 class myAppBar extends StatelessWidget implements PreferredSizeWidget {
   const myAppBar({
+    required this.text,
     super.key,
   });
+  final String text;
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
@@ -31,11 +33,11 @@ class myAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Navigator.pop(context);
               },
             ),
-      title: const Align(
+      title: Align(
         alignment: Alignment.centerRight,
         child: Text(
-          'کەمترین کۆنمرەی وەرگیراو',
-          style: TextStyle(color: ThemeColors.kWhiteTextColor),
+          text,
+          style: const TextStyle(color: ThemeColors.kWhiteTextColor),
         ),
       ),
     );
