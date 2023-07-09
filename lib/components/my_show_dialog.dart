@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../constantes/Colors.dart';
+import '../constantes/them_colors.dart';
 
 void showConnectionDialog(BuildContext context) async {
   if (Theme.of(context).platform == TargetPlatform.iOS) {

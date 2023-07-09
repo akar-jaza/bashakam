@@ -1,5 +1,4 @@
 // ignore_for_file: use_build_context_synchronously, avoid_print
-
 import 'package:bashakam_barawzanko/components/my_textfiled.dart';
 import 'package:bashakam_barawzanko/widgets/slemani_konmra_list_item.dart';
 import 'package:flutter/cupertino.dart';
@@ -8,9 +7,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../API/fetch_all_cities.dart';
 import '../../components/my_appbar.dart';
 import '../../components/my_show_dialog.dart';
-import '../../constantes/Colors.dart';
 import '../../constantes/systemUi_overlay_helper.dart';
 import 'package:connectivity/connectivity.dart';
+
+import '../../constantes/them_colors.dart';
 
 class KamtrinKonmra extends StatefulWidget {
   const KamtrinKonmra({Key? key}) : super(key: key);
@@ -60,7 +60,7 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
         showConnectionDialog(context);
       }
     } catch (error) {
-      print('Fetch Data Error: $error');
+      print('Error: $error');
       showConnectionDialog(context);
     } finally {
       setState(() {
@@ -121,9 +121,7 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
         backgroundColor: ThemeColors.kBodyColor,
-        appBar: const MyAppBar(
-          text: 'کەمترین کۆنمرەی وەرگیراو',
-        ),
+        appBar: const MyAppBar(text: 'کەمترین کۆنمرەی وەرگیراو'),
         body: Column(
           children: [
             Padding(
