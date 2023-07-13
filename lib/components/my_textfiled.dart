@@ -3,19 +3,20 @@ import 'package:flutter/cupertino.dart';
 import '../constantes/them_colors.dart';
 import 'dart:io';
 
-
 class MyTextField extends StatefulWidget {
   const MyTextField({
     Key? key,
     required TextEditingController textController,
     required this.labelText,
     required this.onPressed,
+    required this.onChanged,
   })  : _textController = textController,
         super(key: key);
 
   final TextEditingController _textController;
   final String labelText;
   final void Function()? onPressed;
+  final void Function(String)? onChanged;
 
   @override
   State<MyTextField> createState() => _MyTextFieldState();
@@ -37,6 +38,7 @@ class _MyTextFieldState extends State<MyTextField> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: TextField(
+        onChanged: widget.onChanged,
         keyboardType: TextInputType.text,
         controller: widget._textController,
         cursorColor: ThemeColors.kblueColor,

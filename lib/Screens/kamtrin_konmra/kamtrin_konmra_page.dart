@@ -27,6 +27,8 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
   List<String> parezga = [];
   List<String> gshty = [];
 
+  List<String> filteredDepartmentName = [];
+
   int currentPage = 1;
   int pageSize = 20;
   bool isLoading = false;
@@ -39,6 +41,16 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
     checkConnectivity(context);
     _initScrollController();
     _fetchData();
+
+    filteredDepartmentName = List.from(departmentName);
+
+    // _fetchData().then((_) {
+    //   setState(() {
+    //     filteredDepartmentName = List.from(departmentName);
+    //   });
+    // });
+
+    //filteredDepartmentName = departmentName;
   }
 
   @override
@@ -69,15 +81,6 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
     }
   }
 
-  void _initScrollController() {
-    _scrollController.addListener(() {
-      if (_scrollController.position.pixels ==
-          _scrollController.position.maxScrollExtent) {
-        _getMoreData();
-      }
-    });
-  }
-
   Future<void> _getMoreData() async {
     if (!isLoading) {
       setState(() {
@@ -92,6 +95,9 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
             departmentName.addAll(data['departmentName'].cast<String>());
             parezga.addAll(data['parezga'].cast<String>());
             gshty.addAll(data['gshty'].cast<String>());
+
+            // Update the list of filtered departments with the combined data
+            filteredDepartmentName = List.from(departmentName);
           });
         } else {
           showConnectionDialog(context);
@@ -107,11 +113,36 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
     }
   }
 
+  void _runFilter(String enteredKeyword) {
+    if (enteredKeyword.isEmpty) {
+      setState(() {
+        filteredDepartmentName = List.from(departmentName);
+      });
+    } else {
+      List<String> filteredList = departmentName
+          .where((name) =>
+              name.toLowerCase().contains(enteredKeyword.toLowerCase()))
+          .toList();
+      setState(() {
+        filteredDepartmentName = filteredList;
+      });
+    }
+  }
+
   Future<void> checkConnectivity(BuildContext context) async {
     final connectivityResult = await (Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.none) {
       showConnectionDialog(context);
     }
+  }
+
+  void _initScrollController() {
+    _scrollController.addListener(() {
+      if (_scrollController.position.pixels ==
+          _scrollController.position.maxScrollExtent) {
+        _getMoreData();
+      }
+    });
   }
 
   @override
@@ -128,6 +159,7 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: MyTextField(
                 onPressed: () {},
+                onChanged: (value) => _runFilter(value),
                 textController: _textEditingController,
                 labelText: 'ناوی بەش یاخود کۆنمرە بنووسە',
               ),
@@ -136,12 +168,13 @@ class _KamtrinKonmraState extends State<KamtrinKonmra> {
               child: ListView.builder(
                 controller: _scrollController,
                 itemBuilder: (context, index) => SlemaniKonmraListItem(
-                  departmentName: departmentName,
+                  departmentName: filteredDepartmentName,
                   gshty: gshty,
                   parezga: parezga,
                   index: index,
                 ),
-                itemCount: departmentName.length * 2,
+                itemCount: filteredDepartmentName.length +
+                    1, // departmentName.length * 2
               ),
             ),
             if (isLoading)
